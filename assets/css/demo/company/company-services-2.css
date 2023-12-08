@@ -18,7 +18,7 @@
 	--inputs-margin: 0 0 10px 0;
 	--input-margin-bottom: 10px;
 }
-.services-content .module-first input:not([type=submit]):focus,
+.services-content .module-first input:not([type=button]):focus,
 .services-content .module-first textarea:focus,
 .services-content .module-first .lqd-contact-form select:focus, 
 .services-content .module-first .ui-button.ui-selectmenu-button:focus {

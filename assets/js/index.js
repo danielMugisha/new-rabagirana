@@ -75,6 +75,7 @@ const stories = [
 ];
 
 window.onload = () => {
+	getMannaContent();
     var hero = document.getElementById("hero");
     var video = document.getElementById("myVideo");
     var btn = document.getElementById("play-btn");
@@ -161,3 +162,54 @@ const buildStories = () => {
     </div>`;
 	});
 };
+
+
+const subscribe = async () => {
+	const emailInput = document.getElementById('email');
+	const userEmail = emailInput.value;
+  const url = 'http://localhost:4001/api/subscription/subscribe';
+
+  const data = {
+    email: userEmail,
+    status: 'subscribed'
+  };
+
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data)
+  });
+
+  const result = await response.json();
+
+  if (response.ok) {
+	e
+    console.log(`Success! ${email} added to Mailchimp list.`);
+  } else {
+    console.error(`Error: ${response.status}, ${result.title}`);
+  }
+};
+
+const getMannaContent = async () => {
+	const URL = 'http://localhost:4001/api/manna/latest';
+
+	const response = await fetch(URL);
+	const result = await response.json();
+	if(result.data)
+		buildManna(result.data)
+}
+
+const buildManna = (manna) =>{
+	var imageElement = document.getElementById('manna-image')
+	var titleElement = document.getElementById('manna-title')
+	var summaryElement = document.getElementById('manna-summary')
+	var linkElement = document.getElementById('manna-link')
+
+	imageElement.src = `http://localhost:4001/${manna.featuredImage}`
+	titleElement.innerText = manna.title
+	summaryElement.innerText = manna.summary
+	linkElement.href = `manna.html\?id=${manna._id}`
+}
+

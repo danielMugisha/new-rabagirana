@@ -4,8 +4,8 @@
 .form .lqd-contact-form select {
 	height: 50px;
 }
-.form .lqd-contact-form-button-lg button[type=submit],
-.form .lqd-contact-form-button-lg input[type=submit]{
+.form .lqd-contact-form-button-lg button[type=button],
+.form .lqd-contact-form-button-lg input[type=button]{
 	height: 60px;
 }
 @media (max-width: 1199px) {

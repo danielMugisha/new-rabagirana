@@ -140,7 +140,7 @@ a {
 	border-color: #ffffff;
 }
 
-.ld-sf [type="submit"] {
+.ld-sf [type="button"] {
 	color: var(--lqd-color-green-300);
 }
 

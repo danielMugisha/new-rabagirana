@@ -70,7 +70,7 @@
 /* Button & Link */
 button,
 input[type="button"],
-input[type="submit"],
+input[type="button"],
 .btn,
 .font-heading {
 	font-family: var(--lqd-heading-font-family);
