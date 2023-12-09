@@ -17,7 +17,6 @@ const getMannaContent = async (id) => {
 	if(result.data)
     {
         const mannas = result.data;
-        
         buildManna(id,mannas)
     }
 		
@@ -35,7 +34,7 @@ const buildManna = (id,mannas) =>{
 
 
     const otherMannas = mannas.filter(manna => manna._id != id);
-    var otherArticles = document.getElementsByTagName('other-articles');
+    var otherArticles = document.getElementById('other-articles');
     otherArticles.innerHTML = "";
     otherMannas.forEach(a => {
         otherArticles.innerHTML += `
@@ -75,7 +74,7 @@ const buildManna = (id,mannas) =>{
                                 </ul>
                             </div>
                             <a
-                                href="/manna.html?id="
+                                href="/manna.html?id=${a._id}"
                                 class="lqd-overlay flex lqd-pf-overlay-link leading-1/4em "
                                 data-fresco-group="case-studies"
                             ></a>

@@ -76,6 +76,7 @@ const stories = [
 
 window.onload = () => {
 	getMannaContent();
+	getEvents();
     var hero = document.getElementById("hero");
     var video = document.getElementById("myVideo");
     var btn = document.getElementById("play-btn");
@@ -211,5 +212,137 @@ const buildManna = (manna) =>{
 	titleElement.innerText = manna.title
 	summaryElement.innerText = manna.summary
 	linkElement.href = `manna.html\?id=${manna._id}`
+}
+
+const getEvents = async () =>{
+	const URL = 'http://localhost:4001/api/event/latest';
+
+	const response = await fetch(URL);
+	const result = await response.json();
+
+	if(result.data)
+		buildEvents(result.data)
+}
+
+const buildEvents = (events) =>{
+	const el = document.getElementById('upcoming')
+	el.innerHTML = '';
+	events.forEach(event =>{
+		el.innerHTML +=`<div class="col col-12 col-md-6 col-xl-3 p-0 module-content">
+		<div
+			class="lqd-fb relative lqd-fb-style-6 rounded-4 h-pt-125 text-white"
+			data-lqd-zindex="true"
+		>
+			<div class="lqd-fb-shadow"></div>
+			<div
+				class="flex flex-wrap items-center lqd-overlay flex"
+				data-hover3d="true"
+			>
+				<div
+					class="lqd-fb-content-wrap lqd-overlay flex flex-col items-end transform-style-3d backface-hidden will-change-transform"
+					data-stacking-factor="0.5"
+				>
+					<div
+						class="lqd-fb-img lqd-overlay flex rounded-4 overflow-hidden backface-hidden"
+					>
+						<figure class="w-full h-full m-0">
+							<img
+								class="w-full"
+								src="http://localhost:4001/${event.featuredImage}"
+								alt="${event.title}"
+							/>
+						</figure>
+						<div class="lqd-fb-bg lqd-overlay flex"></div>
+						<div
+							class="lqd-fb-hover-overlay lqd-overlay flex bg-transparent"
+							style="
+								background-image: linear-gradient(
+									180deg,
+									rgba(255, 255, 255, 0) 25%,
+									rgba(71, 214, 126, 0.8) 100%
+								);
+							"
+						></div>
+					</div>
+					<div
+						class="lqd-fb-content flex flex-col justify-end lqd-overlay flex backface-hidden py-1/5em px-1/5em"
+					>
+						<span class="lqd-fb-icon flex mb-0/85em"
+							><i
+								aria-hidden="true"
+								class="lqd-icn-ess icon-lqd-mobile"
+							></i
+						></span>
+						<h6 class="mt-0 mb-1/35em font-bold">${new Date(
+							event.startDate
+						  ).toLocaleString()}</h6>
+						<h2 class="lqd-fb__title mt-0 text-26 font-bold">
+							${event.title}
+						</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>`
+	})
+	
+	const count = 3- events.length
+
+	for(var i = 0; i<count; i++){
+		el.innerHTML += `<div class="col col-12 col-md-6 col-xl-3 p-0 module-content">
+		<div
+			class="lqd-fb relative lqd-fb-style-6 rounded-4 h-pt-125 text-white"
+			data-lqd-zindex="true"
+		>
+			<div class="lqd-fb-shadow"></div>
+			<div
+				class="flex flex-wrap items-center lqd-overlay flex"
+				data-hover3d="true"
+			>
+				<div
+					class="lqd-fb-content-wrap lqd-overlay flex flex-col items-end transform-style-3d backface-hidden will-change-transform"
+					data-stacking-factor="0.5"
+				>
+					<div
+						class="lqd-fb-img lqd-overlay flex rounded-4 overflow-hidden backface-hidden"
+					>
+						<figure class="w-full h-full m-0">
+							<img
+								class="w-full"
+								src="https://fakeimg.pl/500x400?text=Coming+Soon"
+								alt="Business Consultation"
+							/>
+						</figure>
+						<div class="lqd-fb-bg lqd-overlay flex"></div>
+						<div
+							class="lqd-fb-hover-overlay lqd-overlay flex bg-transparent"
+							style="
+								background-image: linear-gradient(
+									180deg,
+									rgba(238, 109, 11, 0) 25%,
+									rgb(238, 109, 1) 100%
+								);
+							"
+						></div>
+					</div>
+					<div
+						class="lqd-fb-content flex flex-col justify-end lqd-overlay flex backface-hidden py-1/5em px-1/5em"
+					>
+						<span class="lqd-fb-icon flex mb-0/85em"
+							><i
+								aria-hidden="true"
+								class="lqd-icn-ess icon-lqd-path"
+							></i
+						></span>
+						<h6 class="mt-0 mb-1/35em font-bold">Upcoming</h6>
+						<h2 class="lqd-fb__title mt-0 text-26 font-bold">
+							Coming Soon
+						</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>`
+	}
 }
 
