@@ -168,7 +168,7 @@ const buildStories = () => {
 const subscribe = async () => {
 	const emailInput = document.getElementById('email');
 	const userEmail = emailInput.value;
-  const url = 'http://localhost:4001/api/subscription/subscribe';
+  const url = 'http://172.232.217.76:4001/api/subscription/subscribe';
 
   const data = {
     email: userEmail,
@@ -194,7 +194,7 @@ const subscribe = async () => {
 };
 
 const getMannaContent = async () => {
-	const URL = 'http://localhost:4001/api/manna/latest';
+	const URL = 'http://172.232.217.76:4001/api/manna/latest';
 
 	const response = await fetch(URL);
 	const result = await response.json();
@@ -208,14 +208,14 @@ const buildManna = (manna) =>{
 	var summaryElement = document.getElementById('manna-summary')
 	var linkElement = document.getElementById('manna-link')
 
-	imageElement.src = `http://localhost:4001/${manna.featuredImage}`
+	imageElement.src = `http://172.232.217.76:4001/${manna.featuredImage}`
 	titleElement.innerText = manna.title
 	summaryElement.innerText = manna.summary
 	linkElement.href = `manna.html\?id=${manna._id}`
 }
 
 const getEvents = async () =>{
-	const URL = 'http://localhost:4001/api/event/latest';
+	const URL = 'http://172.232.217.76:4001/api/event/latest';
 
 	const response = await fetch(URL);
 	const result = await response.json();
@@ -248,7 +248,7 @@ const buildEvents = (events) =>{
 						<figure class="w-full h-full m-0">
 							<img
 								class="w-full"
-								src="http://localhost:4001/${event.featuredImage}"
+								src="http://172.232.217.76:4001/${event.featuredImage}"
 								alt="${event.title}"
 							/>
 						</figure>
