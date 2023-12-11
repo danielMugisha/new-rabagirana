@@ -9,7 +9,7 @@ window.onload = ()=> {
 
 
 const getMannaContent = async (id) => {
-	const URL = `http://172.232.217.76:4001/api/manna`;
+	const URL = `http://172.232.217.76/api/manna`;
 
 	const response = await fetch(URL);
 	const result = await response.json();
@@ -28,7 +28,7 @@ const buildManna = (id,mannas) =>{
 	var titleElement = document.getElementById('manna-title')
 	var contentElement = document.getElementById('manna-content')
 
-	imageElement.src = `http://172.232.217.76:4001/${manna.featuredImage}`
+	imageElement.src = `http://172.232.217.76/${manna.featuredImage}`
 	titleElement.innerText = manna.title
 	contentElement.innerHTML = manna.content
 
@@ -51,7 +51,7 @@ const buildManna = (id,mannas) =>{
                                         <img
                                             width="640"
                                             height="600"
-                                            src="http://172.232.217.76:4001/${a.featuredImage}"
+                                            src="http://172.232.217.76/${a.featuredImage}"
                                             class="w-full h-full objfit-cover objfit-center"
                                             alt="case study"
                                         />
