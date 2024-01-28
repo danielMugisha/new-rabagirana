@@ -21,7 +21,8 @@
 	--lqd-color-green-300: #00937e;
 	--lqd-color-green-900: #0e524a;
 	--lqd-color-slate-100: #f8f9ff;
-	--lqd-color-slate-200: #d3fff8;
+	--lqd-color-slate-200: #d3fff8;    
+	--lqd-color-slate-300: #F7F8F8;
 	--lqd-color-slate-500: #50596c;
 	--lqd-color-orange-100: #ffefe3;
 	--lqd-color-orange-500: #ed6a04;
@@ -112,7 +113,9 @@ a {
 .main-header .module-btn .btn:focus {
 	background-color: var(--lqd-color-blue-700);
 }
-
+.bg-slate-300{
+	background-color: var(--lqd-color-slate-300);
+}
 /* ***** Lity Modal ***** */
 .lity-modal .ld-fancy-heading h2 span {
 	font-family: "DM Serif Text", serif;

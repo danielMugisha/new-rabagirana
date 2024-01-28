@@ -1,6 +1,6 @@
 const stories = [
 	{
-		id: 1,
+		_id: 1,
 		title: "Umusozi w'Ubumwe",
 		summary: `Rusheshe community was known for disunity, disputes, lack of interest in government programs...`,
 		content: `Rusheshe community was known for disunity, disputes, lack of interest in government programs such as medical insurance for all, every child in school and other good government targets. From January 2021, Rabagirana Ministry adopted Rusheshe as a model community where Rwandans and other countries will come and experience authentic healing, forgiveness and reconciliation. In our first meeting, Isaiah 11 was our theme with through pillars: God is the true source of lasting and reconciliation The church should be an agent of God’s restoration in the community When the Kingdom of God comes, former enemies should be working together towards a peaceful and prosperous future. Today, Rusheshe has been renamed ‘ Umusozi w’Ubumwe’ or the Unity Mountain. Unity groups made of all social strata meet to share their pain and joys, visit each other, learn skills together and do small businesses to tackle poverty. Rachel, the leader of the committee says: ‘God has taken away the shame over our community. I am now proud to belong here.’ One local government leader said ‘I considered it a blessing when I was sent to work elsewhere from this extremely difficult community.’ Today as I listen to perpetrators and survivors, to exiles and those who lived here, I am moved.’ One guest from the US: ‘as an African American, I came in Rwanda with doubt. I could not believe true reconciliation is possible. I am amazed at Umusozi w’Ubumwe to see how Rwanda are ‘re-humanizing’ one another, including people who committed terrible atrocities.’`,
@@ -8,7 +8,7 @@ const stories = [
 		image: "assets/images/stories/Umusozi.jpg",
 	},
 	{
-		id: 2,
+		_id: 2,
 		title: "Keza’s story…",
 		summary: `The month was July, the day was a Saturday, and the time was half-past midday. A joyous Keza Angelique...`,
 		content: `The month was July, the day was a Saturday, and the time was half-past midday. A joyous Keza Angelique, a single mother of three, is humming to a hymn from the radio as she warms ‘isombe’ (cassava leaves) for lunch, using her newly purchased gas cooker. With a green colourful ‘kitenge’ (wrapper) around her waist and a bandana of the same colour covering her head, she turns to us and asks, “do you want to know the secret ingredient to my tasty isombe?” “Love!” my colleague immediately yelled. “No. Love doesn’t make my isombe sweet. What’s wrong with you?” She replied playfully, making us all burst into laughter. After she was done warming the isombe, she got ready to prepare ‘ugali’ (sorghum flour). She sprinkled the flour into the boiling water while briskly stirring it with a cooking stick to make it thicker. In a very short time, the ugali was ready and it was time to eat. As we sat by the dining table to devour the tasty meal that lay helplessly before us, Keza signalled that she wanted to say something. My colleague and I immediately had one of those telepathic communications, questioning Keza’s poor timing. “One doesn’t give speeches before the meal…speeches usually take place after the meal!" he seemed to say. "Her house, her rules I guess," I signalled back.  So, we sat quietly and listened to her.
@@ -20,7 +20,7 @@ const stories = [
 		image: "assets/images/stories/Gas.jpeg",
 	},
 	{
-		id: 3,
+		_id: 3,
 		title: "Ubumwe football",
 		summary: `Ubumwe football is a team of single mothers that came together after attending healing heart transforming...`,
 		content: `Ubumwe football is a team of single mothers that came together after attending healing heart transforming nation workshop (HHTN). it started in 2021 February and they are 20 members.
@@ -31,7 +31,7 @@ const stories = [
 		image: "assets/images/stories/ubumwe-football.jpg",
 	},
 	{
-		id: 4,
+		_id: 4,
 		title: "Mutesi's story",
 		summary: `Mutesi is a genocide survivor who is the only survivor in her family, after the genocide she...`,
 		content: `Mutesi is a genocide survivor who is the only survivor in her family, after the genocide she lived a hopeless and miserable life, she lived a lonely life and trusted no one on both Hutu side and Tutsi side. she later on joined our workshop and found freedom,dealt with her pain. Mukeshimana is a wife of an Ex perpetrator, in otherwise the husband killed many people during the Genocide. her husband was imprisoned for 28 years. she lived in denial, guilt and dispair. after going through the healing workshop she felt peace and even received Jesus Christ in the process. now these two ladies joined many more with the same stories through Rabagirana and started a cooperative (Ubumwe crafts) these ladies were trained to make crafts which includes jewellery, baskets, different african print decorations, cultural objects with a meaning. they are now able to generate some little income and are able to provide for their families but most importantly while working on the crafts together, they get an opportunity to share life and experiences as they counsel each other.`,
@@ -39,7 +39,7 @@ const stories = [
 		image: "assets/images/stories/mutesi.jpg",
 	},
 	{
-		id: 5,
+		_id: 5,
 		title: "Alex's story",
 		summary: `My name is Mukunzi Alex, and I came very close to committing suicide last month. Here’s my story...`,
 		content: `My name is Mukunzi, and I came very close to committing suicide last month. Here’s my story:
@@ -50,7 +50,7 @@ const stories = [
 		image: "assets/images/stories/mukunzi-alex.jpg",
 	},
 	{
-		id: 6,
+		_id: 6,
 		title: "The Healing Saloon",
 		summary: `Meet Mukeshimana Claudine; she is a wife, a mother of four, a hairdresser, and of recent, a healing`,
 		content: `Meet Mukeshimana Claudine; she is a wife, a mother of four, a hairdresser, and of recent, a healing and
@@ -77,25 +77,20 @@ const stories = [
 window.onload = () => {
 	getMannaContent();
 	getEvents();
+	getStories();
     var hero = document.getElementById("hero");
     var video = document.getElementById("myVideo");
     var btn = document.getElementById("play-btn");
     hero.addEventListener("click", function () {
-    if (video.paused){
-        video.play();
+    if (video.muted){
         video.muted = false;
-        btn.style.display = "none";
     }else{
-        btn.style.display = "block";
-        video.pause();
+        video.muted = true;
     }
     });
-    getElements();
 };
 
- const getElements = () => {
- 		buildStories();
- };
+ 
 
 
 
@@ -154,7 +149,7 @@ const buildStories = () => {
                     </ul>
                 </div>
                 <a
-                    href="/story.html?id=${story.id}"
+                    href="/story.html?id=${story._id}"
                     class="lqd-overlay flex lqd-pf-overlay-link leading-1/4em "
                     data-fresco-group="case-studies"
                 ></a>
@@ -168,7 +163,7 @@ const buildStories = () => {
 const subscribe = async () => {
 	const emailInput = document.getElementById('email');
 	const userEmail = emailInput.value;
-  const url = 'http://172.232.217.76/api/subscription/subscribe';
+  const url = 'http://localhost:4001/api/subscription/subscribe';
 
   const data = {
     email: userEmail,
@@ -194,12 +189,22 @@ const subscribe = async () => {
 };
 
 const getMannaContent = async () => {
-	const URL = 'http://172.232.217.76/api/manna/latest';
+	const URL = 'http://localhost:4001/api/manna/latest';
 
 	const response = await fetch(URL);
 	const result = await response.json();
 	if(result.data)
 		buildManna(result.data)
+}
+
+const getStories = async () => {
+	const URL = 'http://localhost:4001/api/story';
+
+	const response = await fetch(URL);
+	const result = await response.json();
+	if(result.data.lenth > 0)
+		stories = result.data
+	buildStories(stories)
 }
 
 const buildManna = (manna) =>{
@@ -208,14 +213,14 @@ const buildManna = (manna) =>{
 	var summaryElement = document.getElementById('manna-summary')
 	var linkElement = document.getElementById('manna-link')
 
-	imageElement.src = `http://172.232.217.76/${manna.featuredImage}`
+	imageElement.src = `http://localhost:4001/${manna.featuredImage}`
 	titleElement.innerText = manna.title
 	summaryElement.innerText = manna.summary
 	linkElement.href = `manna.html\?id=${manna._id}`
 }
 
 const getEvents = async () =>{
-	const URL = 'http://172.232.217.76/api/event/latest';
+	const URL = 'http://localhost:4001/api/event/latest';
 
 	const response = await fetch(URL);
 	const result = await response.json();
@@ -248,7 +253,7 @@ const buildEvents = (events) =>{
 						<figure class="w-full h-full m-0">
 							<img
 								class="w-full"
-								src="http://172.232.217.76/${event.featuredImage}"
+								src="http://localhost:4001/${event.featuredImage}"
 								alt="${event.title}"
 							/>
 						</figure>
