@@ -80,13 +80,27 @@ window.onload = () => {
 	getStories();
     var hero = document.getElementById("hero");
     var video = document.getElementById("myVideo");
-    var btn = document.getElementById("play-btn");
+	var soundBtn = document.getElementById("sound-btn")
+	var muteBtn = document.getElementById("mute-btn")
+	video.addEventListener("mouseover", function () {
+		if(video.muted){
+			muteBtn.className = 'video-inactive'
+			soundBtn.className = 'video-active'
+		}else{
+			soundBtn.className = 'video-inactive'
+			muteBtn.className = 'video-active'
+		}
+	});
+	video.addEventListener("mouseleave", function () {
+			soundBtn.className = 'video-inactive'
+			muteBtn.className = 'video-inactive'
+	});
     hero.addEventListener("click", function () {
-    if (video.muted){
-        video.muted = false;
-    }else{
-        video.muted = true;
-    }
+		if (video.muted){
+			video.muted = false;
+		}else{
+			video.muted = true;
+		}
     });
 };
 
@@ -163,7 +177,7 @@ const buildStories = () => {
 const subscribe = async () => {
 	const emailInput = document.getElementById('email');
 	const userEmail = emailInput.value;
-  const url = 'http://localhost:4001/api/subscription/subscribe';
+  const url = 'https://www.api.rabagirana.org/api/subscription/subscribe';
 
   const data = {
     email: userEmail,
@@ -189,7 +203,7 @@ const subscribe = async () => {
 };
 
 const getMannaContent = async () => {
-	const URL = 'http://localhost:4001/api/manna/latest';
+	const URL = 'https://www.api.rabagirana.org/api/manna/latest';
 
 	const response = await fetch(URL);
 	const result = await response.json();
@@ -198,7 +212,7 @@ const getMannaContent = async () => {
 }
 
 const getStories = async () => {
-	const URL = 'http://localhost:4001/api/story';
+	const URL = 'https://www.api.rabagirana.org/api/story';
 
 	const response = await fetch(URL);
 	const result = await response.json();
@@ -213,14 +227,14 @@ const buildManna = (manna) =>{
 	var summaryElement = document.getElementById('manna-summary')
 	var linkElement = document.getElementById('manna-link')
 
-	imageElement.src = `http://localhost:4001/${manna.featuredImage}`
+	imageElement.src = `https://www.api.rabagirana.org/${manna.featuredImage}`
 	titleElement.innerText = manna.title
 	summaryElement.innerText = manna.summary
 	linkElement.href = `manna.html\?id=${manna._id}`
 }
 
 const getEvents = async () =>{
-	const URL = 'http://localhost:4001/api/event/latest';
+	const URL = 'https://www.api.rabagirana.org/api/event/latest';
 
 	const response = await fetch(URL);
 	const result = await response.json();
@@ -253,7 +267,7 @@ const buildEvents = (events) =>{
 						<figure class="w-full h-full m-0">
 							<img
 								class="w-full"
-								src="http://localhost:4001/${event.featuredImage}"
+								src="https://www.api.rabagirana.org/${event.featuredImage}"
 								alt="${event.title}"
 							/>
 						</figure>
@@ -291,7 +305,7 @@ const buildEvents = (events) =>{
 	</div>`
 	})
 	
-	const count = 3- events.length
+	const count = 3 - events.length
 
 	for(var i = 0; i<count; i++){
 		el.innerHTML += `<div class="col col-12 col-md-6 col-xl-3 p-0 module-content">

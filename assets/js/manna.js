@@ -9,7 +9,7 @@ window.onload = ()=> {
 
 
 const getMannaContent = async (id) => {
-	const URL = `http://localhost:4001/api/manna`;
+	const URL = `https://www.api.rabagirana.org/api/manna`;
 
 	const response = await fetch(URL);
 	const result = await response.json();
@@ -28,7 +28,7 @@ const buildManna = (id,mannas) =>{
 	var titleElement = document.getElementById('manna-title')
 	var contentElement = document.getElementById('manna-content')
 
-	imageElement.src = `http://localhost:4001/${manna.featuredImage}`
+	imageElement.src = `https://www.api.rabagirana.org/${manna.featuredImage}`
 	titleElement.innerText = manna.title
 	contentElement.innerHTML = manna.content
 
@@ -51,7 +51,7 @@ const buildManna = (id,mannas) =>{
                                         <img
                                             width="640"
                                             height="600"
-                                            src="http://localhost:4001/${a.featuredImage}"
+                                            src="https://www.api.rabagirana.org/${a.featuredImage}"
                                             class="w-full h-full objfit-cover objfit-center"
                                             alt="case study"
                                         />
@@ -60,9 +60,10 @@ const buildManna = (id,mannas) =>{
                             
                             </div>
                             <div class="lqd-pf-details">
-                                <h2 class="lqd-pf-title mt-0 mb-1 h5">
+                            <a
+                            href="/manna.html?id=${a._id}"<h2 class="lqd-pf-title mt-0 mb-1 h5">
                                     ${a.title}
-                                </h2>
+                                </h2></a>
                                 <ul
                                     class="reset-ul inline-nav lqd-pf-cat inline-flex relative z-2"
                                 >
