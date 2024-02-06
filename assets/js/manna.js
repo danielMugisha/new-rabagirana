@@ -9,7 +9,7 @@ window.onload = ()=> {
 
 
 const getMannaContent = async (id) => {
-	const URL = `https://www.api.rabagirana.org/api/manna`;
+	const URL = `https://strapi.rabagirana.org/api/manna`;
 
 	const response = await fetch(URL);
 	const result = await response.json();
@@ -28,7 +28,7 @@ const buildManna = (id,mannas) =>{
 	var titleElement = document.getElementById('manna-title')
 	var contentElement = document.getElementById('manna-content')
 
-	imageElement.src = `https://www.api.rabagirana.org/${manna.featuredImage}`
+	imageElement.src = `https://strapi.rabagirana.org/${manna.featuredImage}`
 	titleElement.innerText = manna.title
 	contentElement.innerHTML = manna.content
 
@@ -51,7 +51,7 @@ const buildManna = (id,mannas) =>{
                                         <img
                                             width="640"
                                             height="600"
-                                            src="https://www.api.rabagirana.org/${a.featuredImage}"
+                                            src="https://strapi.rabagirana.org/${a.featuredImage}"
                                             class="w-full h-full objfit-cover objfit-center"
                                             alt="case study"
                                         />
