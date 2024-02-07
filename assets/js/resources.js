@@ -5,7 +5,7 @@ window.onload = ()=> {
 
 
 const getResources = async () => {
-	const URL = `http://localhost:4001/api/resource`;
+	const URL = `https://strapi.rabagirana.org/api/resource`;
 
 	const response = await fetch(URL);
 	const result = await response.json();
@@ -19,7 +19,7 @@ const getResources = async () => {
 }
 
 const buildDocs = (resources) =>{
-    const URL = `http://localhost:4001/`;
+    const URL = `https://strapi.rabagirana.org/`;
     const docs = resources.filter(resource => resource.category === "brochure");
     var brochures = document.getElementById("brochures");
 
