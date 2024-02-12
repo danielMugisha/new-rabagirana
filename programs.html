@@ -46,198 +46,134 @@
     <div id="wrap">
       <div class="lqd-sticky-placeholder hidden"></div>
       <header
-        id="site-header"
-        class="main-header main-header-overlay"
-        data-sticky-header="true"
-        data-sticky-values-measured="false"
-        data-sticky-options='{"disableOnMobile": true}'
-      >
-        <section class="lqd-section desktop-header md:hidden">
-          <div class="container-fluid p-0">
-            <div class="flex flex-wrap w-full justify-between">
-              <div class="navbar-brand-plain w-15percent py-30 flex">
-                <a
-                  href="index.html"
-                  class="navbar-brand flex relative p-0 leading-1/4em"
-                  ><span class="navbar-brand-inner post-rel"
-                    ><img
-                      width="150px"
-                      class="logo-default"
-                      src="assets/images/demo/digital-hub/logo.png"
-                      alt="Rabagirana" /></span
-                ></a>
-              </div>
-              <div
-                class="module-primary-nav w-60percent flex justify-end lg:w-85percent"
-              >
-                <div
-                  class="navbar-collapse inline-flex lqd-submenu-cover p-0"
-                  id="main-header-collapse"
-                  aria-expanded="false"
-                  role="navigation"
-                >
-                  <ul
-                    id="primary-nav"
-                    class="main-nav flex justify-center reset-ul inline-ul lqd-menu-counter-right lqd-menu-items-inline main-nav-hover-default lqd-submenu-toggle-hover"
-                    data-submenu-options='{"toggleType": "fade", "handler": "mouse-in-out"}'
-                    data-localscroll="true"
-                    data-localscroll-options='{"itemsSelector" : ">li > a", "trackWindowScroll": true, "includeParentAsOffset": true}'
-                  >
-                    <li class="is-active">
-                      <a
-                        class="leading-1/4em text-blue-700"
-                        href="index.html#banner"
-                        >Home</a
-                      >
-                    </li>
-                    <li class="menu-item-has-children">
-                      <a
-                        class="leading-1/4em text-blue-700"
-                        href="index.html#events"
-                        >Events <span class="submenu-expander"></span>
-                      </a>
-                    </li>
-                    <li class="menu-item-has-children">
-                      <a
-                        class="leading-1/4em text-blue-700"
-                        href="index.html#manna"
-                        >Manna <span class="submenu-expander"></span>
-                        <span
-                          class="link-icon inline-flex hide-if-empty right-icon"
-                        >
-                        </span
-                      ></a>
-                    </li>
-                    <li>
-                      <a
-                        class="leading-1/4em text-blue-700"
-                        href="index.html#case-studies"
-                        >Stories</a
-                      >
-                    </li>
-                    <li>
-                      <a class="leading-1/4em text-blue-700" href="index.html#programs"
-                        >Programs</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="leading-1/4em text-blue-700"
-                        href="index.html#contact"
-                        >Contact Us</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="w-25percent flex items-center justify-end lg:hidden">
-                <div class="module-btn px-0/5em">
-                  <a
-                    href="/umusozi.html"
-                    class="btn btn-solid btn-md uppercase text-13 font-bold tracking-1/5 leading-1/4em bg-white rounded-100 shadow-md text-blue-700 hover:text-white"
-                    ><span class="btn-txt" data-text="Umusozi w'Ubumwe"
-                      >Umusozi w' Ubumwe</span
-                    ></a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <div class="lqd-mobile-sec relative">
-          <div
-            class="lqd-mobile-sec-inner navbar-header flex items-stretch w-full"
-          >
-            <div class="lqd-mobile-modules-container empty"></div>
-            <button
-              type="button"
-              class="bg-transparent border-none navbar-toggle collapsed nav-trigger style-mobile flex relative items-center justify-end p-0"
-              data-ld-toggle="true"
-              data-bs-toggle="collapse"
-              data-bs-target="#lqd-mobile-sec-nav"
-              aria-expanded="false"
-              data-toggle-options='{ "changeClassnames":  {"html":  "mobile-nav-activated"} }'
-            >
-              <span class="sr-only">Menu</span>
-              <span class="bars inline-block relative z-1"
-                ><span class="bars-inner flex flex-col w-full h-full"
-                  ><span class="bar inline-block"></span>
-                  <span class="bar inline-block"></span>
-                  <span class="bar inline-block"></span></span
-              ></span>
-            </button>
-            <a
-              class="navbar-brand flex relative leading-1/4em"
-              href="index.html"
-              ><span class="navbar-brand-inner"
-                ><img
-                  class="logo-default"
-                  src="assets/images/demo/digital-hub/logo.png"
-                  alt="Hub" /></span
-            ></a>
-          </div>
-          <div class="lqd-mobile-sec-nav w-full absolute z-10">
-            <div
-              class="mobile-navbar-collapse navbar-collapse collapse w-full"
-              id="lqd-mobile-sec-nav"
-              aria-expanded="false"
-              role="navigation"
-            >
-              <ul
-                id="mobile-primary-nav"
-                class="reset-ul lqd-mobile-main-nav main-nav lqd-submenu-toggle-hover"
-              >
-                <li
-                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-7550 current_page_item menu-item-7601"
-                >
-                  <a href="index.html#banner" class="leading-1/4em">Home</a>
-                </li>
-                <li class="menu-item-has-children">
-                  <a href="index.html#events" class="leading-1/4em"
-                    >Events
-                    <span class="submenu-expander absolute"></span>
-                    <span class="link-icon inline-flex hide-if-empty right-icon"
-                      ><i class="lqd-icn-ess icon-ion-ios-arrow-down"></i></span
-                  ></a>
-                </li>
-                <li class="menu-item-has-children">
-                  <a href="index.html#manna" class="leading-1/4em"
-                    >Manna <span class="submenu-expander absolute"></span>
-                    <span class="link-icon inline-flex hide-if-empty right-icon"
-                      ><i class="lqd-icn-ess icon-ion-ios-arrow-down"></i></span
-                  ></a>
-                </li>
-                <li>
-                  <a href="index.html#case-studies" class="leading-1/4em"
-                    >Stories</a
-                  >
-                </li>
-                <li>
-                  <a href="index.html#programs" class="leading-1/4em"
-                    >Programs</a
-                  >
-                </li>
-                <li>
-                  <a href="index.html#contact" class="leading-1/4em"
-                    >Contact Us</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="w-25percent flex items-center justify-end lg:hidden">
-            <div class="module-btn px-0/5em">
-              <a
-                href="/umusozi.html"
-                class="btn btn-solid btn-md uppercase text-13 font-bold tracking-1/5 leading-1/4em bg-white rounded-100 shadow-md text-blue-700 hover:text-white"
-                ><span class="btn-txt" data-text="Umusozi w'Ubumwe"
-                  >Umusozi w' Ubumwe</span
-                ></a
-              >
-            </div>
-          </div>
-        </div>
-      </header>
+				id="site-header"
+				class="main-header main-header-overlay"
+				data-sticky-header="true"
+				data-sticky-values-measured="false"
+				data-sticky-options='{"disableOnMobile": true}'
+			>
+				<section class="lqd-section desktop-header md:hidden">
+					<div class="container-fluid p-0">
+						<div class="flex flex-wrap w-full ">
+							<div class="navbar-brand-plain w-15percent py-30 flex">
+								<a
+									href="index.html"
+									class="navbar-brand flex relative p-0 leading-1/4em"
+									><span class="navbar-brand-inner post-rel"
+										><img
+											width="150px"
+											class="logo-default"
+											src="assets/images/demo/digital-hub/logo.png"
+											alt="Rabagirana" /></span
+								></a>
+							</div>
+							<div
+								class="module-primary-nav w-60percent flex  justify-centre lg:w-85percent"
+								style="flex: 1;"
+							>
+								<div
+									class="navbar-collapse inline-flex lqd-submenu-cover p-0"
+									id="main-header-collapse"
+									aria-expanded="false"
+									role="navigation"
+								>
+									<ul
+										id="primary-nav"
+										class="main-nav flex justify-center reset-ul inline-ul lqd-menu-counter-right lqd-menu-items-inline main-nav-hover-default lqd-submenu-toggle-hover"
+										data-submenu-options='{"toggleType": "fade", "handler": "mouse-in-out"}'
+										data-localscroll="true"
+										data-localscroll-options='{"itemsSelector" : ">li > a", "trackWindowScroll": true, "includeParentAsOffset": true}'
+									>
+										<li class="is-active"><a class="leading-1/4em text-blue-700" href="/index.html#banner">Home</a></li>
+										<li><a class="leading-1/4em text-blue-700" href="/index.html#programs">Programs</a></li>
+										<li><a class="leading-1/4em text-blue-700" href="/umusozi.html">Umusozi w' ubumwe</a></li>
+										<li><a class="leading-1/4em text-blue-700" href="/index.html#case-studies">Stories</a></li>
+										<li><a class="leading-1/4em text-blue-700" href="/index.html#events">Events</a></li>
+										<li><a class="leading-1/4em text-blue-700"href="/index.html#manna">Manna</a></li>
+										<li><a class="leading-1/4em text-blue-700" href="/resources.html">Resources</a></li>
+										<li><a class="leading-1/4em text-blue-700" href="/index.html#contact">Contact Us</a</li>
+									</ul>
+								</div>
+							</div>
+							<div class="w-25percent flex items-center justify-end "
+							data-custom-animations="true"
+							data-ca-options='{"animationTarget": "h2, h6, p, .btn", "duration" : 1800, "delay" : 170, "ease": "power4.out", "initValues": {"y": "65px", "rotationY" : 65, "opacity" : 0} , "animations": {"y": "0px", "rotationY" : 0, "opacity" : 1}}'>
+								<div class="fancy-button module-btn px-0/5em">
+									<a
+									href="#contact-modal"
+									class="btn btn-solid btn-md btn-icon-right btn-hover-reveal font-bold uppercase tracking-1/5 leading-1/4em whitespace-nowrap rounded-100 text-white"
+									data-lity="#contact-modal"
+									><span class="btn-txt" data-text="Donate">Donate</span>
+									<span class="btn-icon text-16"
+										><i
+											aria-hidden="true"
+											class="lqd-icn-ess icon-md-arrow-round-forward-2"
+										></i></span
+								></a>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<div class="lqd-mobile-sec relative">
+					<div
+						class="lqd-mobile-sec-inner navbar-header flex items-stretch w-full"
+					>
+						<div class="lqd-mobile-modules-container empty"></div>
+						<button
+							type="button"
+							class="bg-transparent border-none navbar-toggle collapsed nav-trigger style-mobile flex relative items-center justify-end p-0"
+							data-ld-toggle="true"
+							data-bs-toggle="collapse"
+							data-bs-target="#lqd-mobile-sec-nav"
+							aria-expanded="false"
+							data-toggle-options='{ "changeClassnames":  {"html":  "mobile-nav-activated"} }'
+						>
+							<span class="sr-only">Menu</span>
+							<span class="bars inline-block relative z-1"
+								><span class="bars-inner flex flex-col w-full h-full"
+									><span class="bar inline-block"></span>
+									<span class="bar inline-block"></span>
+									<span class="bar inline-block"></span></span
+							></span>
+						</button>
+						<a
+							class="navbar-brand flex relative leading-1/4em"
+							href="index.html"
+							><span class="navbar-brand-inner"
+								><img
+									class="logo-default"
+									src="assets/images/demo/digital-hub/logo.png"
+									alt="Hub" /></span
+						></a>
+					</div>
+					<div class="lqd-mobile-sec-nav w-full absolute z-10">
+						<div
+							class="mobile-navbar-collapse navbar-collapse collapse w-full"
+							id="lqd-mobile-sec-nav"
+							aria-expanded="false"
+							role="navigation"
+						>
+							<ul
+								id="mobile-primary-nav"
+								class="reset-ul lqd-mobile-main-nav main-nav lqd-submenu-toggle-hover"
+							>
+								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-7550 current_page_item menu-item-7601"
+								><a href="#banner" class="leading-1/4em">Home</a></li>
+								<li><a href="#programs" class="leading-1/4em">Programs</a></li>
+								<li><a href="/umusozi.html" class="leading-1/4em">Umusozi w' ubumwe</a></li>
+								<li><a href="#case-studies" class="leading-1/4em">Stories</a></li>
+								<li><a href="#events" class="leading-1/4em">Events</a></li>
+								<li><a href="#manna" class="leading-1/4em">Manna </a></li>
+								<li><a href="/resources.html" class="leading-1/4em">Resources</a></li>
+								<li><a href="#contact" class="leading-1/4em">Contact Us</a></li>
+							</ul>
+						</div>
+					</div>
+					
+				</div>
+			</header>
       <div class="titlebar-inner pt-120">
         <div class="container">
           <div class="row justify-center -mx-15">

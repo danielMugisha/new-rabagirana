@@ -59,7 +59,7 @@
 			>
 				<section class="lqd-section desktop-header md:hidden">
 					<div class="container-fluid p-0">
-						<div class="flex flex-wrap w-full justify-between">
+						<div class="flex flex-wrap w-full ">
 							<div class="navbar-brand-plain w-15percent py-30 flex">
 								<a
 									href="index.html"
@@ -73,7 +73,8 @@
 								></a>
 							</div>
 							<div
-								class="module-primary-nav w-60percent flex justify-end lg:w-85percent"
+								class="module-primary-nav w-60percent flex  justify-centre lg:w-85percent"
+								style="flex: 1;"
 							>
 								<div
 									class="navbar-collapse inline-flex lqd-submenu-cover p-0"
@@ -88,64 +89,33 @@
 										data-localscroll="true"
 										data-localscroll-options='{"itemsSelector" : ">li > a", "trackWindowScroll": true, "includeParentAsOffset": true}'
 									>
-										<li class="is-active">
-											<a class="leading-1/4em text-blue-700" href="#banner"
-												>Home</a
-											>
-										</li>
-										<li class="menu-item-has-children">
-											<a class="leading-1/4em text-blue-700" href="#events"
-												>Events <span class="submenu-expander"></span>
-												</a
-											>
-										</li>
-										<li class="menu-item-has-children">
-											<a
-												class="leading-1/4em text-blue-700"
-												href="#manna"
-												>Manna <span class="submenu-expander"></span>
-												<span
-													class="link-icon inline-flex hide-if-empty right-icon"
-												>
-												</span></a
-											>
-										</li>
-										<li>
-											<a class="leading-1/4em text-blue-700" href="#case-studies"
-												>Stories</a
-											>
-										</li>
-										<li>
-											<a
-												class="leading-1/4em text-blue-700"
-												href="#programs"
-												>Programs</a
-											>
-										</li>
-										<li>
-											<a
-												class="leading-1/4em text-blue-700"
-												href="/resources.html"
-												>Resources</a
-											>
-										</li>
-										<li>
-											<a class="leading-1/4em text-blue-700" href="#contact"
-												>Contact Us</a
-											>
-										</li>
+										<li class="is-active"><a class="leading-1/4em text-blue-700" href="#banner">Home</a></li>
+										<li><a class="leading-1/4em text-blue-700" href="#programs">Programs</a></li>
+										<li><a class="leading-1/4em text-blue-700" href="/umusozi.html">Umusozi w' ubumwe</a></li>
+										<li><a class="leading-1/4em text-blue-700" href="#case-studies">Stories</a></li>
+										<li><a class="leading-1/4em text-blue-700" href="#events">Events</a></li>
+										<li><a class="leading-1/4em text-blue-700"href="#manna">Manna</a></li>
+										<li><a class="leading-1/4em text-blue-700" href="/resources.html">Resources</a></li>
+										<li><a class="leading-1/4em text-blue-700" href="#contact">Contact Us</a</li>
 									</ul>
 								</div>
 							</div>
-							<div class="w-25percent flex items-center justify-end lg:hidden">
-								<div class="module-btn px-0/5em">
+							<div class="w-25percent flex items-center justify-end "
+							data-custom-animations="true"
+							data-ca-options='{"animationTarget": "h2, h6, p, .btn", "duration" : 1800, "delay" : 170, "ease": "power4.out", "initValues": {"y": "65px", "rotationY" : 65, "opacity" : 0} , "animations": {"y": "0px", "rotationY" : 0, "opacity" : 1}}'>
+								<div class="fancy-button module-btn px-0/5em">
 									<a
-										href="/umusozi.html"
-										class="btn btn-solid btn-md uppercase text-13 font-bold tracking-1/5 leading-1/4em bg-white rounded-100 shadow-md text-blue-700 hover:text-white"
-										><span class="btn-txt" data-text="Umusozi w'Ubumwe"
-											>Umusozi w' Ubumwe</span
-										></a
-									>
+									href="#contact-modal"
+									class="btn btn-solid btn-md btn-icon-right btn-hover-reveal font-bold uppercase tracking-1/5 leading-1/4em whitespace-nowrap rounded-100 text-white"
+									data-lity="#contact-modal"
+									><span class="btn-txt" data-text="Donate">Donate</span>
+									<span class="btn-icon text-16"
+										><i
+											aria-hidden="true"
+											class="lqd-icn-ess icon-md-arrow-round-forward-2"
+										></i></span
+								></a>
+									
 								</div>
 							</div>
 						</div>
@@ -194,54 +164,19 @@
 								id="mobile-primary-nav"
 								class="reset-ul lqd-mobile-main-nav main-nav lqd-submenu-toggle-hover"
 							>
-								<li
-									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-7550 current_page_item menu-item-7601"
-								>
-									<a href="#banner" class="leading-1/4em">Home</a>
-								</li>
-								<li class="menu-item-has-children">
-									<a href="#events" class="leading-1/4em"
-										>Events
-										<span class="submenu-expander absolute"></span>
-										<span class="link-icon inline-flex hide-if-empty right-icon"
-											><i class="lqd-icn-ess icon-ion-ios-arrow-down"></i></span
-									></a>
-								</li>
-								<li class="menu-item-has-children">
-									<a href="#manna" class="leading-1/4em"
-										>Manna <span class="submenu-expander absolute"></span>
-										<span class="link-icon inline-flex hide-if-empty right-icon"
-											><i class="lqd-icn-ess icon-ion-ios-arrow-down"></i></span
-									></a>
-								</li>
-								<li>
-									<a href="#case-studies" class="leading-1/4em">Stories</a>
-								</li>
-								<li>
-									<a href="#programs" class="leading-1/4em"
-										>Programs</a
-									>
-								</li>
-								<li>
-									<a href="/resources.html" class="leading-1/4em"
-										>Resources</a
-									>
-								</li>
+								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-7550 current_page_item menu-item-7601"
+								><a href="#banner" class="leading-1/4em">Home</a></li>
+								<li><a href="#programs" class="leading-1/4em">Programs</a></li>
+								<li><a href="/umusozi.html" class="leading-1/4em">Umusozi w' ubumwe</a></li>
+								<li><a href="#case-studies" class="leading-1/4em">Stories</a></li>
+								<li><a href="#events" class="leading-1/4em">Events</a></li>
+								<li><a href="#manna" class="leading-1/4em">Manna </a></li>
+								<li><a href="/resources.html" class="leading-1/4em">Resources</a></li>
 								<li><a href="#contact" class="leading-1/4em">Contact Us</a></li>
 							</ul>
 						</div>
 					</div>
-					<div class="w-25percent flex items-center justify-end lg:hidden">
-						<div class="module-btn px-0/5em">
-							<a
-								href="/umusozi.html"
-								class="btn btn-solid btn-md uppercase text-13 font-bold tracking-1/5 leading-1/4em bg-white rounded-100 shadow-md text-blue-700 hover:text-white"
-								><span class="btn-txt" data-text="Umusozi w'Ubumwe"
-									>Umusozi w' Ubumwe</span
-								></a
-							>
-						</div>
-					</div>
+					
 				</div>
 			</header>
 			<main
@@ -250,6 +185,7 @@
 				style="background-image: url(assets/images/demo/digital-hub/bg-min.png)"
 			>
 				<div id="lqd-contents-wrap">
+					<!-- Hero -->
 					<section
 						class="lqd-section banner min-h-100vh w-full flex flex-column items-center justify-center"
 						id="banner"
@@ -275,19 +211,19 @@
 									data-custom-animations="true"
 									data-ca-options='{"animationTarget": "h2, h6, p, .btn", "duration" : 1800, "delay" : 170, "ease": "power4.out", "initValues": {"y": "65px", "rotationY" : 65, "opacity" : 0} , "animations": {"y": "0px", "rotationY" : 0, "opacity" : 1}}'
 								>
-									<div class="ld-fancy-heading relative">
+									<!-- <div class="ld-fancy-heading relative">
 										<h6
 											class="ld-fh-element inline-block relative mb-2em text-12 uppercase font-bold tracking-1/5 text-gray-900"
 										>
 											"Comfort my people"
 										</h6>
-									</div>
+									</div> -->
 									<div class="ld-fancy-heading relative">
 										<h2
 											class="ld-fh-element inline-block relative text-rotator-activated mb-0/25em text-72 leading-1/05em tracking-0"
 											data-text-rotator="true"
 										>
-											Souls could shine brighter than the
+											Souls can shine brighter than the
 											<span class="txt-rotate-keywords" style="color: #f3c248"
 												><span
 													class="txt-rotate-keyword lqd-keyword-slide-out is-next"
@@ -305,26 +241,27 @@
 									</div>
 									<div class="ld-fancy-heading relative">
 										<p class="ld-fh-element relative mb-2em text-20 leading-32">
-											Equip Christian workers to become catalysts of
-											healing/reconciliation and community transformation.
+											Our mission is to equip Christian workers to become catalysts of
+											healing, reconciliation, and community transformation.
 										</p>
 									</div>
 									<div
 										class="flex flex-row flex-wrap items-center justify-start"
 									>
-										<div class="fancy-button mr-15 module-btn sm:w-full">
-											<a
-												href="#contact-modal"
-												class="btn btn-solid btn-xlg btn-icon-right btn-hover-reveal font-bold uppercase tracking-1/5 leading-1/4em whitespace-nowrap bg-transparent rounded-100 text-white"
-												data-lity="#contact-modal"
-												><span class="btn-txt" data-text="Donate">Donate</span>
-												<span class="btn-icon text-16"
-													><i
-														aria-hidden="true"
-														class="lqd-icn-ess icon-md-arrow-round-forward-2"
-													></i></span
-											></a>
-										</div>
+							
+										<div class="fancy-button  module-btn ">
+								<a
+									href="#contact-modal"
+									class="btn btn-solid btn-xlg btn-icon-right btn-hover-reveal font-bold uppercase tracking-1/5 leading-1/4em whitespace-nowrap bg-transparent rounded-100 text-white"
+									data-lity="#contact-modal"
+									><span class="btn-txt" data-text="Donate">Donate</span>
+									<span class="btn-icon text-16"
+										><i
+											aria-hidden="true"
+											class="lqd-icn-ess icon-md-arrow-round-forward-2"
+										></i></span
+								></a>
+							</div>
 										<div class="fancy-button text-left sm:w-full">
 											<a
 												href="#contact"
@@ -399,112 +336,198 @@
 							</div>
 						</div>
 					</section>
+					<!-- Programs -->
 					<section
-						class="lqd-section services pt-50"
-						id="events"
+						class="lqd-section case-study pt-30 pb-50"
+						id="programs"
 						data-custom-animations="true"
-						data-ca-options='{"animationTarget": ".animation-element", "ease": "power4.out", "initValues": {"y": "60px", "rotationZ" : 5, "opacity" : 0, "transformOrigin": "50% 50% 120px"} , "animations": {"y": "0px", "rotationZ" : 0, "opacity" : 1, "transformOrigin": "50% 50% 0px"}}'
+						data-ca-options='{"animationTarget": ".animation-element", "ease": "power4.out", "initValues": {"y": "45px", "rotationY" : 45, "opacity" : 0} , "animations": {"y": "0px", "rotationY" : 0, "opacity" : 1}}'
 					>
 						<div class="container">
-							<div class="row">
-								<div class="col col-xl-4 col-12 mb-30 sm:py-0">
-									<div
-										class="iconbox flex flex-grow-1 relative items-center iconbox-custombg animation-element"
-									>
-										<div class="iconbox-icon-wrap mr-60">
-											<div
-												class="iconbox-icon-container relative z-1 m-0 w-55 h-55 text-primary text-54"
-											>
-												<span class="icon-custom-bg"
-													><svg class="w-145" viewBox="0 0 200 200">
-														<path
-															fill="#F2F4F8"
-															d="M54.4, -27.6C66, -11.2, 68, 14.6, 57.3, 31.9C46.6, 49.1, 23.3, 57.8, -0.3, 58C-23.9, 58.2, -47.9, 49.8, -55.4, 34.4C-63, 18.9, -54.2, -3.6, -42.2, -20.3C-30.3, -36.9, -15.1, -47.6, 3.1, -49.3C21.3, -51.1, 42.7, -44.1, 54.4, -27.6Z"
-															transform="translate(100 100)"
-														></path>
-													</svg> 
-												</span
-												><img src="assets/images/common/heart.png"/>
-											</div>
+							<div class="row justify-center">
+								<div class="col col-12 col-xl-6 text-center p-0 mb-30">
+									<div class="title-module">
+										<div class="ld-fancy-heading relative animation-element">
+											<h2 class="ld-fh-element inline-block relative mb-0/5em" style="text-decoration: underline; text-underline-offset: 10px;">
+												Our Programs
+											</h2>
 										</div>
-										<div class="contents">
-											<h3 class="lqd-iconbox-heading mb-0/7em text-18">
-												Healing & Reconsiliation
-											</h3>
-											<p>
-												Our vision is to see Rwanda become a source of lasting
-												peace, unity and a light to the nations.
+										<div class="ld-fancy-heading relative animation-element">
+											<p
+												class="ld-fh-element inline-block relative mb-0/5em text-20 leading-1/7em"
+											>
+												Through various programs, we aim at achieving our
+												objectives, in conflicts resolution, healing and
+												reconciliation and christian personal development.
 											</p>
 										</div>
 									</div>
 								</div>
-								<div class="col col-xl-4 col-12 mb-30 sm:py-0">
+								<div class="col col-12 p-0"></div>
+								<div
+									class="col col-12 col-md-6 col-xl-3 p-20 module-content module-1"
+								>
 									<div
-										class="iconbox flex flex-grow-1 relative items-center iconbox-custombg animation-element"
+										class="icon-box-module py-45 px-30 bg-white rounded-10 mb-30 sm:m-0 animation-element"
 									>
-										<div class="iconbox-icon-wrap mr-60">
-											<div
-												class="iconbox-icon-container relative z-1 m-0 w-55 h-55 text-primary text-54"
-											>
-												<span class="icon-custom-bg"
-													><svg class="w-145" viewBox="0 0 200 200">
-														<path
-															fill="#F2F4F8"
-															d="M54.4, -27.6C66, -11.2, 68, 14.6, 57.3, 31.9C46.6, 49.1, 23.3, 57.8, -0.3, 58C-23.9, 58.2, -47.9, 49.8, -55.4, 34.4C-63, 18.9, -54.2, -3.6, -42.2, -20.3C-30.3, -36.9, -15.1, -47.6, 3.1, -49.3C21.3, -51.1, 42.7, -44.1, 54.4, -27.6Z"
-															transform="translate(100 100)"
-														></path>
-													</svg> </span
-												><img src="assets/images/common/conflict-resolution.png"/>
-											</div>
-										</div>
-										<div class="contents">
-											<h3 class="lqd-iconbox-heading mb-0/7em text-18">
-												Conflict Resolution
-											</h3>
-											<p>
-												Let's break dividing walls and celebrate diversity to
-												the glory of God.
-											</p>
-										</div>
-									</div>
-								</div>
-								<div class="col col-xl-4 col-12 mb-30 sm:py-0">
-									<div
-										class="iconbox flex flex-grow-1 relative items-center iconbox-custombg animation-element"
-									>
-										<div class="iconbox-icon-wrap mr-60">
-											<div
-												class="iconbox-icon-container relative z-1 m-0 w-55 h-55 text-primary text-54"
-											>
-												<span class="icon-custom-bg"
-													><svg class="w-145" viewBox="0 0 200 200">
-														<path
-															fill="#F2F4F8"
-															d="M54.4, -27.6C66, -11.2, 68, 14.6, 57.3, 31.9C46.6, 49.1, 23.3, 57.8, -0.3, 58C-23.9, 58.2, -47.9, 49.8, -55.4, 34.4C-63, 18.9, -54.2, -3.6, -42.2, -20.3C-30.3, -36.9, -15.1, -47.6, 3.1, -49.3C21.3, -51.1, 42.7, -44.1, 54.4, -27.6Z"
-															transform="translate(100 100)"
-														></path>
-													</svg> </span
+										<div
+											class="iconbox text-start mb-0 items-start flex flex-grow-1 relative flex-col iconbox-default"
+										>
+											<div class="iconbox-icon-wrap">
+												<div
+													class="iconbox-icon-container inline-flex relative z-1 rounded-full mb-25 w-55 h-55 text-26 bg-red-100"
 												>
-												<img src="assets/images/common/leadership.png"/>
+													<img src="assets/images/common/love.png"/>
+												</div>
+											</div>
+											<div class="contents text-start">
+												<h3 class="lqd-iconbox-heading text-20 mb-0/75em">
+													Healing and Reconciliation
+												</h3>
+												<div class="text-14 mb-2/5rem">
+													Repairing the Rwandan community to become a source of
+													lasting peace, unity and a light to the nations, to
+													the glory of God.
+												</div>
+												<a
+													href="programs.html"
+													class="btn btn-naked btn-icon-right btn-hover-reveal mt-1/5em mb-0 tracking-1/5 leading-1/4em text-13 uppercase font-bold text-blue-600"
+													><span class="btn-txt" data-text="― Learn more"
+														>― Learn more</span
+													>
+													<span class="btn-icon text-18"
+														><i
+															class="lqd-icn-ess icon-md-arrow-forward"
+														></i></span
+												></a>
 											</div>
 										</div>
-										<div class="contents">
-											<h3 class="lqd-iconbox-heading mb-0/7em text-18">
-												Leadership Training
-											</h3>
-											<p>
-												Equip Christian workers to become catalysts of
-												healing/reconciliation and community transformation.
-											</p>
+									</div>
+								</div>
+								<div
+									class="col col-12 col-md-6 col-xl-3 p-20 module-content module-2"
+								>
+									<div
+										class="icon-box-module py-45 px-30 bg-white rounded-10 mt-60 mb-30 lg:mt-0 sm:m-0 animation-element"
+									>
+										<div
+											class="iconbox text-start mb-0 items-start flex flex-grow-1 relative flex-col iconbox-default"
+										>
+											<div class="iconbox-icon-wrap">
+												<div
+													class="iconbox-icon-container inline-flex relative z-1 rounded-full mb-25 w-55 h-55 text-26 bg-blue-100"
+												>
+													<img src="assets/images/common/goal (1).png"/>
+												</div>
+											</div>
+											<div class="contents text-start">
+												<h3 class="lqd-iconbox-heading text-20 mb-0/75em">
+													Community Outreach
+												</h3>
+												<div class="text-14 mb-2/5rem">
+													Making lives better, Christian way of developing
+													communities and bringing hope to those in despair.
+												</div>
+												<a
+													href="programs.html"
+													class="btn btn-naked btn-icon-right btn-hover-reveal mt-1/5em mb-0 tracking-1/5 leading-1/4em text-13 uppercase font-bold text-blue-600"
+													><span class="btn-txt" data-text="― Learn more"
+														>― Learn more</span
+													>
+													<span class="btn-icon text-18"
+														><i
+															class="lqd-icn-ess icon-md-arrow-forward"
+														></i></span
+												></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div
+									class="col col-12 col-md-6 col-xl-3 p-20 module-content module-3"
+								>
+									<div
+										class="icon-box-module py-45 px-30 bg-white rounded-10 mb-30 sm:m-0 animation-element"
+									>
+										<div
+											class="iconbox text-start mb-0 items-start flex flex-grow-1 relative flex-col iconbox-default"
+										>
+											<div class="iconbox-icon-wrap">
+												<div
+													class="iconbox-icon-container inline-flex relative z-1 rounded-full mb-25 w-55 h-55 text-26 bg-green-100"
+												>
+													<img src="assets/images/common/team.png">
+												</div>
+											</div>
+											<div class="contents text-start">
+												<h3 class="lqd-iconbox-heading text-20 mb-0/75em">
+													Servant Leadership
+												</h3>
+												<div class="text-14 mb-2/5rem">
+													Developing church leaders and equiping them with tools
+													to nurture the larger flock with wisdom and
+													compassion.
+												</div>
+												<a
+													href="programs.html"
+													class="btn btn-naked btn-icon-right btn-hover-reveal mt-1/5em mb-0 tracking-1/5 leading-1/4em text-13 uppercase font-bold text-blue-600"
+													><span class="btn-txt" data-text="― Learn more"
+														>― Learn more</span
+													>
+													<span class="btn-icon text-18"
+														><i
+															class="lqd-icn-ess icon-md-arrow-forward"
+														></i></span
+												></a>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</section>
-					<section class="lqd-section portfolio pt-150 pb-100">
-						<div class="container-fluid">
+					<!-- Stories -->
+					<section
+						class="lqd-section case-study-carousel pt-60 pb-50"
+						id="case-studies"
+						data-custom-animations="true"
+						data-ca-options='{"animationTarget": ".animation-element", "ease": "power4.out", "initValues": {"y": "30px", "opacity" : 0} , "animations": {"y": "0px", "opacity" : 1}}'
+					>
+						<div class="container">
+							<div class="row items-center justify-between">
+								<div class="col col-12 col-md-6 p-0">
+									<div class="ld-fancy-heading relative animation-element">
+										<h2 class="m-0 ld-fh-element m-0 inline-block pos-re">
+											Success Stories
+										</h2>
+									</div>
+								</div>
+								<div class="col col-12 p-0">
+									<div class="carousel-container pt-40 animation-element">
+										<div
+											class="carousel-items"
+											id="stories"
+											data-lqd-flickity='{ "equalHeightCells": true, "filters": "#pf-filter-46824385", "prevNextButtons": true, "navArrow":  6, "fullwidthSide":  true, "buttonsAppendTo":  "self" }'
+										>
+
+									</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- Events -->
+					<section class="lqd-section portfolio pb-100" >
+						<div class="container-fluid" id="events">
+							<div class="col col-12 col-md-6 p-0" style="margin: 2rem;">
+								<div class="ld-fancy-heading relative animation-element">
+									<h2 class="ld-fh-element m-0 inline-block pos-re">
+										Events
+									</h2>
+								</div>
+							</div>
 							<div class="row d-flex justify-around" id="upcoming">
+								
 								<div class="col col-12 col-md-6 col-xl-3 p-0 module-content">
 									<div
 										class="lqd-fb relative lqd-fb-style-6 rounded-4 h-pt-125 text-white"
@@ -670,6 +693,7 @@
 							</div>
 						</div>
 					</section>
+					<!-- Manna -->
 					<section class="lqd-section marketing pt-60 pb-60" id="manna">
 						<div class="container">
 							<div class="row items-center">
@@ -679,19 +703,19 @@
 									data-ca-options='{"animationTarget": "img", "duration" : 2000, "ease": "power4.out", "initValues": {"x": "-60px", "rotationY" : 60, "opacity" : 0, "transformOrigin": "50% 50% 0px"} , "animations": {"x": "0px", "rotationY" : 0, "opacity" : 1, "transformOrigin": "50% 50% 120px"}}'
 								>
 									<div
-										class="carousel-container relative carousel-nav-shaped carousel-dots-mobile-inside carousel-dots-mobile-center"
+										class="relative "
 										id="img-carousel"
 									>
 										<div
-											class="carousel-items relative -mx-15"
+											class=" relative"
 											data-lqd-flickity='{"cellAlign": "left", "groupCells": false, "prevNextButtons": false, "pageDots": false}'
 											tabindex="0"
 										>
 											<div
-												class="carousel-item flex flex-col justify-center has-one-child w-full px-15"
+												class="flex flex-col justify-center has-one-child w-full px-15"
 											>
-												<div class="carousel-item-inner relative w-full">
-													<div class="carousel-item-content relative w-full">
+												<div class=" relative w-full">
+													<div class=" relative w-full">
 														<p>
 															<img
 																id="manna-image"
@@ -710,14 +734,14 @@
 								</div>
 								<div class="col col-xl-7 col-12 p-0">
 									<div class="module-content">
-										<div class="carousel-container relative">
-											<div class="carousel-items relative -mx-15" tabindex="0">
+										<div class=" relative">
+											<div class="relative -mx-15" tabindex="0">
 												<div
-													class="carousel-item flex flex-col justify-center has-one-child w-full px-15"
+													class=" flex flex-col justify-center has-one-child w-full px-15"
 													aria-hidden="true"
 												>
-													<div class="carousel-item-inner relative w-full">
-														<div class="carousel-item-content relative w-full">
+													<div class="relative w-full">
+														<div class="relative w-full">
 															<div
 																class="flex items-start content-center flex-col mt-0 mb-40 md:mb-0"
 																data-custom-animations="true"
@@ -792,254 +816,50 @@
 							</div>
 						</div>
 					</section>
-					<section
-						class="lqd-section case-study-carousel pt-60 pb-50"
-						id="case-studies"
-						data-custom-animations="true"
-						data-ca-options='{"animationTarget": ".animation-element", "ease": "power4.out", "initValues": {"y": "30px", "opacity" : 0} , "animations": {"y": "0px", "opacity" : 1}}'
-					>
-						<div class="container">
-							<div class="row items-center justify-between">
-								<div class="col col-12 col-md-6 p-0">
-									<div class="ld-fancy-heading relative animation-element">
-										<h2 class="m-0 ld-fh-element m-0 inline-block pos-re">
-											Success Stories
-										</h2>
-									</div>
-								</div>
-								<div class="col col-12 p-0">
-									<div class="carousel-container pt-40 animation-element">
-										<div
-											class="carousel-items relative"
-											id="stories"
-											data-lqd-flickity='{ "equalHeightCells": true, "filters": "#pf-filter-46824385", "prevNextButtons": true, "navArrow":  6, "fullwidthSide":  true, "buttonsAppendTo":  "self" }'
-										>
-
-									</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</section>
-					<section
-						class="lqd-section case-study pt-30 pb-50"
-						id="programs"
-						data-custom-animations="true"
-						data-ca-options='{"animationTarget": ".animation-element", "ease": "power4.out", "initValues": {"y": "45px", "rotationY" : 45, "opacity" : 0} , "animations": {"y": "0px", "rotationY" : 0, "opacity" : 1}}'
-					>
-						<div class="container">
-							<div class="row justify-center">
-								<div class="col col-12 col-xl-6 text-center p-0 mb-30">
-									<div class="title-module">
-										<div class="ld-fancy-heading relative animation-element">
-											<h2 class="ld-fh-element inline-block relative mb-0/5em">
-												Our Programs
-											</h2>
-										</div>
-										<div class="ld-fancy-heading relative animation-element">
-											<p
-												class="ld-fh-element inline-block relative mb-0/5em text-20 leading-1/7em"
-											>
-												Through various programs, we aim at achieving our
-												objectives, in conflicts resolution, healing and
-												reconciliation and christian personal development.
-											</p>
-										</div>
-									</div>
-								</div>
-								<div class="col col-12 p-0"></div>
-								<div
-									class="col col-12 col-md-6 col-xl-3 p-20 module-content module-1"
-								>
-									<div
-										class="icon-box-module py-45 px-30 bg-white rounded-10 mb-30 sm:m-0 animation-element"
-									>
-										<div
-											class="iconbox text-start mb-0 items-start flex flex-grow-1 relative flex-col iconbox-default"
-										>
-											<div class="iconbox-icon-wrap">
-												<div
-													class="iconbox-icon-container inline-flex relative z-1 rounded-full mb-25 w-55 h-55 text-26 bg-red-100"
-												>
-													<img src="assets/images/common/love.png"/>
-												</div>
-											</div>
-											<div class="contents text-start">
-												<h3 class="lqd-iconbox-heading text-20 mb-0/75em">
-													Healing and Reconciliation
-												</h3>
-												<div class="text-14 mb-2/5rem">
-													Repairing the Rwandan community to become a source of
-													lasting peace, unity and a light to the nations, to
-													the glory of God.
-												</div>
-												<a
-													href="programs.html"
-													class="btn btn-naked btn-icon-right btn-hover-reveal mt-1/5em mb-0 tracking-1/5 leading-1/4em text-13 uppercase font-bold text-blue-600"
-													><span class="btn-txt" data-text="― Learn more"
-														>― Learn more</span
-													>
-													<span class="btn-icon text-18"
-														><i
-															class="lqd-icn-ess icon-md-arrow-forward"
-														></i></span
-												></a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div
-									class="col col-12 col-md-6 col-xl-3 p-20 module-content module-2"
-								>
-									<div
-										class="icon-box-module py-45 px-30 bg-white rounded-10 mt-60 mb-30 lg:mt-0 sm:m-0 animation-element"
-									>
-										<div
-											class="iconbox text-start mb-0 items-start flex flex-grow-1 relative flex-col iconbox-default"
-										>
-											<div class="iconbox-icon-wrap">
-												<div
-													class="iconbox-icon-container inline-flex relative z-1 rounded-full mb-25 w-55 h-55 text-26 bg-blue-100"
-												>
-													<img src="assets/images/common/goal (1).png"/>
-												</div>
-											</div>
-											<div class="contents text-start">
-												<h3 class="lqd-iconbox-heading text-20 mb-0/75em">
-													Community Outreach
-												</h3>
-												<div class="text-14 mb-2/5rem">
-													Making lives better, Christian way of developing
-													communities and bringing hope to those in despair.
-												</div>
-												<a
-													href="programs.html"
-													class="btn btn-naked btn-icon-right btn-hover-reveal mt-1/5em mb-0 tracking-1/5 leading-1/4em text-13 uppercase font-bold text-blue-600"
-													><span class="btn-txt" data-text="― Learn more"
-														>― Learn more</span
-													>
-													<span class="btn-icon text-18"
-														><i
-															class="lqd-icn-ess icon-md-arrow-forward"
-														></i></span
-												></a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div
-									class="col col-12 col-md-6 col-xl-3 p-20 module-content module-3"
-								>
-									<div
-										class="icon-box-module py-45 px-30 bg-white rounded-10 mb-30 sm:m-0 animation-element"
-									>
-										<div
-											class="iconbox text-start mb-0 items-start flex flex-grow-1 relative flex-col iconbox-default"
-										>
-											<div class="iconbox-icon-wrap">
-												<div
-													class="iconbox-icon-container inline-flex relative z-1 rounded-full mb-25 w-55 h-55 text-26 bg-green-100"
-												>
-													<img src="assets/images/common/team.png">
-												</div>
-											</div>
-											<div class="contents text-start">
-												<h3 class="lqd-iconbox-heading text-20 mb-0/75em">
-													Servant Leadership
-												</h3>
-												<div class="text-14 mb-2/5rem">
-													Developing church leaders and equiping them with tools
-													to nurture the larger flock with wisdom and
-													compassion.
-												</div>
-												<a
-													href="programs.html"
-													class="btn btn-naked btn-icon-right btn-hover-reveal mt-1/5em mb-0 tracking-1/5 leading-1/4em text-13 uppercase font-bold text-blue-600"
-													><span class="btn-txt" data-text="― Learn more"
-														>― Learn more</span
-													>
-													<span class="btn-icon text-18"
-														><i
-															class="lqd-icn-ess icon-md-arrow-forward"
-														></i></span
-												></a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</section>
-					<section
-						class="lqd-section testimonial pt-170 pb-85 bg-slate-100 transition-all"
-						id="testimonial"
-					>
-						<div class="lqd-shape lqd-shape-top" data-negative="false">
-							<svg
-								class="lqd-custom-shape left-0 rotate-180"
-								preserveaspectratio="none"
-								viewbox="0 0 1440 150"
-							>
-								<path
-									class="lqd-shape-fill"
-									d="M 0 26.1978 C 275.76 83.8152 430.707 65.0509 716.279 25.6386 C 930.422 -3.86123 1210.32 -3.98357 1439 9.18045 C 2072.34 45.9691 2201.93 62.4429 2560 26.198 V 172.199 L 0 172.199 V 26.1978 Z"
-									fill="#fff"
-								>
-									<animate
-										repeatCount="indefinite"
-										fill="freeze"
-										attributeName="d"
-										dur="10s"
-										values="M0 25.9086C277 84.5821 433 65.736 720 25.9086C934.818 -3.9019 1214.06 -5.23669 1442 8.06597C2079 45.2421 2208 63.5007 2560 25.9088V171.91L0 171.91V25.9086Z; M0 86.3149C316 86.315 444 159.155 884 51.1554C1324 -56.8446 1320.29 34.1214 1538 70.4063C1814 116.407 2156 188.408 2560 86.315V232.317L0 232.316V86.3149Z; M0 53.6584C158 11.0001 213 0 363 0C513 0 855.555 115.001 1154 115.001C1440 115.001 1626 -38.0004 2560 53.6585V199.66L0 199.66V53.6584Z; M0 25.9086C277 84.5821 433 65.736 720 25.9086C934.818 -3.9019 1214.06 -5.23669 1442 8.06597C2079 45.2421 2208 63.5007 2560 25.9088V171.91L0 171.91V25.9086Z"
-									></animate>
-								</path>
-							</svg>
-						</div>
-					</section>
-					<section
+					<!-- Partners -->
+					<section 
 						class="lqd-section clients py-45 bg-slate-100 border-top border-bottom border-black-10 transition-all"
+						id="partners"
 						data-custom-animations="true"
-						data-ca-options='{"animationTarget": ".animation-element", "ease": "power4.out", "initValues": {"scaleX" : 0.2, "scaleY" : 0.2, "opacity" : 0} , "animations": {"scaleX" : 1, "scaleY" : 1, "opacity" : 1}}'
-					>
-
+						data-ca-options='{"animationTarget": ".animation-element", "ease": "power4.out", "initValues": {"scaleX" : 0.2, "scaleY" : 0.2, "opacity" : 0} , "animations": {"scaleX" : 1, "scaleY" : 1, "opacity" : 1}}'>
 							<div class="slider-body">
 								<div class="my-slider">
-								<div class="my-slide-track">
-									<div class="my-slide">
-										<a href="https://www.aiu.ac.ke/"><img src="assets/images/partners/aiu.png" class="partner-img" alt="African International University" title="African International University" /></a>
-									</div>
-									<div class="my-slide">
-										<a href="https://www.belpres.org"><img src="assets/images/partners/bellevue.png" class="partner-img"  alt="Belle Vue" title="Belle Vue" /></a>
-									</div>
-									<div class="my-slide">
-										<a href="https://www.gburwanda.org/wp"><img src="assets/images/partners/gbu.png" class="partner-img"  alt="Groupe Biblique Universitaire" title="Groupe Biblique Universitaire" /></a>
-									</div>
-									<div class="my-slide">
-										<a href="https://www.hhtnglobal.org"><img src="assets/images/partners/hhtnlogo.png" class="partner-img"  alt="HHTN Global" title="HHTN Global" /></a>
-									</div>
-									<div class="my-slide">
-										<a href="https://www.lerucher.org"><img src="assets/images/partners/lerucher.png" class="partner-img"  alt="Le Rucher" title="Le Rucher" /></a>
-									</div>
-									<div class="my-slide">
-										<a href="https://mafint.org/"><img src="assets/images/partners/maf.svg" class="partner-img"  alt="Mission Aviation Fellowship" title="Mission Aviation Fellowship" /></a>
-									</div>
-									<div class="my-slide">
-										<a href="https://micahglobal.org/"><img src="assets/images/partners/micah.jpg" class="partner-img"  alt="Micah Global" title="Micah Global" /></a>
-									</div>
-									<div class="my-slide">
-										<a href="https://www.resonateglobalmission.org"><img src="assets/images/partners/resonate.png" class="partner-img"  alt="Resonate" title="Resonate" /></a>
-									</div>
-									<div class="my-slide">
-										<a href="https://waypeace.org/"><img src="assets/images/partners/wayofpeace.webp" class="partner-img"   alt="Way Of Peace" title="Way Of Peace" /></a>
-									</div>
-									<div class="my-slide">
-										<a href="https://www.worldrenew.net"><img src="assets/images/partners/worldrenew.png" class="partner-img"  alt="World Renew" title="World Renew" /></a>
-									</div>
+									<div class="my-slide-track">
+										<div class="my-slide">
+											<a href="https://www.aiu.ac.ke/"><img src="assets/images/partners/aiu.png" class="partner-img" alt="African International University" title="African International University" /></a>
+										</div>
+										<div class="my-slide">
+											<a href="https://www.belpres.org"><img src="assets/images/partners/bellevue.png" class="partner-img"  alt="Belle Vue" title="Belle Vue" /></a>
+										</div>
+										<div class="my-slide">
+											<a href="https://www.gburwanda.org/wp"><img src="assets/images/partners/gbu.png" class="partner-img"  alt="Groupe Biblique Universitaire" title="Groupe Biblique Universitaire" /></a>
+										</div>
+										<div class="my-slide">
+											<a href="https://www.hhtnglobal.org"><img src="assets/images/partners/hhtnlogo.png" class="partner-img"  alt="HHTN Global" title="HHTN Global" /></a>
+										</div>
+										<div class="my-slide">
+											<a href="https://www.lerucher.org"><img src="assets/images/partners/lerucher.png" class="partner-img"  alt="Le Rucher" title="Le Rucher" /></a>
+										</div>
+										<div class="my-slide">
+											<a href="https://mafint.org/"><img src="assets/images/partners/maf.svg" class="partner-img"  alt="Mission Aviation Fellowship" title="Mission Aviation Fellowship" /></a>
+										</div>
+										<div class="my-slide">
+											<a href="https://micahglobal.org/"><img src="assets/images/partners/micah.jpg" class="partner-img"  alt="Micah Global" title="Micah Global" /></a>
+										</div>
+										<div class="my-slide">
+											<a href="https://www.resonateglobalmission.org"><img src="assets/images/partners/resonate.png" class="partner-img"  alt="Resonate" title="Resonate" /></a>
+										</div>
+										<div class="my-slide">
+											<a href="https://waypeace.org/"><img src="assets/images/partners/wayofpeace.webp" class="partner-img"   alt="Way Of Peace" title="Way Of Peace" /></a>
+										</div>
+										<div class="my-slide">
+											<a href="https://www.worldrenew.net"><img src="assets/images/partners/worldrenew.png" class="partner-img"  alt="World Renew" title="World Renew" /></a>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
 					</section>
+					<!-- Contact -->
 					<section
 						class="lqd-section contact pt-75 pb-100 bg-slate-100 transition-all"
 						id="contact"
@@ -1081,7 +901,7 @@
 												>
 													<mark class="lqd-highlight"
 														><span class="lqd-highlight-txt"
-															>Any questions </span
+															>Questions?</span
 														><span
 															class="lqd-highlight-inner bg-slate-200 bottom-5 left-0"
 														></span>
@@ -1096,7 +916,7 @@
 													data-split-text="true"
 													data-split-options='{"type": "lines"}'
 												>
-													Feel free to reach out to us on email or phone call
+													Feel free to contact us through email or phone call
 												</p>
 											</div>
 										</div>
@@ -1153,6 +973,7 @@
 					</section>
 				</div>
 			</main>
+			<!-- Footer -->
 			<div class="lqd-back-to-top fixed text-10" data-back-to-top="true">
 				<a
 					href="#wrap"
@@ -1232,7 +1053,7 @@
 										<h3
 											class="lqd-iconbox-heading text-end justify-lg-start text-slate-500 text-14 m-0"
 										>
-											Get Latest Events
+											 Events
 										</h3>
 									</div>
 									<div
@@ -1251,7 +1072,7 @@
 										<h3
 											class="lqd-iconbox-heading text-end justify-lg-start text-slate-500 text-14 m-0"
 										>
-											Fresh Manna
+										    Manna
 										</h3>
 									</div>
 								</div>
@@ -1283,13 +1104,14 @@
 									</div>
 									<div class="ld-fancy-heading relative">
 										<p class="ld-fh-element inline-block relative mb-2em">
-											We're Rabagirana. Our passion is to see Rwanda become a
+											Our passion is to see Rwanda become a
 											model of lasting peace, unity and light for the nations to
 											the glory of God.
 										</p>
 									</div>
 									<ul
 										class="icon-list-items inline-items flex flex-wrap list-none p-0 mb-0 -mx-10"
+										style="justify-content: center; align-items: center;"
 									>
 										<li class="icon-list-item inline-item mx-10">
 											<a href="https://www.facebook.com/rabagiranarwanda" target="_blank"><span class="icon-list-icon flex"
@@ -1446,8 +1268,42 @@
 												</svg> </span
 											></a>
 										</li>
+										<div
+										class="flex flex-row flex-wrap items-center justify-start"
+									>
+							
+										<div class="fancy-button  module-btn ">
+								<a
+									href="#contact-modal"
+									class="btn btn-solid btn-sm btn-icon-right btn-hover-reveal font-bold uppercase tracking-1/5 leading-1/4em whitespace-nowrap bg-transparent rounded-100 text-white"
+									data-lity="#contact-modal"
+									><span class="btn-txt" data-text="Donate">Donate</span>
+									<span class="btn-icon text-16"
+										><i
+											aria-hidden="true"
+											class="lqd-icn-ess icon-md-arrow-round-forward-2"
+										></i></span
+								></a>
+							</div>
+										<div class="fancy-button text-left sm:w-full">
+											<a
+												href="#contact"
+												class="btn btn-naked btn-icon-right btn-hover-reveal btn-has-label font-bold uppercase tracking-1/5 leading-1/4em whitespace-nowrap text-blue-700"
+												data-localscroll="true"
+												><span class="btn-txt" 
+													>Join Us</span
+												>
+												<span class="btn-icon"
+													><i
+														aria-hidden="true"
+														class="lqd-icn-ess icon-md-arrow-round-down"
+													></i></span
+											></a>
+										</div>
+									</div>
 									</ul>
 								</div>
+								
 							</div>
 							<div class="w-55percent flex p-0 lg:w-full">
 								<div class="w-full flex flex-wrap p-10 mb-30">
@@ -1626,7 +1482,7 @@
 							</div>
 							<div class="w-25percent lg:w-50percent sm:w-full">
 								<div class="relative flex flex-col bg-slate-300 transition-all rounded-6 p-30 mx-15 mb-30 hover:bg-accent">
-									<h3 class="ld-fh-element relative mb-0/5em text-22 text-slate-900">FOR USA AND CANADA</h3>
+									<h3 class="ld-fh-element relative mb-0/5em text-22 text-slate-900">FOR NORTH AMERICA</h3>
 									<p class="ld-fh-element relative mb-0/5em text-17 leading-1/6em">
 										You can also make your check out to: <b>Le Rucher/Mercy Ministries</b> and <b>enclose a note saying it is for Rabagirana.</b> Send to Renee Schudel, 13890 Indio Drive, Sloughhouse, CA 95683.</p>
 								</div>
@@ -1663,7 +1519,6 @@
 		<script src="assets/js/liquid-gdpr.min.js"></script>
 		<script src="assets/js/theme.min.js"></script>
 		<script src="assets/js/liquid-ajax-contact-form.min.js"></script>
-		<!-- <script src="assets/js/load-data.js"></script> -->
 		<script src="assets/js/index.js?version=0.1"></script>
 		<script>
 			var phone_number = "*182*8*1*00000#";

@@ -112,7 +112,7 @@ const buildStories = () => {
 	var el = document.getElementById("stories");
 	el.innerHTML = "";
 	stories.forEach((story) => {
-		el.innerHTML += `<div class="carousel-item col-12 col-lg-6 col-xl-4 mr-60">
+		el.innerHTML += `<div class="carousel-item col-12 col-lg-6 col-xl-4 mr-70">
         <article
             class="lqd-pf-item lqd-pf-item-style-3 lqd-pf-overlay-bg-scale lqd-pf-content-v pf-details-h-str"
         >

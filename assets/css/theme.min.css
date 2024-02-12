@@ -8599,7 +8599,7 @@ style + .ld-module-sd > .ld-module-dropdown:last-child {
 	display: flex;
 }
 .carousel-item {
-	flex: 0 0 auto;
+	flex: 0 0 30%;
 }
 .carousel-item.has-one-child .carousel-item-content,
 .carousel-item.has-one-child .carousel-item-inner {
