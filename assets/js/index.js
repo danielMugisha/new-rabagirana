@@ -75,6 +75,7 @@ const stories = [
 ];
 
 window.onload = () => {
+	getBaseUrl();
 	getMannaContent();
 	getEvents();
 	getStories();
@@ -104,7 +105,7 @@ window.onload = () => {
     });
 };
 
- 
+let apiURL = "";
 
 
 
@@ -173,37 +174,56 @@ const buildStories = () => {
 	});
 };
 
+const getBaseUrl = () => {
+	if (window.location.hostname === "localhost") {
+		apiURL =  "http://localhost:3000/"; // or whatever port your backend runs on
+	}
+	apiURL =  "https://app.rabagirana.org/";
+};
+
 
 const subscribe = async () => {
 	const emailInput = document.getElementById('email');
 	const userEmail = emailInput.value;
-  const url = 'https://strapi.rabagirana.org/api/subscription/subscribe';
+  
+	if (!userEmail || !userEmail.includes('@')) {
+		alert('Please enter a valid email address');
+		return;
+	}
+  
+	const url = `${apiURL}api/subscriptions/subscribe`;
 
-  const data = {
-    email: userEmail,
-    status: 'subscribed'
-  };
+	const data = {
+		email: userEmail,
+		status: 'subscribed'
+	};
 
-  const response = await fetch(url, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data)
-  });
+	try {
+		const response = await fetch(url, {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(data)
+		});
 
-  const result = await response.json();
+		const result = await response.json();
 
-  if (response.ok) {
-	e
-    console.log(`Success! ${email} added to Mailchimp list.`);
-  } else {
-    console.error(`Error: ${response.status}, ${result.title}`);
-  }
+		if (response.ok) {
+			alert(`Thank you for subscribing!`);
+			emailInput.value = ''; // Clear the input field
+		} else {
+			alert(`Error: ${result.error || 'Subscription failed'}`);
+		}
+	} catch (error) {
+		console.error('Subscription error:', error);
+		alert('Sorry, there was a problem processing your subscription. Please try again later.');
+	}
 };
 
+
 const getMannaContent = async () => {
-	const URL = 'https://strapi.rabagirana.org/api/manna/latest';
+	const URL = `${apiURL}api/manna/latest`;
 
 	const response = await fetch(URL);
 	const result = await response.json();
@@ -212,7 +232,7 @@ const getMannaContent = async () => {
 }
 
 const getStories = async () => {
-	const URL = 'https://strapi.rabagirana.org/api/story';
+	const URL = `${apiURL}api/stories`;
 
 	const response = await fetch(URL);
 	const result = await response.json();
@@ -227,14 +247,14 @@ const buildManna = (manna) =>{
 	var summaryElement = document.getElementById('manna-summary')
 	var linkElement = document.getElementById('manna-link')
 
-	imageElement.src = `https://strapi.rabagirana.org/${manna.featuredImage}`
+	imageElement.src = `${apiURL}${manna.featuredImage}`
 	titleElement.innerText = manna.title
 	summaryElement.innerText = manna.summary
 	linkElement.href = `manna.html\?id=${manna._id}`
 }
 
 const getEvents = async () =>{
-	const URL = 'https://strapi.rabagirana.org/api/event/latest';
+	const URL = `${apiURL}api/events/latest`;
 
 	const response = await fetch(URL);
 	const result = await response.json();
@@ -267,7 +287,7 @@ const buildEvents = (events) =>{
 						<figure class="w-full h-full m-0">
 							<img
 								class="w-full"
-								src="https://strapi.rabagirana.org/${event.featuredImage}"
+								src="${apiURL}${event.featuredImage}"
 								alt="${event.title}"
 							/>
 						</figure>
