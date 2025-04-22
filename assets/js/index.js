@@ -79,6 +79,7 @@ window.onload = () => {
 	getMannaContent();
 	getEvents();
 	getStories();
+	buildStories();
     var hero = document.getElementById("hero");
     var video = document.getElementById("myVideo");
 	var soundBtn = document.getElementById("sound-btn")
@@ -109,11 +110,11 @@ let apiURL = "";
 
 
 
-const buildStories = () => {
+const buildStories = async () => {
 	var el = document.getElementById("stories");
 	el.innerHTML = "";
 	stories.forEach((story) => {
-		el.innerHTML += `<div class="carousel-item col-12 col-lg-6 col-xl-4 mr-70">
+		el.innerHTML += `<div class="carousel-item col-12 col-lg-6 col-xl-3 mr-70">
         <article
             class="lqd-pf-item lqd-pf-item-style-3 lqd-pf-overlay-bg-scale lqd-pf-content-v pf-details-h-str"
         >
@@ -174,7 +175,7 @@ const buildStories = () => {
 	});
 };
 
-const getBaseUrl = () => {
+const getBaseUrl = async () => {
 	if (window.location.hostname === "localhost") {
 		apiURL =  "http://localhost:3000/"; // or whatever port your backend runs on
 	}
@@ -238,10 +239,9 @@ const getStories = async () => {
 	const result = await response.json();
 	if(result.data.lenth > 0)
 		stories = result.data
-	buildStories(stories)
 }
 
-const buildManna = (manna) =>{
+const buildManna = async (manna) =>{
 	var imageElement = document.getElementById('manna-image')
 	var titleElement = document.getElementById('manna-title')
 	var summaryElement = document.getElementById('manna-summary')
@@ -263,7 +263,7 @@ const getEvents = async () =>{
 		buildEvents(result.data)
 }
 
-const buildEvents = (events) =>{
+const buildEvents = async(events) =>{
 	const el = document.getElementById('upcoming')
 	el.innerHTML = '';
 	events.forEach(event =>{
