@@ -31,6 +31,41 @@
       rel="stylesheet"
     />
     <title>Rabagirana Ministries</title>
+    <style>
+      /* Global card styles for all program cards */
+      .iconbox.program-card {
+        border: 1px solid #f1f1f1;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+        overflow: hidden;
+        border-radius: 10px;
+        z-index: 1;
+        
+      }
+
+      .iconbox.program-card:hover {
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        transform: translateY(-5px);
+        z-index: 10;
+        position: absolute;
+        max-width: 260px;
+      }
+
+      .iconbox.program-card .contents p {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        max-height: 2.8em;
+        transition: max-height 0.3s ease;
+      }
+
+      .iconbox.program-card:hover .contents p {
+        
+        -webkit-line-clamp: unset;
+        max-height: 400px;
+      }
+    </style>
   </head>
   <body
     data-localscroll-offset="80"
@@ -110,7 +145,7 @@
 											class="lqd-icn-ess icon-md-arrow-round-forward-2"
 										></i></span
 								></a>
-									
+
 								</div>
 							</div>
 						</div>
@@ -171,7 +206,7 @@
 							</ul>
 						</div>
 					</div>
-					
+
 				</div>
 			</header>
       <div class="titlebar-inner pt-120">
@@ -331,16 +366,7 @@
                       class="lqd-tabs-pane fade active in"
                     >
                       <p style="text-align: center">
-                        We conduct a 3-day interactive workshop based on the
-                        Bible to enable people to experience healing of their
-                        wounds and reconcile at the cross. We train facilitators
-                        to enable them to run workshops. Schools are a
-                        combination of workshops, training, and practicums. We
-                        encourage attendants to repackage the topics in artistic
-                        formats like songs or paintings or integrate HHTN into
-                        community development processes. For more info. see the
-                        article "Introducing the Reconciliation Ministry" and
-                        the video.
+                        No Content ???.
                       </p>
                       <div
                       class="lqd-section icon-box-page bg-gray-200 pt-90 pb-100"
@@ -355,53 +381,21 @@
                             <div class="col col-12 col-md-6 col-xl-3 p-0">
                               <div class="flex flex-auto p-15 transition-all">
                                 <div
-                                  class="iconbox flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0"
+                                  class="iconbox program-card flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0"
                                   data-slideelement-onhover="true"
                                   data-slideelement-options='{ "visibleElement":  ".iconbox-icon-wrap, p, h3", "hiddenElement":  ".btn", "alignMid":  true, "triggerElement":  ".iconbox" }'
                                 >
-                                  <div class="iconbox-icon-wrap">
-                                    <div
-                                      class="mb-25 iconbox-icon-container inline-flex w-40 text-50"
-                                    >
-                                      <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="50"
-                                        height="50"
-                                        viewbox="0 0 50 50"
-                                      >
-                                        <path
-                                          d="M4.15-19.775a8.008,8.008,0,0,0,5.908-2.466A8.072,8.072,0,0,0,12.5-28.125V-42.48L18.115-37.7l1.465-1.66L11.67-46.24,3.76-39.355,5.225-37.7,10.4-42.48v14.355a6.082,6.082,0,0,1-1.782,4.443A6.017,6.017,0,0,1,4.15-21.875H-6.25a5.843,5.843,0,0,0-3.223.977,10.241,10.241,0,0,0-2.661,2.515,12.919,12.919,0,0,0-1.807,3.369,10.428,10.428,0,0,0-.659,3.54v6.25h2.1v-6.25a10.192,10.192,0,0,1,1.807-5.469q1.807-2.832,4.443-2.832Zm-25-25h25v-2.1h-25a4,4,0,0,0-2.93,1.221A4,4,0,0,0-25-42.725v41.7A4,4,0,0,0-23.779,1.9a4,4,0,0,0,2.93,1.221v-2.1A2.013,2.013,0,0,1-22.339.464,2.013,2.013,0,0,1-22.9-1.025v-41.7a2.013,2.013,0,0,1,.562-1.489A2.013,2.013,0,0,1-20.85-44.775Zm6.25,47.9h2.1v-4.15h-2.1Zm.83-32.52L-10.4-32.91l3.32,3.516,1.66-1.66-3.516-3.32L-5.42-37.7l-1.66-1.66L-10.4-35.84l-3.369-3.516-1.66,1.66,3.564,3.32-3.564,3.32ZM15.82-14.355,12.5-10.84,9.18-14.355,7.52-12.7l3.516,3.32L7.52-6.055l1.66,1.66L12.5-7.91l3.32,3.516,1.66-1.66-3.516-3.32L17.48-12.7ZM22.9-42.725H25a4,4,0,0,0-1.221-2.93,4,4,0,0,0-2.93-1.221h-2.1v2.1h2.1a2.013,2.013,0,0,1,1.489.562A2.013,2.013,0,0,1,22.9-42.725Zm0,41.7A2.013,2.013,0,0,1,22.339.464a2.013,2.013,0,0,1-1.489.562H-6.25v2.1h27.1A4,4,0,0,0,23.779,1.9,4,4,0,0,0,25-1.025v-29.2H22.9Zm0-33.35H25v-4.15H22.9Z"
-                                          transform="translate(25 46.875)"
-                                          fill="#184341"
-                                        ></path>
-                                      </svg>
-                                    </div>
-                                  </div>
+                                  
                                   <h3
                                     class="lqd-iconbox-heading text-center text-16 leading-1em mb-0"
                                   >
                                     Prison Ministry
                                   </h3>
                                   <div class="contents">
-                                    <p>Workshop, schools</p>
-                                    <!-- <a
-                                      href="page-company-services.html"
-                                      class="btn btn-naked btn-icon-right btn-hover-swp mt-em mb-0 items-center text-15 font-bold text-secondary hover:text-primary"
-                                      ><span
-                                        class="btn-txt"
-                                        data-text="Learn more"
-                                        >Learn more</span
-                                      >
-                                      <span class="btn-icon text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i> </span
-                                      ><span
-                                        class="btn-icon mr-10 text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i></span
-                                    ></a> -->
+                                    <p>Despite COVID-19 challenges, “Sowers of Love” groups continued offering pastoral and psychosocial support to inmates, showing remarkable resilience.
+                                      Detained women engaged in income-generating crafts, with some supporting their families and children's education.
+                                      As activities resumed, Rabagirana was granted space to train new facilitators and prepare long-term inmates for reintegration, including genocide-related cases.
+                                      </p>
                                   </div>
                                 </div>
                               </div>
@@ -409,53 +403,20 @@
                             <div class="col col-12 col-md-6 col-xl-3 p-0">
                               <div class="flex flex-auto p-15 transition-all">
                                 <div
-                                  class="iconbox flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0"
+                                  class="iconbox program-card flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0"
                                   data-slideelement-onhover="true"
                                   data-slideelement-options='{ "visibleElement":  ".iconbox-icon-wrap, p, h3", "hiddenElement":  ".btn", "alignMid":  true, "triggerElement":  ".iconbox" }'
                                 >
-                                  <div class="iconbox-icon-wrap">
-                                    <div
-                                      class="mb-25 iconbox-icon-container inline-flex w-40 text-50"
-                                    >
-                                      <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="50"
-                                        height="50"
-                                        viewbox="0 0 50 50"
-                                      >
-                                        <path
-                                          d="M-1.27-11.865-8.35-5.225l-7.08-6.641a15.456,15.456,0,0,0-3.857,2.441,16.207,16.207,0,0,0-3.027,3.467,16.786,16.786,0,0,0-1.978,4.272A16.381,16.381,0,0,0-25,3.125H8.35a16.381,16.381,0,0,0-.708-4.81A16.786,16.786,0,0,0,5.664-5.957,16.207,16.207,0,0,0,2.637-9.424,15.16,15.16,0,0,0-1.27-11.865ZM-22.705,1.025A14.51,14.51,0,0,1-20.41-4.956a14.049,14.049,0,0,1,4.785-4.419l7.275,7.08,7.52-7.08A15.276,15.276,0,0,1,3.882-4.956,13.977,13.977,0,0,1,6.25,1.025Zm14.355-12.5a8.048,8.048,0,0,0,5.908-2.441A7.991,7.991,0,0,0,0-19.775v-4.2H-2.1v4.2a6.082,6.082,0,0,1-1.782,4.443A6.017,6.017,0,0,1-8.35-13.525a6.04,6.04,0,0,1-4.443-1.807A6.04,6.04,0,0,1-14.6-19.775v-4.2h6.25a8.048,8.048,0,0,0,5.908-2.441A7.991,7.991,0,0,0,0-32.275H-12.5a4,4,0,0,0-2.93,1.221,4,4,0,0,0-1.221,2.93v8.35a7.991,7.991,0,0,0,2.441,5.859A7.991,7.991,0,0,0-8.35-11.475Zm-6.25-16.65a2.048,2.048,0,0,1,.586-1.514,2.048,2.048,0,0,1,1.514-.586H-2.49a6.014,6.014,0,0,1-2.222,3.052A6.049,6.049,0,0,1-8.35-26.025H-14.6Zm18.75-8.35h12.5v-2.051H4.15Zm0,6.25h12.5v-2.051H4.15Zm-6.25-12.5a1.967,1.967,0,0,1,.586-1.489A2.1,2.1,0,0,1,0-44.775H20.85a2.013,2.013,0,0,1,1.489.562,2.013,2.013,0,0,1,.562,1.489H25a4,4,0,0,0-1.221-2.93,4,4,0,0,0-2.93-1.221H0a4,4,0,0,0-2.93,1.221,4,4,0,0,0-1.221,2.93v6.25H-2.1Zm25,8.35H25v-4.15H22.9Zm0,8.35a2.013,2.013,0,0,1-.562,1.489,2.013,2.013,0,0,1-1.489.562H13.965l-5.615,4.2v-4.2H4.15v2.1h2.1v6.25l8.35-6.25h6.25a4,4,0,0,0,2.93-1.221A4,4,0,0,0,25-26.025v-4.2H22.9Z"
-                                          transform="translate(25 46.875)"
-                                          fill="#184341"
-                                        ></path>
-                                      </svg>
-                                    </div>
-                                  </div>
                                   <h3
                                     class="lqd-iconbox-heading text-center text-16 leading-1em mb-0"
                                   >
                                     Universities
                                   </h3>
                                   <div class="contents">
-                                    <p>Education for peace for children</p>
-                                    <!-- <a
-                                      href="page-company-services.html"
-                                      class="btn btn-naked btn-icon-right btn-hover-swp mt-em mb-0 items-center text-15 font-bold text-secondary hover:text-primary"
-                                      ><span
-                                        class="btn-txt"
-                                        data-text="Learn more"
-                                        >Learn more</span
-                                      >
-                                      <span class="btn-icon text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i> </span
-                                      ><span
-                                        class="btn-icon mr-10 text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i></span
-                                    ></a> -->
+                                    <p>Rabagirana partnered with CEP and GBU to train 125 facilitators who reached over 26,000 students with healing and reconciliation efforts.
+                                      Campus activities included workshops, unity clubs, and dialogue sessions.
+                                      Many participants later became church leaders, reflecting the program’s lasting spiritual influence.
+                                      </p>
                                   </div>
                                 </div>
                               </div>
@@ -463,53 +424,21 @@
                             <div class="col col-12 col-md-6 col-xl-3 p-0">
                               <div class="flex flex-auto p-15 transition-all">
                                 <div
-                                  class="iconbox flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0"
+                                  class="iconbox program-card flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0"
                                   data-slideelement-onhover="true"
                                   data-slideelement-options='{ "visibleElement":  ".iconbox-icon-wrap, p, h3", "hiddenElement":  ".btn", "alignMid":  true, "triggerElement":  ".iconbox" }'
                                 >
-                                  <div class="iconbox-icon-wrap">
-                                    <div
-                                      class="mb-25 iconbox-icon-container inline-flex w-40 text-50"
-                                    >
-                                      <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="50"
-                                        height="50"
-                                        viewbox="0 0 50 50"
-                                      >
-                                        <path
-                                          d="M-2.1-31.25a1.023,1.023,0,0,0-.269-.757,1.023,1.023,0,0,0-.757-.269H-8.35V-37.5a1.023,1.023,0,0,0-.269-.757,1.023,1.023,0,0,0-.757-.269,1.023,1.023,0,0,0-.757.269,1.023,1.023,0,0,0-.269.757v5.225h-5.225a1.023,1.023,0,0,0-.757.269,1.023,1.023,0,0,0-.269.757,1.023,1.023,0,0,0,.269.757,1.023,1.023,0,0,0,.757.269H-10.4V-25a1.023,1.023,0,0,0,.269.757,1.023,1.023,0,0,0,.757.269,1.023,1.023,0,0,0,.757-.269A1.023,1.023,0,0,0-8.35-25v-5.225h5.225a1.023,1.023,0,0,0,.757-.269A1.023,1.023,0,0,0-2.1-31.25ZM15.625-17.725H5.225a1.056,1.056,0,0,0-.781.293,1.056,1.056,0,0,0-.293.781.994.994,0,0,0,.293.732,1.056,1.056,0,0,0,.781.293h10.4a.975.975,0,0,0,.757-.293,1.043,1.043,0,0,0,.269-.732,1.111,1.111,0,0,0-.269-.781A.975.975,0,0,0,15.625-17.725Zm0,8.35H5.225a1.056,1.056,0,0,0-.781.293.994.994,0,0,0-.293.732,1.056,1.056,0,0,0,.293.781,1.056,1.056,0,0,0,.781.293h10.4a.975.975,0,0,0,.757-.293,1.111,1.111,0,0,0,.269-.781,1.043,1.043,0,0,0-.269-.732A.975.975,0,0,0,15.625-9.375Zm-10.4-20.85h10.4a1.023,1.023,0,0,0,.757-.269,1.023,1.023,0,0,0,.269-.757,1.023,1.023,0,0,0-.269-.757,1.023,1.023,0,0,0-.757-.269H5.225a1.111,1.111,0,0,0-.781.269.975.975,0,0,0-.293.757.975.975,0,0,0,.293.757A1.111,1.111,0,0,0,5.225-30.225ZM-3.32-18.555a1.136,1.136,0,0,0-.757-.293.965.965,0,0,0-.708.293L-9.18-14.16l-4.346-4.395a1.136,1.136,0,0,0-.757-.293.965.965,0,0,0-.708.293,1.05,1.05,0,0,0-.342.757.9.9,0,0,0,.342.708l4.346,4.395L-14.99-8.35a1.05,1.05,0,0,0-.342.757.9.9,0,0,0,.342.708.559.559,0,0,0,.317.171,3.945,3.945,0,0,0,.513.024,4.048,4.048,0,0,0,.488-.024.574.574,0,0,0,.342-.171l4.395-4.346L-4.59-6.885a.574.574,0,0,0,.342.171,4.048,4.048,0,0,0,.488.024,3.945,3.945,0,0,0,.513-.024.559.559,0,0,0,.317-.171.9.9,0,0,0,.342-.708A1.05,1.05,0,0,0-2.93-8.35L-7.275-12.7-2.93-17.09a1.107,1.107,0,0,1-.2-.635A2.829,2.829,0,0,0-3.32-18.555ZM16.65-46.875v2.1a6.06,6.06,0,0,1,4.468,1.782A6.06,6.06,0,0,1,22.9-38.525v33.3A6.06,6.06,0,0,1,21.118-.757,6.06,6.06,0,0,1,16.65,1.025h-33.3A6.06,6.06,0,0,1-21.118-.757,6.06,6.06,0,0,1-22.9-5.225v-33.3a6.06,6.06,0,0,1,1.782-4.468,6.06,6.06,0,0,1,4.468-1.782H4.15v-2.1h-20.8a8.048,8.048,0,0,0-5.908,2.441A8.048,8.048,0,0,0-25-38.525v33.3A8.048,8.048,0,0,0-22.559.684,8.048,8.048,0,0,0-16.65,3.125h33.3A8.048,8.048,0,0,0,22.559.684,8.048,8.048,0,0,0,25-5.225v-33.3a8.048,8.048,0,0,0-2.441-5.908A8.048,8.048,0,0,0,16.65-46.875Zm-8.3,2.1H12.5v-2.1H8.35Z"
-                                          transform="translate(25 46.875)"
-                                          fill="#184341"
-                                        ></path>
-                                      </svg>
-                                    </div>
-                                  </div>
+                                  
                                   <h3
                                     class="lqd-iconbox-heading text-center text-16 leading-1em mb-0"
                                   >
                                     Churches and Organizations
                                   </h3>
                                   <div class="contents">
-                                    <p>Lighthouse, Kumbaya Shine Band, Africa Rise</p>
-                                    <!-- <a
-                                      href="page-company-services.html"
-                                      class="btn btn-naked btn-icon-right btn-hover-swp mt-em mb-0 items-center text-15 font-bold text-secondary hover:text-primary"
-                                      ><span
-                                        class="btn-txt"
-                                        data-text="Learn more"
-                                        >Learn more</span
-                                      >
-                                      <span class="btn-icon text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i> </span
-                                      ><span
-                                        class="btn-icon mr-10 text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i></span
-                                    ></a> -->
+                                    <p>In partnership with Kicukiro churches, Rabagirana brought together genocide survivors and perpetrators to form solidarity groups promoting reconciliation.
+                                      Some groups evolved into cooperatives and youth clubs, fostering lasting unity.
+                                      A Gahanga group built Iriba ry’imbabazi (“Spring of Mercy”), a shared water source now benefiting over 200 community members.
+                                      </p>
                                   </div>
                                 </div>
                               </div>
@@ -517,132 +446,39 @@
                             <div class="col col-12 col-md-6 col-xl-3 p-0">
                               <div class="flex flex-auto p-15 transition-all">
                                 <div
-                                  class="iconbox flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0"
+                                  class="iconbox program-card flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0"
                                   data-slideelement-onhover="true"
                                   data-slideelement-options='{ "visibleElement":  ".iconbox-icon-wrap, p, h3", "hiddenElement":  ".btn", "alignMid":  true, "triggerElement":  ".iconbox" }'
                                 >
-                                  <div class="iconbox-icon-wrap">
-                                    <div
-                                      class="mb-25 iconbox-icon-container inline-flex w-40 text-50"
-                                    >
-                                      <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="50"
-                                        height="50"
-                                        viewbox="0 0 50 50"
-                                      >
-                                        <path
-                                          d="M-12.5-23.975a12.164,12.164,0,0,0,.977,4.858,12.625,12.625,0,0,0,2.686,3.979,12.625,12.625,0,0,0,3.979,2.686A12.164,12.164,0,0,0,0-11.475a12.164,12.164,0,0,0,4.858-.977,12.625,12.625,0,0,0,3.979-2.686,12.625,12.625,0,0,0,2.686-3.979,12.164,12.164,0,0,0,.977-4.858,12.219,12.219,0,0,0-.977-4.834,12.267,12.267,0,0,0-2.686-3.979,13.194,13.194,0,0,0-3.979-2.686,11.909,11.909,0,0,0-4.858-1,11.909,11.909,0,0,0-4.858,1,13.194,13.194,0,0,0-3.979,2.686,12.267,12.267,0,0,0-2.686,3.979A12.219,12.219,0,0,0-12.5-23.975ZM0-34.375a10.52,10.52,0,0,1,4.321.879,10.008,10.008,0,0,1,3.394,2.441L-2.1-21.24l-3.32-3.32-1.465,1.416,5.029,5.029L9.18-29.15a23.614,23.614,0,0,1,.83,2.441,9.912,9.912,0,0,1,.391,2.734,10.417,10.417,0,0,1-.806,4.1,10.549,10.549,0,0,1-2.2,3.32,10.063,10.063,0,0,1-3.3,2.222,10.417,10.417,0,0,1-4.1.806,10.417,10.417,0,0,1-4.1-.806,10.063,10.063,0,0,1-3.3-2.222,10.549,10.549,0,0,1-2.2-3.32,10.417,10.417,0,0,1-.806-4.1,10.293,10.293,0,0,1,.806-4.053,10.549,10.549,0,0,1,2.2-3.32,10.063,10.063,0,0,1,3.3-2.222A10.417,10.417,0,0,1,0-34.375Zm2.1-10.4H6.25v-2.1H2.1Zm12.5-2.1H10.4v2.1H12.7a12.335,12.335,0,0,0,1.245,3.662,12.644,12.644,0,0,0,2.246,3.052,12.644,12.644,0,0,0,3.052,2.246A12.335,12.335,0,0,0,22.9-34.57v12.7a12.106,12.106,0,0,1-2.588,7.2,37.292,37.292,0,0,1-6.2,6.567A56.254,56.254,0,0,1,6.567-2.759Q2.637-.439,0,.83-2.637-.439-6.567-2.759a56.254,56.254,0,0,1-7.544-5.347,37.292,37.292,0,0,1-6.2-6.567,12.106,12.106,0,0,1-2.588-7.2v-12.7a12.335,12.335,0,0,0,3.662-1.245,12.644,12.644,0,0,0,3.052-2.246,12.644,12.644,0,0,0,2.246-3.052A12.335,12.335,0,0,0-12.7-44.775H-2.1v-2.1H-14.6a10.417,10.417,0,0,1-.806,4.1,10.258,10.258,0,0,1-2.2,3.3,10.258,10.258,0,0,1-3.3,2.2,10.417,10.417,0,0,1-4.1.806v14.6a14.662,14.662,0,0,0,3.906,9.717A49.988,49.988,0,0,0-12.5-4.224,65.054,65.054,0,0,0-3.906,1.147L0,3.125,3.906,1.147A65.054,65.054,0,0,0,12.5-4.224a49.988,49.988,0,0,0,8.594-7.935A14.662,14.662,0,0,0,25-21.875v-14.6a10.417,10.417,0,0,1-4.1-.806,10.258,10.258,0,0,1-3.3-2.2,10.258,10.258,0,0,1-2.2-3.3A10.417,10.417,0,0,1,14.6-46.875Z"
-                                          transform="translate(25 46.875)"
-                                          fill="#184341"
-                                        ></path>
-                                      </svg>
-                                    </div>
-                                  </div>
+                                  
                                   <h3
                                     class="lqd-iconbox-heading text-center text-16 leading-1em mb-0"
                                   >
                                     Trainings
                                   </h3>
                                   <div class="contents">
-                                    <p>Prison Ministry and perpetrators reintegration</p>
-                                    <!-- <a
-                                      href="page-company-services.html"
-                                      class="btn btn-naked btn-icon-right btn-hover-swp mt-em mb-0 items-center text-15 font-bold text-secondary hover:text-primary"
-                                      ><span
-                                        class="btn-txt"
-                                        data-text="Learn more"
-                                        >Learn more</span
-                                      >
-                                      <span class="btn-icon text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i> </span
-                                      ><span
-                                        class="btn-icon mr-10 text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i></span
-                                    ></a> -->
+                                    <p>In Training ,Rabagirana is launching CECECE to offer leadership, counseling, community development, and discipleship curricula across Rwanda.
+                                      The center will be promoted nationwide, inviting financial support for wider access.
+                                      A resource unit and multimedia studio will help extend its reach beyond Rwanda through digital platforms
+                                      </p>
                                   </div>
                                 </div>
                               </div>
                             </div>
-                            <div class="col col-12 col-md-6 col-xl-3 p-0">
-                              <div class="flex flex-auto p-15 transition-all">
-                                <div
-                                  class="iconbox flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0"
-                                  data-slideelement-onhover="true"
-                                  data-slideelement-options='{ "visibleElement":  ".iconbox-icon-wrap, p, h3", "hiddenElement":  ".btn", "alignMid":  true, "triggerElement":  ".iconbox" }'
-                                >
-                                  <div class="iconbox-icon-wrap">
-                                    <div
-                                      class="mb-25 iconbox-icon-container inline-flex w-40 text-50"
-                                    >
-                                      <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="50"
-                                        height="50"
-                                        viewbox="0 0 50 50"
-                                      >
-                                        <path
-                                          d="M-12.5-23.975a12.164,12.164,0,0,0,.977,4.858,12.625,12.625,0,0,0,2.686,3.979,12.625,12.625,0,0,0,3.979,2.686A12.164,12.164,0,0,0,0-11.475a12.164,12.164,0,0,0,4.858-.977,12.625,12.625,0,0,0,3.979-2.686,12.625,12.625,0,0,0,2.686-3.979,12.164,12.164,0,0,0,.977-4.858,12.219,12.219,0,0,0-.977-4.834,12.267,12.267,0,0,0-2.686-3.979,13.194,13.194,0,0,0-3.979-2.686,11.909,11.909,0,0,0-4.858-1,11.909,11.909,0,0,0-4.858,1,13.194,13.194,0,0,0-3.979,2.686,12.267,12.267,0,0,0-2.686,3.979A12.219,12.219,0,0,0-12.5-23.975ZM0-34.375a10.52,10.52,0,0,1,4.321.879,10.008,10.008,0,0,1,3.394,2.441L-2.1-21.24l-3.32-3.32-1.465,1.416,5.029,5.029L9.18-29.15a23.614,23.614,0,0,1,.83,2.441,9.912,9.912,0,0,1,.391,2.734,10.417,10.417,0,0,1-.806,4.1,10.549,10.549,0,0,1-2.2,3.32,10.063,10.063,0,0,1-3.3,2.222,10.417,10.417,0,0,1-4.1.806,10.417,10.417,0,0,1-4.1-.806,10.063,10.063,0,0,1-3.3-2.222,10.549,10.549,0,0,1-2.2-3.32,10.417,10.417,0,0,1-.806-4.1,10.293,10.293,0,0,1,.806-4.053,10.549,10.549,0,0,1,2.2-3.32,10.063,10.063,0,0,1,3.3-2.222A10.417,10.417,0,0,1,0-34.375Zm2.1-10.4H6.25v-2.1H2.1Zm12.5-2.1H10.4v2.1H12.7a12.335,12.335,0,0,0,1.245,3.662,12.644,12.644,0,0,0,2.246,3.052,12.644,12.644,0,0,0,3.052,2.246A12.335,12.335,0,0,0,22.9-34.57v12.7a12.106,12.106,0,0,1-2.588,7.2,37.292,37.292,0,0,1-6.2,6.567A56.254,56.254,0,0,1,6.567-2.759Q2.637-.439,0,.83-2.637-.439-6.567-2.759a56.254,56.254,0,0,1-7.544-5.347,37.292,37.292,0,0,1-6.2-6.567,12.106,12.106,0,0,1-2.588-7.2v-12.7a12.335,12.335,0,0,0,3.662-1.245,12.644,12.644,0,0,0,3.052-2.246,12.644,12.644,0,0,0,2.246-3.052A12.335,12.335,0,0,0-12.7-44.775H-2.1v-2.1H-14.6a10.417,10.417,0,0,1-.806,4.1,10.258,10.258,0,0,1-2.2,3.3,10.258,10.258,0,0,1-3.3,2.2,10.417,10.417,0,0,1-4.1.806v14.6a14.662,14.662,0,0,0,3.906,9.717A49.988,49.988,0,0,0-12.5-4.224,65.054,65.054,0,0,0-3.906,1.147L0,3.125,3.906,1.147A65.054,65.054,0,0,0,12.5-4.224a49.988,49.988,0,0,0,8.594-7.935A14.662,14.662,0,0,0,25-21.875v-14.6a10.417,10.417,0,0,1-4.1-.806,10.258,10.258,0,0,1-3.3-2.2,10.258,10.258,0,0,1-2.2-3.3A10.417,10.417,0,0,1,14.6-46.875Z"
-                                          transform="translate(25 46.875)"
-                                          fill="#184341"
-                                        ></path>
-                                      </svg>
-                                    </div>
-                                  </div>
-                                  <h3
-                                    class="lqd-iconbox-heading text-center text-16 leading-1em mb-0"
-                                  >
-                                    Church Ministries
-                                  </h3>
-                                  <div class="contents">
-                                    <p>Prison Ministry and perpetrators reintegration</p>
-                                    <!-- <a
-                                      href="page-company-services.html"
-                                      class="btn btn-naked btn-icon-right btn-hover-swp mt-em mb-0 items-center text-15 font-bold text-secondary hover:text-primary"
-                                      ><span
-                                        class="btn-txt"
-                                        data-text="Learn more"
-                                        >Learn more</span
-                                      >
-                                      <span class="btn-icon text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i> </span
-                                      ><span
-                                        class="btn-icon mr-10 text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i></span
-                                    ></a> -->
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
+                            
                           </div>
                         </div>
                       </div>
                       </div>
                     </div>
-                    
+
                     <div
                       id="lqd-tab-item-2"
                       role="tabpanel"
                       class="lqd-tabs-pane fade"
                     >
                       <p style="text-align: center">
-                        We conduct 3-days of basic training on Biblical
-                        principles of development and an additional 3days of
-                        practical outworking that include methods of tackling
-                        poverty, domestic violence, caring for the environment,
-                        and other topics that will result in initiatives leading
-                        to holistic transformation. Together with Resonate
-                        Global Mission, we have also introduced "Helping without
-                        Hurting," a 3-day training manual for churches and
-                        organizations that run community development programs.
+                        We are a Christian Band That Spread the message of Healing , Peace and Unity through arts
                       </p>
                       <div
                       class="lqd-section icon-box-page bg-gray-200 pt-90 pb-100"
@@ -657,53 +493,18 @@
                             <div class="col col-12 col-md-6 col-xl-3 p-0">
                               <div class="flex flex-auto p-15 transition-all">
                                 <div
-                                  class="iconbox flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0"
+                                  class="iconbox program-card flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0"
                                   data-slideelement-onhover="true"
                                   data-slideelement-options='{ "visibleElement":  ".iconbox-icon-wrap, p, h3", "hiddenElement":  ".btn", "alignMid":  true, "triggerElement":  ".iconbox" }'
                                 >
-                                  <div class="iconbox-icon-wrap">
-                                    <div
-                                      class="mb-25 iconbox-icon-container inline-flex w-40 text-50"
-                                    >
-                                      <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="50"
-                                        height="50"
-                                        viewbox="0 0 50 50"
-                                      >
-                                        <path
-                                          d="M4.15-19.775a8.008,8.008,0,0,0,5.908-2.466A8.072,8.072,0,0,0,12.5-28.125V-42.48L18.115-37.7l1.465-1.66L11.67-46.24,3.76-39.355,5.225-37.7,10.4-42.48v14.355a6.082,6.082,0,0,1-1.782,4.443A6.017,6.017,0,0,1,4.15-21.875H-6.25a5.843,5.843,0,0,0-3.223.977,10.241,10.241,0,0,0-2.661,2.515,12.919,12.919,0,0,0-1.807,3.369,10.428,10.428,0,0,0-.659,3.54v6.25h2.1v-6.25a10.192,10.192,0,0,1,1.807-5.469q1.807-2.832,4.443-2.832Zm-25-25h25v-2.1h-25a4,4,0,0,0-2.93,1.221A4,4,0,0,0-25-42.725v41.7A4,4,0,0,0-23.779,1.9a4,4,0,0,0,2.93,1.221v-2.1A2.013,2.013,0,0,1-22.339.464,2.013,2.013,0,0,1-22.9-1.025v-41.7a2.013,2.013,0,0,1,.562-1.489A2.013,2.013,0,0,1-20.85-44.775Zm6.25,47.9h2.1v-4.15h-2.1Zm.83-32.52L-10.4-32.91l3.32,3.516,1.66-1.66-3.516-3.32L-5.42-37.7l-1.66-1.66L-10.4-35.84l-3.369-3.516-1.66,1.66,3.564,3.32-3.564,3.32ZM15.82-14.355,12.5-10.84,9.18-14.355,7.52-12.7l3.516,3.32L7.52-6.055l1.66,1.66L12.5-7.91l3.32,3.516,1.66-1.66-3.516-3.32L17.48-12.7ZM22.9-42.725H25a4,4,0,0,0-1.221-2.93,4,4,0,0,0-2.93-1.221h-2.1v2.1h2.1a2.013,2.013,0,0,1,1.489.562A2.013,2.013,0,0,1,22.9-42.725Zm0,41.7A2.013,2.013,0,0,1,22.339.464a2.013,2.013,0,0,1-1.489.562H-6.25v2.1h27.1A4,4,0,0,0,23.779,1.9,4,4,0,0,0,25-1.025v-29.2H22.9Zm0-33.35H25v-4.15H22.9Z"
-                                          transform="translate(25 46.875)"
-                                          fill="#184341"
-                                        ></path>
-                                      </svg>
-                                    </div>
-                                  </div>
+                                  
                                   <h3
                                     class="lqd-iconbox-heading text-center text-16 leading-1em mb-0"
                                   >
-                                    Studio
+                                    Studio & Practice Room
                                   </h3>
                                   <div class="contents">
-                                    <p>Workshop, schools</p>
-                                    <!-- <a
-                                      href="page-company-services.html"
-                                      class="btn btn-naked btn-icon-right btn-hover-swp mt-em mb-0 items-center text-15 font-bold text-secondary hover:text-primary"
-                                      ><span
-                                        class="btn-txt"
-                                        data-text="Learn more"
-                                        >Learn more</span
-                                      >
-                                      <span class="btn-icon text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i> </span
-                                      ><span
-                                        class="btn-icon mr-10 text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i></span
-                                    ></a> -->
+                                    <p> We offer a range of musical services under Umoja Music by Kumbaya. Find your ideal rehearsal space in our practice room. Capture your sound with our audio and live recording services. Get quality sound rental for any event. Learn and grow with our music instructing in Piano, Guitar, and Drums. Explore your musical journey with us!</p>
                                   </div>
                                 </div>
                               </div>
@@ -711,107 +512,20 @@
                             <div class="col col-12 col-md-6 col-xl-3 p-0">
                               <div class="flex flex-auto p-15 transition-all">
                                 <div
-                                  class="iconbox flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0"
+                                  class="iconbox program-card flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0"
                                   data-slideelement-onhover="true"
                                   data-slideelement-options='{ "visibleElement":  ".iconbox-icon-wrap, p, h3", "hiddenElement":  ".btn", "alignMid":  true, "triggerElement":  ".iconbox" }'
                                 >
-                                  <div class="iconbox-icon-wrap">
-                                    <div
-                                      class="mb-25 iconbox-icon-container inline-flex w-40 text-50"
-                                    >
-                                      <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="50"
-                                        height="50"
-                                        viewbox="0 0 50 50"
-                                      >
-                                        <path
-                                          d="M-1.27-11.865-8.35-5.225l-7.08-6.641a15.456,15.456,0,0,0-3.857,2.441,16.207,16.207,0,0,0-3.027,3.467,16.786,16.786,0,0,0-1.978,4.272A16.381,16.381,0,0,0-25,3.125H8.35a16.381,16.381,0,0,0-.708-4.81A16.786,16.786,0,0,0,5.664-5.957,16.207,16.207,0,0,0,2.637-9.424,15.16,15.16,0,0,0-1.27-11.865ZM-22.705,1.025A14.51,14.51,0,0,1-20.41-4.956a14.049,14.049,0,0,1,4.785-4.419l7.275,7.08,7.52-7.08A15.276,15.276,0,0,1,3.882-4.956,13.977,13.977,0,0,1,6.25,1.025Zm14.355-12.5a8.048,8.048,0,0,0,5.908-2.441A7.991,7.991,0,0,0,0-19.775v-4.2H-2.1v4.2a6.082,6.082,0,0,1-1.782,4.443A6.017,6.017,0,0,1-8.35-13.525a6.04,6.04,0,0,1-4.443-1.807A6.04,6.04,0,0,1-14.6-19.775v-4.2h6.25a8.048,8.048,0,0,0,5.908-2.441A7.991,7.991,0,0,0,0-32.275H-12.5a4,4,0,0,0-2.93,1.221,4,4,0,0,0-1.221,2.93v8.35a7.991,7.991,0,0,0,2.441,5.859A7.991,7.991,0,0,0-8.35-11.475Zm-6.25-16.65a2.048,2.048,0,0,1,.586-1.514,2.048,2.048,0,0,1,1.514-.586H-2.49a6.014,6.014,0,0,1-2.222,3.052A6.049,6.049,0,0,1-8.35-26.025H-14.6Zm18.75-8.35h12.5v-2.051H4.15Zm0,6.25h12.5v-2.051H4.15Zm-6.25-12.5a1.967,1.967,0,0,1,.586-1.489A2.1,2.1,0,0,1,0-44.775H20.85a2.013,2.013,0,0,1,1.489.562,2.013,2.013,0,0,1,.562,1.489H25a4,4,0,0,0-1.221-2.93,4,4,0,0,0-2.93-1.221H0a4,4,0,0,0-2.93,1.221,4,4,0,0,0-1.221,2.93v6.25H-2.1Zm25,8.35H25v-4.15H22.9Zm0,8.35a2.013,2.013,0,0,1-.562,1.489,2.013,2.013,0,0,1-1.489.562H13.965l-5.615,4.2v-4.2H4.15v2.1h2.1v6.25l8.35-6.25h6.25a4,4,0,0,0,2.93-1.221A4,4,0,0,0,25-26.025v-4.2H22.9Z"
-                                          transform="translate(25 46.875)"
-                                          fill="#184341"
-                                        ></path>
-                                      </svg>
-                                    </div>
-                                  </div>
-                                  <h3
-                                    class="lqd-iconbox-heading text-center text-16 leading-1em mb-0"
-                                  >
-                                    Practice Room
-                                  </h3>
-                                  <div class="contents">
-                                    <!-- <p>Lorem, ipsum dolor.</p> -->
-                                    <!-- <a
-                                      href="page-company-services.html"
-                                      class="btn btn-naked btn-icon-right btn-hover-swp mt-em mb-0 items-center text-15 font-bold text-secondary hover:text-primary"
-                                      ><span
-                                        class="btn-txt"
-                                        data-text="Learn more"
-                                        >Learn more</span
-                                      >
-                                      <span class="btn-icon text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i> </span
-                                      ><span
-                                        class="btn-icon mr-10 text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i></span
-                                    ></a> -->
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col col-12 col-md-6 col-xl-3 p-0">
-                              <div class="flex flex-auto p-15 transition-all">
-                                <div
-                                  class="iconbox flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0"
-                                  data-slideelement-onhover="true"
-                                  data-slideelement-options='{ "visibleElement":  ".iconbox-icon-wrap, p, h3", "hiddenElement":  ".btn", "alignMid":  true, "triggerElement":  ".iconbox" }'
-                                >
-                                  <div class="iconbox-icon-wrap">
-                                    <div
-                                      class="mb-25 iconbox-icon-container inline-flex w-40 text-50"
-                                    >
-                                      <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="50"
-                                        height="50"
-                                        viewbox="0 0 50 50"
-                                      >
-                                        <path
-                                          d="M-2.1-31.25a1.023,1.023,0,0,0-.269-.757,1.023,1.023,0,0,0-.757-.269H-8.35V-37.5a1.023,1.023,0,0,0-.269-.757,1.023,1.023,0,0,0-.757-.269,1.023,1.023,0,0,0-.757.269,1.023,1.023,0,0,0-.269.757v5.225h-5.225a1.023,1.023,0,0,0-.757.269,1.023,1.023,0,0,0-.269.757,1.023,1.023,0,0,0,.269.757,1.023,1.023,0,0,0,.757.269H-10.4V-25a1.023,1.023,0,0,0,.269.757,1.023,1.023,0,0,0,.757.269,1.023,1.023,0,0,0,.757-.269A1.023,1.023,0,0,0-8.35-25v-5.225h5.225a1.023,1.023,0,0,0,.757-.269A1.023,1.023,0,0,0-2.1-31.25ZM15.625-17.725H5.225a1.056,1.056,0,0,0-.781.293,1.056,1.056,0,0,0-.293.781.994.994,0,0,0,.293.732,1.056,1.056,0,0,0,.781.293h10.4a.975.975,0,0,0,.757-.293,1.043,1.043,0,0,0,.269-.732,1.111,1.111,0,0,0-.269-.781A.975.975,0,0,0,15.625-17.725Zm0,8.35H5.225a1.056,1.056,0,0,0-.781.293.994.994,0,0,0-.293.732,1.056,1.056,0,0,0,.293.781,1.056,1.056,0,0,0,.781.293h10.4a.975.975,0,0,0,.757-.293,1.111,1.111,0,0,0,.269-.781,1.043,1.043,0,0,0-.269-.732A.975.975,0,0,0,15.625-9.375Zm-10.4-20.85h10.4a1.023,1.023,0,0,0,.757-.269,1.023,1.023,0,0,0,.269-.757,1.023,1.023,0,0,0-.269-.757,1.023,1.023,0,0,0-.757-.269H5.225a1.111,1.111,0,0,0-.781.269.975.975,0,0,0-.293.757.975.975,0,0,0,.293.757A1.111,1.111,0,0,0,5.225-30.225ZM-3.32-18.555a1.136,1.136,0,0,0-.757-.293.965.965,0,0,0-.708.293L-9.18-14.16l-4.346-4.395a1.136,1.136,0,0,0-.757-.293.965.965,0,0,0-.708.293,1.05,1.05,0,0,0-.342.757.9.9,0,0,0,.342.708l4.346,4.395L-14.99-8.35a1.05,1.05,0,0,0-.342.757.9.9,0,0,0,.342.708.559.559,0,0,0,.317.171,3.945,3.945,0,0,0,.513.024,4.048,4.048,0,0,0,.488-.024.574.574,0,0,0,.342-.171l4.395-4.346L-4.59-6.885a.574.574,0,0,0,.342.171,4.048,4.048,0,0,0,.488.024,3.945,3.945,0,0,0,.513-.024.559.559,0,0,0,.317-.171.9.9,0,0,0,.342-.708A1.05,1.05,0,0,0-2.93-8.35L-7.275-12.7-2.93-17.09a1.107,1.107,0,0,1-.2-.635A2.829,2.829,0,0,0-3.32-18.555ZM16.65-46.875v2.1a6.06,6.06,0,0,1,4.468,1.782A6.06,6.06,0,0,1,22.9-38.525v33.3A6.06,6.06,0,0,1,21.118-.757,6.06,6.06,0,0,1,16.65,1.025h-33.3A6.06,6.06,0,0,1-21.118-.757,6.06,6.06,0,0,1-22.9-5.225v-33.3a6.06,6.06,0,0,1,1.782-4.468,6.06,6.06,0,0,1,4.468-1.782H4.15v-2.1h-20.8a8.048,8.048,0,0,0-5.908,2.441A8.048,8.048,0,0,0-25-38.525v33.3A8.048,8.048,0,0,0-22.559.684,8.048,8.048,0,0,0-16.65,3.125h33.3A8.048,8.048,0,0,0,22.559.684,8.048,8.048,0,0,0,25-5.225v-33.3a8.048,8.048,0,0,0-2.441-5.908A8.048,8.048,0,0,0,16.65-46.875Zm-8.3,2.1H12.5v-2.1H8.35Z"
-                                          transform="translate(25 46.875)"
-                                          fill="#184341"
-                                        ></path>
-                                      </svg>
-                                    </div>
-                                  </div>
+                                  
                                   <h3
                                     class="lqd-iconbox-heading text-center text-16 leading-1em mb-0"
                                   >
                                     Responding to invitations
                                   </h3>
                                   <div class="contents">
-                                    <!-- <p>Lighthouse, Kumbaya Shine Band, Africa Rise</p> -->
-                                    <!-- <a
-                                      href="page-company-services.html"
-                                      class="btn btn-naked btn-icon-right btn-hover-swp mt-em mb-0 items-center text-15 font-bold text-secondary hover:text-primary"
-                                      ><span
-                                        class="btn-txt"
-                                        data-text="Learn more"
-                                        >Learn more</span
-                                      >
-                                      <span class="btn-icon text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i> </span
-                                      ><span
-                                        class="btn-icon mr-10 text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i></span
-                                    ></a> -->
+                                    <p>
+                                      We thoughtfully consider all invitations to share the message of healing, peace, and unity through the arts. Whether you're interested in booking a performance, utilizing our recording or rental services, or exploring instruction, please reach out. We'll get back to you promptly to discuss how we can best collaborate and bring this message through the arts to your event or project.
+                                    </p>
                                   </div>
                                 </div>
                               </div>
@@ -821,22 +535,14 @@
                       </div>
                     </div>
                     </div>
-                    
+
                     <div
                       id="lqd-tab-item-3"
                       role="tabpanel"
                       class="lqd-tabs-pane fade"
                     >
                       <p style="text-align: center">
-                        We conduct a 3-day training on worldview and an
-                        introduction to Biblical leadership, character study,
-                        leadership skills, team dynamics, and conflict
-                        transformation. Recently, in partnership with Resonate
-                        Global Mission, we introduced the Timothy Leadership
-                        Training Initiative, a 2-year program with 6 modules for
-                        church leaders with or without theological training.
-                        Trainees attend for four days in three months and carry
-                        out assignments.
+                        Get Involved with Rabagirana Ministries: Opportunities for Learning, Engagement, and Impact
                       </p>
                       <div
                       class="lqd-section icon-box-page bg-gray-200 pt-90 pb-100"
@@ -851,53 +557,18 @@
                             <div class="col col-12 col-md-6 col-xl-3 p-0">
                               <div class="flex flex-auto p-15 transition-all">
                                 <div
-                                  class="iconbox flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0"
+                                  class="iconbox program-card flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0"
                                   data-slideelement-onhover="true"
                                   data-slideelement-options='{ "visibleElement":  ".iconbox-icon-wrap, p, h3", "hiddenElement":  ".btn", "alignMid":  true, "triggerElement":  ".iconbox" }'
                                 >
-                                  <div class="iconbox-icon-wrap">
-                                    <div
-                                      class="mb-25 iconbox-icon-container inline-flex w-40 text-50"
-                                    >
-                                      <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="50"
-                                        height="50"
-                                        viewbox="0 0 50 50"
-                                      >
-                                        <path
-                                          d="M4.15-19.775a8.008,8.008,0,0,0,5.908-2.466A8.072,8.072,0,0,0,12.5-28.125V-42.48L18.115-37.7l1.465-1.66L11.67-46.24,3.76-39.355,5.225-37.7,10.4-42.48v14.355a6.082,6.082,0,0,1-1.782,4.443A6.017,6.017,0,0,1,4.15-21.875H-6.25a5.843,5.843,0,0,0-3.223.977,10.241,10.241,0,0,0-2.661,2.515,12.919,12.919,0,0,0-1.807,3.369,10.428,10.428,0,0,0-.659,3.54v6.25h2.1v-6.25a10.192,10.192,0,0,1,1.807-5.469q1.807-2.832,4.443-2.832Zm-25-25h25v-2.1h-25a4,4,0,0,0-2.93,1.221A4,4,0,0,0-25-42.725v41.7A4,4,0,0,0-23.779,1.9a4,4,0,0,0,2.93,1.221v-2.1A2.013,2.013,0,0,1-22.339.464,2.013,2.013,0,0,1-22.9-1.025v-41.7a2.013,2.013,0,0,1,.562-1.489A2.013,2.013,0,0,1-20.85-44.775Zm6.25,47.9h2.1v-4.15h-2.1Zm.83-32.52L-10.4-32.91l3.32,3.516,1.66-1.66-3.516-3.32L-5.42-37.7l-1.66-1.66L-10.4-35.84l-3.369-3.516-1.66,1.66,3.564,3.32-3.564,3.32ZM15.82-14.355,12.5-10.84,9.18-14.355,7.52-12.7l3.516,3.32L7.52-6.055l1.66,1.66L12.5-7.91l3.32,3.516,1.66-1.66-3.516-3.32L17.48-12.7ZM22.9-42.725H25a4,4,0,0,0-1.221-2.93,4,4,0,0,0-2.93-1.221h-2.1v2.1h2.1a2.013,2.013,0,0,1,1.489.562A2.013,2.013,0,0,1,22.9-42.725Zm0,41.7A2.013,2.013,0,0,1,22.339.464a2.013,2.013,0,0,1-1.489.562H-6.25v2.1h27.1A4,4,0,0,0,23.779,1.9,4,4,0,0,0,25-1.025v-29.2H22.9Zm0-33.35H25v-4.15H22.9Z"
-                                          transform="translate(25 46.875)"
-                                          fill="#184341"
-                                        ></path>
-                                      </svg>
-                                    </div>
-                                  </div>
+                                  
                                   <h3
                                     class="lqd-iconbox-heading text-center text-16 leading-1em mb-0"
                                   >
                                     ISOR
                                   </h3>
                                   <div class="contents">
-                                    <p>Biblical servant leadership</p>
-                                    <!-- <a
-                                      href="page-company-services.html"
-                                      class="btn btn-naked btn-icon-right btn-hover-swp mt-em mb-0 items-center text-15 font-bold text-secondary hover:text-primary"
-                                      ><span
-                                        class="btn-txt"
-                                        data-text="Learn more"
-                                        >Learn more</span
-                                      >
-                                      <span class="btn-icon text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i> </span
-                                      ><span
-                                        class="btn-icon mr-10 text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i></span
-                                    ></a> -->
+                                    <p>ISOR is a unique residential course held once every two years, designed to equip Christian leaders with the knowledge and tools to address deep divisions and social conflicts in their communities, nations, or mission fields. The next session will take place in March 2026. For more information or to express interest, contact us at rabagiranaministries@gmail.com.</p>
                                   </div>
                                 </div>
                               </div>
@@ -905,53 +576,20 @@
                             <div class="col col-12 col-md-6 col-xl-3 p-0">
                               <div class="flex flex-auto p-15 transition-all">
                                 <div
-                                  class="iconbox flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0"
+                                  class="iconbox program-card flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0"
                                   data-slideelement-onhover="true"
                                   data-slideelement-options='{ "visibleElement":  ".iconbox-icon-wrap, p, h3", "hiddenElement":  ".btn", "alignMid":  true, "triggerElement":  ".iconbox" }'
                                 >
-                                  <div class="iconbox-icon-wrap">
-                                    <div
-                                      class="mb-25 iconbox-icon-container inline-flex w-40 text-50"
-                                    >
-                                      <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="50"
-                                        height="50"
-                                        viewbox="0 0 50 50"
-                                      >
-                                        <path
-                                          d="M-1.27-11.865-8.35-5.225l-7.08-6.641a15.456,15.456,0,0,0-3.857,2.441,16.207,16.207,0,0,0-3.027,3.467,16.786,16.786,0,0,0-1.978,4.272A16.381,16.381,0,0,0-25,3.125H8.35a16.381,16.381,0,0,0-.708-4.81A16.786,16.786,0,0,0,5.664-5.957,16.207,16.207,0,0,0,2.637-9.424,15.16,15.16,0,0,0-1.27-11.865ZM-22.705,1.025A14.51,14.51,0,0,1-20.41-4.956a14.049,14.049,0,0,1,4.785-4.419l7.275,7.08,7.52-7.08A15.276,15.276,0,0,1,3.882-4.956,13.977,13.977,0,0,1,6.25,1.025Zm14.355-12.5a8.048,8.048,0,0,0,5.908-2.441A7.991,7.991,0,0,0,0-19.775v-4.2H-2.1v4.2a6.082,6.082,0,0,1-1.782,4.443A6.017,6.017,0,0,1-8.35-13.525a6.04,6.04,0,0,1-4.443-1.807A6.04,6.04,0,0,1-14.6-19.775v-4.2h6.25a8.048,8.048,0,0,0,5.908-2.441A7.991,7.991,0,0,0,0-32.275H-12.5a4,4,0,0,0-2.93,1.221,4,4,0,0,0-1.221,2.93v8.35a7.991,7.991,0,0,0,2.441,5.859A7.991,7.991,0,0,0-8.35-11.475Zm-6.25-16.65a2.048,2.048,0,0,1,.586-1.514,2.048,2.048,0,0,1,1.514-.586H-2.49a6.014,6.014,0,0,1-2.222,3.052A6.049,6.049,0,0,1-8.35-26.025H-14.6Zm18.75-8.35h12.5v-2.051H4.15Zm0,6.25h12.5v-2.051H4.15Zm-6.25-12.5a1.967,1.967,0,0,1,.586-1.489A2.1,2.1,0,0,1,0-44.775H20.85a2.013,2.013,0,0,1,1.489.562,2.013,2.013,0,0,1,.562,1.489H25a4,4,0,0,0-1.221-2.93,4,4,0,0,0-2.93-1.221H0a4,4,0,0,0-2.93,1.221,4,4,0,0,0-1.221,2.93v6.25H-2.1Zm25,8.35H25v-4.15H22.9Zm0,8.35a2.013,2.013,0,0,1-.562,1.489,2.013,2.013,0,0,1-1.489.562H13.965l-5.615,4.2v-4.2H4.15v2.1h2.1v6.25l8.35-6.25h6.25a4,4,0,0,0,2.93-1.221A4,4,0,0,0,25-26.025v-4.2H22.9Z"
-                                          transform="translate(25 46.875)"
-                                          fill="#184341"
-                                        ></path>
-                                      </svg>
-                                    </div>
-                                  </div>
+                                  
                                   <h3
                                     class="lqd-iconbox-heading text-center text-16 leading-1em mb-0"
                                   >
                                     Reconciliation Tours
                                   </h3>
                                   <div class="contents">
-                                    <!-- <p>Lorem, ipsum dolor.</p> -->
-                                    <!-- <a
-                                      href="page-company-services.html"
-                                      class="btn btn-naked btn-icon-right btn-hover-swp mt-em mb-0 items-center text-15 font-bold text-secondary hover:text-primary"
-                                      ><span
-                                        class="btn-txt"
-                                        data-text="Learn more"
-                                        >Learn more</span
-                                      >
-                                      <span class="btn-icon text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i> </span
-                                      ><span
-                                        class="btn-icon mr-10 text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i></span
-                                    ></a> -->
+                                    <p>
+                                      If you're in Rwanda or planning to visit, you can experience the remarkable story of Rwanda’s healing and resilience firsthand. Through our curated Reconciliation Tours, you'll visit key sites that reflect the transformation journey of the nation. To schedule your visit or learn more, reach out at rabagiranaministries@gmail.com. 
+                                    </p>
                                   </div>
                                 </div>
                               </div>
@@ -959,53 +597,18 @@
                             <div class="col col-12 col-md-6 col-xl-3 p-0">
                               <div class="flex flex-auto p-15 transition-all">
                                 <div
-                                  class="iconbox flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0"
+                                  class="iconbox program-card flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0"
                                   data-slideelement-onhover="true"
                                   data-slideelement-options='{ "visibleElement":  ".iconbox-icon-wrap, p, h3", "hiddenElement":  ".btn", "alignMid":  true, "triggerElement":  ".iconbox" }'
                                 >
-                                  <div class="iconbox-icon-wrap">
-                                    <div
-                                      class="mb-25 iconbox-icon-container inline-flex w-40 text-50"
-                                    >
-                                      <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="50"
-                                        height="50"
-                                        viewbox="0 0 50 50"
-                                      >
-                                        <path
-                                          d="M-2.1-31.25a1.023,1.023,0,0,0-.269-.757,1.023,1.023,0,0,0-.757-.269H-8.35V-37.5a1.023,1.023,0,0,0-.269-.757,1.023,1.023,0,0,0-.757-.269,1.023,1.023,0,0,0-.757.269,1.023,1.023,0,0,0-.269.757v5.225h-5.225a1.023,1.023,0,0,0-.757.269,1.023,1.023,0,0,0-.269.757,1.023,1.023,0,0,0,.269.757,1.023,1.023,0,0,0,.757.269H-10.4V-25a1.023,1.023,0,0,0,.269.757,1.023,1.023,0,0,0,.757.269,1.023,1.023,0,0,0,.757-.269A1.023,1.023,0,0,0-8.35-25v-5.225h5.225a1.023,1.023,0,0,0,.757-.269A1.023,1.023,0,0,0-2.1-31.25ZM15.625-17.725H5.225a1.056,1.056,0,0,0-.781.293,1.056,1.056,0,0,0-.293.781.994.994,0,0,0,.293.732,1.056,1.056,0,0,0,.781.293h10.4a.975.975,0,0,0,.757-.293,1.043,1.043,0,0,0,.269-.732,1.111,1.111,0,0,0-.269-.781A.975.975,0,0,0,15.625-17.725Zm0,8.35H5.225a1.056,1.056,0,0,0-.781.293.994.994,0,0,0-.293.732,1.056,1.056,0,0,0,.293.781,1.056,1.056,0,0,0,.781.293h10.4a.975.975,0,0,0,.757-.293,1.111,1.111,0,0,0,.269-.781,1.043,1.043,0,0,0-.269-.732A.975.975,0,0,0,15.625-9.375Zm-10.4-20.85h10.4a1.023,1.023,0,0,0,.757-.269,1.023,1.023,0,0,0,.269-.757,1.023,1.023,0,0,0-.269-.757,1.023,1.023,0,0,0-.757-.269H5.225a1.111,1.111,0,0,0-.781.269.975.975,0,0,0-.293.757.975.975,0,0,0,.293.757A1.111,1.111,0,0,0,5.225-30.225ZM-3.32-18.555a1.136,1.136,0,0,0-.757-.293.965.965,0,0,0-.708.293L-9.18-14.16l-4.346-4.395a1.136,1.136,0,0,0-.757-.293.965.965,0,0,0-.708.293,1.05,1.05,0,0,0-.342.757.9.9,0,0,0,.342.708l4.346,4.395L-14.99-8.35a1.05,1.05,0,0,0-.342.757.9.9,0,0,0,.342.708.559.559,0,0,0,.317.171,3.945,3.945,0,0,0,.513.024,4.048,4.048,0,0,0,.488-.024.574.574,0,0,0,.342-.171l4.395-4.346L-4.59-6.885a.574.574,0,0,0,.342.171,4.048,4.048,0,0,0,.488.024,3.945,3.945,0,0,0,.513-.024.559.559,0,0,0,.317-.171.9.9,0,0,0,.342-.708A1.05,1.05,0,0,0-2.93-8.35L-7.275-12.7-2.93-17.09a1.107,1.107,0,0,1-.2-.635A2.829,2.829,0,0,0-3.32-18.555ZM16.65-46.875v2.1a6.06,6.06,0,0,1,4.468,1.782A6.06,6.06,0,0,1,22.9-38.525v33.3A6.06,6.06,0,0,1,21.118-.757,6.06,6.06,0,0,1,16.65,1.025h-33.3A6.06,6.06,0,0,1-21.118-.757,6.06,6.06,0,0,1-22.9-5.225v-33.3a6.06,6.06,0,0,1,1.782-4.468,6.06,6.06,0,0,1,4.468-1.782H4.15v-2.1h-20.8a8.048,8.048,0,0,0-5.908,2.441A8.048,8.048,0,0,0-25-38.525v33.3A8.048,8.048,0,0,0-22.559.684,8.048,8.048,0,0,0-16.65,3.125h33.3A8.048,8.048,0,0,0,22.559.684,8.048,8.048,0,0,0,25-5.225v-33.3a8.048,8.048,0,0,0-2.441-5.908A8.048,8.048,0,0,0,16.65-46.875Zm-8.3,2.1H12.5v-2.1H8.35Z"
-                                          transform="translate(25 46.875)"
-                                          fill="#184341"
-                                        ></path>
-                                      </svg>
-                                    </div>
-                                  </div>
+                                  
                                   <h3
                                     class="lqd-iconbox-heading text-center text-16 leading-1em mb-0"
                                   >
                                     PRN Migration
                                   </h3>
                                   <div class="contents">
-                                    <p>Potter's hand manual</p>
-                                    <!-- <a
-                                      href="page-company-services.html"
-                                      class="btn btn-naked btn-icon-right btn-hover-swp mt-em mb-0 items-center text-15 font-bold text-secondary hover:text-primary"
-                                      ><span
-                                        class="btn-txt"
-                                        data-text="Learn more"
-                                        >Learn more</span
-                                      >
-                                      <span class="btn-icon text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i> </span
-                                      ><span
-                                        class="btn-icon mr-10 text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i></span
-                                    ></a> -->
+                                    <p>We are honored to support Joseph Nyamutera in his appointment as PRN Migration & Diaspora Coordinator. This marks a significant step in extending Rabagirana’s reconciliation mission to the global stage, as part of our commitment to peace and healing across nations , reach out at https://www.reconciledworld.net/ </p>
                                   </div>
                                 </div>
                               </div>
@@ -1013,53 +616,18 @@
                             <div class="col col-12 col-md-6 col-xl-3 p-0">
                               <div class="flex flex-auto p-15 transition-all">
                                 <div
-                                  class="iconbox flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0"
+                                  class="iconbox program-card flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0"
                                   data-slideelement-onhover="true"
                                   data-slideelement-options='{ "visibleElement":  ".iconbox-icon-wrap, p, h3", "hiddenElement":  ".btn", "alignMid":  true, "triggerElement":  ".iconbox" }'
                                 >
-                                  <div class="iconbox-icon-wrap">
-                                    <div
-                                      class="mb-25 iconbox-icon-container inline-flex w-40 text-50"
-                                    >
-                                      <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="50"
-                                        height="50"
-                                        viewbox="0 0 50 50"
-                                      >
-                                        <path
-                                          d="M-12.5-23.975a12.164,12.164,0,0,0,.977,4.858,12.625,12.625,0,0,0,2.686,3.979,12.625,12.625,0,0,0,3.979,2.686A12.164,12.164,0,0,0,0-11.475a12.164,12.164,0,0,0,4.858-.977,12.625,12.625,0,0,0,3.979-2.686,12.625,12.625,0,0,0,2.686-3.979,12.164,12.164,0,0,0,.977-4.858,12.219,12.219,0,0,0-.977-4.834,12.267,12.267,0,0,0-2.686-3.979,13.194,13.194,0,0,0-3.979-2.686,11.909,11.909,0,0,0-4.858-1,11.909,11.909,0,0,0-4.858,1,13.194,13.194,0,0,0-3.979,2.686,12.267,12.267,0,0,0-2.686,3.979A12.219,12.219,0,0,0-12.5-23.975ZM0-34.375a10.52,10.52,0,0,1,4.321.879,10.008,10.008,0,0,1,3.394,2.441L-2.1-21.24l-3.32-3.32-1.465,1.416,5.029,5.029L9.18-29.15a23.614,23.614,0,0,1,.83,2.441,9.912,9.912,0,0,1,.391,2.734,10.417,10.417,0,0,1-.806,4.1,10.549,10.549,0,0,1-2.2,3.32,10.063,10.063,0,0,1-3.3,2.222,10.417,10.417,0,0,1-4.1.806,10.417,10.417,0,0,1-4.1-.806,10.063,10.063,0,0,1-3.3-2.222,10.549,10.549,0,0,1-2.2-3.32,10.417,10.417,0,0,1-.806-4.1,10.293,10.293,0,0,1,.806-4.053,10.549,10.549,0,0,1,2.2-3.32,10.063,10.063,0,0,1,3.3-2.222A10.417,10.417,0,0,1,0-34.375Zm2.1-10.4H6.25v-2.1H2.1Zm12.5-2.1H10.4v2.1H12.7a12.335,12.335,0,0,0,1.245,3.662,12.644,12.644,0,0,0,2.246,3.052,12.644,12.644,0,0,0,3.052,2.246A12.335,12.335,0,0,0,22.9-34.57v12.7a12.106,12.106,0,0,1-2.588,7.2,37.292,37.292,0,0,1-6.2,6.567A56.254,56.254,0,0,1,6.567-2.759Q2.637-.439,0,.83-2.637-.439-6.567-2.759a56.254,56.254,0,0,1-7.544-5.347,37.292,37.292,0,0,1-6.2-6.567,12.106,12.106,0,0,1-2.588-7.2v-12.7a12.335,12.335,0,0,0,3.662-1.245,12.644,12.644,0,0,0,3.052-2.246,12.644,12.644,0,0,0,2.246-3.052A12.335,12.335,0,0,0-12.7-44.775H-2.1v-2.1H-14.6a10.417,10.417,0,0,1-.806,4.1,10.258,10.258,0,0,1-2.2,3.3,10.258,10.258,0,0,1-3.3,2.2,10.417,10.417,0,0,1-4.1.806v14.6a14.662,14.662,0,0,0,3.906,9.717A49.988,49.988,0,0,0-12.5-4.224,65.054,65.054,0,0,0-3.906,1.147L0,3.125,3.906,1.147A65.054,65.054,0,0,0,12.5-4.224a49.988,49.988,0,0,0,8.594-7.935A14.662,14.662,0,0,0,25-21.875v-14.6a10.417,10.417,0,0,1-4.1-.806,10.258,10.258,0,0,1-3.3-2.2,10.258,10.258,0,0,1-2.2-3.3A10.417,10.417,0,0,1,14.6-46.875Z"
-                                          transform="translate(25 46.875)"
-                                          fill="#184341"
-                                        ></path>
-                                      </svg>
-                                    </div>
-                                  </div>
+                                  
                                   <h3
                                     class="lqd-iconbox-heading text-center text-16 leading-1em mb-0"
                                   >
-                                    Rabagirana Friends and Partners
+                                    Rabagirana Friends and Partners Newsletter
                                   </h3>
                                   <div class="contents">
-                                    <p>Spiritual retreatsfor christian worker</p>
-                                    <!-- <a
-                                      href="page-company-services.html"
-                                      class="btn btn-naked btn-icon-right btn-hover-swp mt-em mb-0 items-center text-15 font-bold text-secondary hover:text-primary"
-                                      ><span
-                                        class="btn-txt"
-                                        data-text="Learn more"
-                                        >Learn more</span
-                                      >
-                                      <span class="btn-icon text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i> </span
-                                      ><span
-                                        class="btn-icon mr-10 text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i></span
-                                    ></a> -->
+                                    <p>Join a growing community of individuals passionate about national healing and peacebuilding. Our monthly newsletter shares stories, updates, and opportunities to get involved. Subscribe today and be part of the movement!</p>
                                   </div>
                                 </div>
                               </div>
@@ -1067,53 +635,18 @@
                             <div class="col col-12 col-md-6 col-xl-3 p-0">
                               <div class="flex flex-auto p-15 transition-all">
                                 <div
-                                  class="iconbox flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0"
+                                  class="iconbox program-card flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0"
                                   data-slideelement-onhover="true"
                                   data-slideelement-options='{ "visibleElement":  ".iconbox-icon-wrap, p, h3", "hiddenElement":  ".btn", "alignMid":  true, "triggerElement":  ".iconbox" }'
                                 >
-                                  <div class="iconbox-icon-wrap">
-                                    <div
-                                      class="mb-25 iconbox-icon-container inline-flex w-40 text-50"
-                                    >
-                                      <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="50"
-                                        height="50"
-                                        viewbox="0 0 50 50"
-                                      >
-                                        <path
-                                          d="M-12.5-23.975a12.164,12.164,0,0,0,.977,4.858,12.625,12.625,0,0,0,2.686,3.979,12.625,12.625,0,0,0,3.979,2.686A12.164,12.164,0,0,0,0-11.475a12.164,12.164,0,0,0,4.858-.977,12.625,12.625,0,0,0,3.979-2.686,12.625,12.625,0,0,0,2.686-3.979,12.164,12.164,0,0,0,.977-4.858,12.219,12.219,0,0,0-.977-4.834,12.267,12.267,0,0,0-2.686-3.979,13.194,13.194,0,0,0-3.979-2.686,11.909,11.909,0,0,0-4.858-1,11.909,11.909,0,0,0-4.858,1,13.194,13.194,0,0,0-3.979,2.686,12.267,12.267,0,0,0-2.686,3.979A12.219,12.219,0,0,0-12.5-23.975ZM0-34.375a10.52,10.52,0,0,1,4.321.879,10.008,10.008,0,0,1,3.394,2.441L-2.1-21.24l-3.32-3.32-1.465,1.416,5.029,5.029L9.18-29.15a23.614,23.614,0,0,1,.83,2.441,9.912,9.912,0,0,1,.391,2.734,10.417,10.417,0,0,1-.806,4.1,10.549,10.549,0,0,1-2.2,3.32,10.063,10.063,0,0,1-3.3,2.222,10.417,10.417,0,0,1-4.1.806,10.417,10.417,0,0,1-4.1-.806,10.063,10.063,0,0,1-3.3-2.222,10.549,10.549,0,0,1-2.2-3.32,10.417,10.417,0,0,1-.806-4.1,10.293,10.293,0,0,1,.806-4.053,10.549,10.549,0,0,1,2.2-3.32,10.063,10.063,0,0,1,3.3-2.222A10.417,10.417,0,0,1,0-34.375Zm2.1-10.4H6.25v-2.1H2.1Zm12.5-2.1H10.4v2.1H12.7a12.335,12.335,0,0,0,1.245,3.662,12.644,12.644,0,0,0,2.246,3.052,12.644,12.644,0,0,0,3.052,2.246A12.335,12.335,0,0,0,22.9-34.57v12.7a12.106,12.106,0,0,1-2.588,7.2,37.292,37.292,0,0,1-6.2,6.567A56.254,56.254,0,0,1,6.567-2.759Q2.637-.439,0,.83-2.637-.439-6.567-2.759a56.254,56.254,0,0,1-7.544-5.347,37.292,37.292,0,0,1-6.2-6.567,12.106,12.106,0,0,1-2.588-7.2v-12.7a12.335,12.335,0,0,0,3.662-1.245,12.644,12.644,0,0,0,3.052-2.246,12.644,12.644,0,0,0,2.246-3.052A12.335,12.335,0,0,0-12.7-44.775H-2.1v-2.1H-14.6a10.417,10.417,0,0,1-.806,4.1,10.258,10.258,0,0,1-2.2,3.3,10.258,10.258,0,0,1-3.3,2.2,10.417,10.417,0,0,1-4.1.806v14.6a14.662,14.662,0,0,0,3.906,9.717A49.988,49.988,0,0,0-12.5-4.224,65.054,65.054,0,0,0-3.906,1.147L0,3.125,3.906,1.147A65.054,65.054,0,0,0,12.5-4.224a49.988,49.988,0,0,0,8.594-7.935A14.662,14.662,0,0,0,25-21.875v-14.6a10.417,10.417,0,0,1-4.1-.806,10.258,10.258,0,0,1-3.3-2.2,10.258,10.258,0,0,1-2.2-3.3A10.417,10.417,0,0,1,14.6-46.875Z"
-                                          transform="translate(25 46.875)"
-                                          fill="#184341"
-                                        ></path>
-                                      </svg>
-                                    </div>
-                                  </div>
+                                  
                                   <h3
                                     class="lqd-iconbox-heading text-center text-16 leading-1em mb-0"
                                   >
                                     Donors Relations
                                   </h3>
                                   <div class="contents">
-                                    <p>Spiritual retreatsfor christian worker</p>
-                                    <!-- <a
-                                      href="page-company-services.html"
-                                      class="btn btn-naked btn-icon-right btn-hover-swp mt-em mb-0 items-center text-15 font-bold text-secondary hover:text-primary"
-                                      ><span
-                                        class="btn-txt"
-                                        data-text="Learn more"
-                                        >Learn more</span
-                                      >
-                                      <span class="btn-icon text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i> </span
-                                      ><span
-                                        class="btn-icon mr-10 text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i></span
-                                    ></a> -->
+                                    <p>You can make a lasting impact by partnering with us financially. Your donations help sustain transformative programs in reconciliation, leadership training, and community development. We are committed to using every gift wisely and transparently. For giving options, please contact us at rabagiranaministries@gmail.com.</p>
                                   </div>
                                 </div>
                               </div>
@@ -1130,15 +663,10 @@
                       class="lqd-tabs-pane fade"
                     >
                       <p style="text-align: center">
-                        We conduct a 3-day training on worldview and an
-                        introduction to Biblical leadership, character study,
-                        leadership skills, team dynamics, and conflict
-                        transformation. Recently, in partnership with Resonate
-                        Global Mission, we introduced the Timothy Leadership
-                        Training Initiative, a 2-year program with 6 modules for
-                        church leaders with or without theological training.
-                        Trainees attend for four days in three months and carry
-                        out assignments.
+                        Walking alongside you to wholeness - 
+
+At Emmaus Family Centre, we are committed to walking alongside individuals, families, and organizations on their journey toward healing, resilience, and transformation. Through our range of services, we foster emotional well-being and empower people to thrive in every sphere of life.
+
                       </p>
                       <div
                       class="lqd-section icon-box-page bg-gray-200 pt-90 pb-100"
@@ -1153,53 +681,18 @@
                             <div class="col col-12 col-md-6 col-xl-3 p-0">
                               <div class="flex flex-auto p-15 transition-all">
                                 <div
-                                  class="iconbox flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0"
+                                  class="iconbox program-card flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0"
                                   data-slideelement-onhover="true"
                                   data-slideelement-options='{ "visibleElement":  ".iconbox-icon-wrap, p, h3", "hiddenElement":  ".btn", "alignMid":  true, "triggerElement":  ".iconbox" }'
                                 >
-                                  <div class="iconbox-icon-wrap">
-                                    <div
-                                      class="mb-25 iconbox-icon-container inline-flex w-40 text-50"
-                                    >
-                                      <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="50"
-                                        height="50"
-                                        viewbox="0 0 50 50"
-                                      >
-                                        <path
-                                          d="M4.15-19.775a8.008,8.008,0,0,0,5.908-2.466A8.072,8.072,0,0,0,12.5-28.125V-42.48L18.115-37.7l1.465-1.66L11.67-46.24,3.76-39.355,5.225-37.7,10.4-42.48v14.355a6.082,6.082,0,0,1-1.782,4.443A6.017,6.017,0,0,1,4.15-21.875H-6.25a5.843,5.843,0,0,0-3.223.977,10.241,10.241,0,0,0-2.661,2.515,12.919,12.919,0,0,0-1.807,3.369,10.428,10.428,0,0,0-.659,3.54v6.25h2.1v-6.25a10.192,10.192,0,0,1,1.807-5.469q1.807-2.832,4.443-2.832Zm-25-25h25v-2.1h-25a4,4,0,0,0-2.93,1.221A4,4,0,0,0-25-42.725v41.7A4,4,0,0,0-23.779,1.9a4,4,0,0,0,2.93,1.221v-2.1A2.013,2.013,0,0,1-22.339.464,2.013,2.013,0,0,1-22.9-1.025v-41.7a2.013,2.013,0,0,1,.562-1.489A2.013,2.013,0,0,1-20.85-44.775Zm6.25,47.9h2.1v-4.15h-2.1Zm.83-32.52L-10.4-32.91l3.32,3.516,1.66-1.66-3.516-3.32L-5.42-37.7l-1.66-1.66L-10.4-35.84l-3.369-3.516-1.66,1.66,3.564,3.32-3.564,3.32ZM15.82-14.355,12.5-10.84,9.18-14.355,7.52-12.7l3.516,3.32L7.52-6.055l1.66,1.66L12.5-7.91l3.32,3.516,1.66-1.66-3.516-3.32L17.48-12.7ZM22.9-42.725H25a4,4,0,0,0-1.221-2.93,4,4,0,0,0-2.93-1.221h-2.1v2.1h2.1a2.013,2.013,0,0,1,1.489.562A2.013,2.013,0,0,1,22.9-42.725Zm0,41.7A2.013,2.013,0,0,1,22.339.464a2.013,2.013,0,0,1-1.489.562H-6.25v2.1h27.1A4,4,0,0,0,23.779,1.9,4,4,0,0,0,25-1.025v-29.2H22.9Zm0-33.35H25v-4.15H22.9Z"
-                                          transform="translate(25 46.875)"
-                                          fill="#184341"
-                                        ></path>
-                                      </svg>
-                                    </div>
-                                  </div>
+                                  
                                   <h3
                                     class="lqd-iconbox-heading text-center text-16 leading-1em mb-0"
                                   >
-                                    Debriefing
+                                  DEBRIEFING WORKSHOPS
                                   </h3>
                                   <div class="contents">
-                                    <p>Biblical servant leadership</p>
-                                    <!-- <a
-                                      href="page-company-services.html"
-                                      class="btn btn-naked btn-icon-right btn-hover-swp mt-em mb-0 items-center text-15 font-bold text-secondary hover:text-primary"
-                                      ><span
-                                        class="btn-txt"
-                                        data-text="Learn more"
-                                        >Learn more</span
-                                      >
-                                      <span class="btn-icon text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i> </span
-                                      ><span
-                                        class="btn-icon mr-10 text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i></span
-                                    ></a> -->
+                                    <p>Our debriefing sessions are a vital initiative to support the well-being of individuals across various organizations. By creating a safe and structured environment for participants to process their experiences, we help foster healthier, more resilient teams capable of navigating challenges and contributing meaningfully to their organizations.</p>
                                   </div>
                                 </div>
                               </div>
@@ -1207,53 +700,20 @@
                             <div class="col col-12 col-md-6 col-xl-3 p-0">
                               <div class="flex flex-auto p-15 transition-all">
                                 <div
-                                  class="iconbox flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0"
+                                  class="iconbox program-card flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0"
                                   data-slideelement-onhover="true"
                                   data-slideelement-options='{ "visibleElement":  ".iconbox-icon-wrap, p, h3", "hiddenElement":  ".btn", "alignMid":  true, "triggerElement":  ".iconbox" }'
                                 >
-                                  <div class="iconbox-icon-wrap">
-                                    <div
-                                      class="mb-25 iconbox-icon-container inline-flex w-40 text-50"
-                                    >
-                                      <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="50"
-                                        height="50"
-                                        viewbox="0 0 50 50"
-                                      >
-                                        <path
-                                          d="M-1.27-11.865-8.35-5.225l-7.08-6.641a15.456,15.456,0,0,0-3.857,2.441,16.207,16.207,0,0,0-3.027,3.467,16.786,16.786,0,0,0-1.978,4.272A16.381,16.381,0,0,0-25,3.125H8.35a16.381,16.381,0,0,0-.708-4.81A16.786,16.786,0,0,0,5.664-5.957,16.207,16.207,0,0,0,2.637-9.424,15.16,15.16,0,0,0-1.27-11.865ZM-22.705,1.025A14.51,14.51,0,0,1-20.41-4.956a14.049,14.049,0,0,1,4.785-4.419l7.275,7.08,7.52-7.08A15.276,15.276,0,0,1,3.882-4.956,13.977,13.977,0,0,1,6.25,1.025Zm14.355-12.5a8.048,8.048,0,0,0,5.908-2.441A7.991,7.991,0,0,0,0-19.775v-4.2H-2.1v4.2a6.082,6.082,0,0,1-1.782,4.443A6.017,6.017,0,0,1-8.35-13.525a6.04,6.04,0,0,1-4.443-1.807A6.04,6.04,0,0,1-14.6-19.775v-4.2h6.25a8.048,8.048,0,0,0,5.908-2.441A7.991,7.991,0,0,0,0-32.275H-12.5a4,4,0,0,0-2.93,1.221,4,4,0,0,0-1.221,2.93v8.35a7.991,7.991,0,0,0,2.441,5.859A7.991,7.991,0,0,0-8.35-11.475Zm-6.25-16.65a2.048,2.048,0,0,1,.586-1.514,2.048,2.048,0,0,1,1.514-.586H-2.49a6.014,6.014,0,0,1-2.222,3.052A6.049,6.049,0,0,1-8.35-26.025H-14.6Zm18.75-8.35h12.5v-2.051H4.15Zm0,6.25h12.5v-2.051H4.15Zm-6.25-12.5a1.967,1.967,0,0,1,.586-1.489A2.1,2.1,0,0,1,0-44.775H20.85a2.013,2.013,0,0,1,1.489.562,2.013,2.013,0,0,1,.562,1.489H25a4,4,0,0,0-1.221-2.93,4,4,0,0,0-2.93-1.221H0a4,4,0,0,0-2.93,1.221,4,4,0,0,0-1.221,2.93v6.25H-2.1Zm25,8.35H25v-4.15H22.9Zm0,8.35a2.013,2.013,0,0,1-.562,1.489,2.013,2.013,0,0,1-1.489.562H13.965l-5.615,4.2v-4.2H4.15v2.1h2.1v6.25l8.35-6.25h6.25a4,4,0,0,0,2.93-1.221A4,4,0,0,0,25-26.025v-4.2H22.9Z"
-                                          transform="translate(25 46.875)"
-                                          fill="#184341"
-                                        ></path>
-                                      </svg>
-                                    </div>
-                                  </div>
+                                  
                                   <h3
                                     class="lqd-iconbox-heading text-center text-16 leading-1em mb-0"
                                   >
-                                    Family Therapy
+                                  Psychoeducation
                                   </h3>
                                   <div class="contents">
-                                    <!-- <p>Lorem, ipsum dolor.</p> -->
-                                    <!-- <a
-                                      href="page-company-services.html"
-                                      class="btn btn-naked btn-icon-right btn-hover-swp mt-em mb-0 items-center text-15 font-bold text-secondary hover:text-primary"
-                                      ><span
-                                        class="btn-txt"
-                                        data-text="Learn more"
-                                        >Learn more</span
-                                      >
-                                      <span class="btn-icon text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i> </span
-                                      ><span
-                                        class="btn-icon mr-10 text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i></span
-                                    ></a> -->
+                                    <p>
+                                      Workshops and training sessions designed to educate and equip families with essential skills. Topics include parental classes, trauma counseling, emotional well-being, stress management, and communication skills to strengthen family bonds. 
+                                    </p>
                                   </div>
                                 </div>
                               </div>
@@ -1261,53 +721,18 @@
                             <div class="col col-12 col-md-6 col-xl-3 p-0">
                               <div class="flex flex-auto p-15 transition-all">
                                 <div
-                                  class="iconbox flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0"
+                                  class="iconbox program-card flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0"
                                   data-slideelement-onhover="true"
                                   data-slideelement-options='{ "visibleElement":  ".iconbox-icon-wrap, p, h3", "hiddenElement":  ".btn", "alignMid":  true, "triggerElement":  ".iconbox" }'
                                 >
-                                  <div class="iconbox-icon-wrap">
-                                    <div
-                                      class="mb-25 iconbox-icon-container inline-flex w-40 text-50"
-                                    >
-                                      <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="50"
-                                        height="50"
-                                        viewbox="0 0 50 50"
-                                      >
-                                        <path
-                                          d="M-2.1-31.25a1.023,1.023,0,0,0-.269-.757,1.023,1.023,0,0,0-.757-.269H-8.35V-37.5a1.023,1.023,0,0,0-.269-.757,1.023,1.023,0,0,0-.757-.269,1.023,1.023,0,0,0-.757.269,1.023,1.023,0,0,0-.269.757v5.225h-5.225a1.023,1.023,0,0,0-.757.269,1.023,1.023,0,0,0-.269.757,1.023,1.023,0,0,0,.269.757,1.023,1.023,0,0,0,.757.269H-10.4V-25a1.023,1.023,0,0,0,.269.757,1.023,1.023,0,0,0,.757.269,1.023,1.023,0,0,0,.757-.269A1.023,1.023,0,0,0-8.35-25v-5.225h5.225a1.023,1.023,0,0,0,.757-.269A1.023,1.023,0,0,0-2.1-31.25ZM15.625-17.725H5.225a1.056,1.056,0,0,0-.781.293,1.056,1.056,0,0,0-.293.781.994.994,0,0,0,.293.732,1.056,1.056,0,0,0,.781.293h10.4a.975.975,0,0,0,.757-.293,1.043,1.043,0,0,0,.269-.732,1.111,1.111,0,0,0-.269-.781A.975.975,0,0,0,15.625-17.725Zm0,8.35H5.225a1.056,1.056,0,0,0-.781.293.994.994,0,0,0-.293.732,1.056,1.056,0,0,0,.293.781,1.056,1.056,0,0,0,.781.293h10.4a.975.975,0,0,0,.757-.293,1.111,1.111,0,0,0,.269-.781,1.043,1.043,0,0,0-.269-.732A.975.975,0,0,0,15.625-9.375Zm-10.4-20.85h10.4a1.023,1.023,0,0,0,.757-.269,1.023,1.023,0,0,0,.269-.757,1.023,1.023,0,0,0-.269-.757,1.023,1.023,0,0,0-.757-.269H5.225a1.111,1.111,0,0,0-.781.269.975.975,0,0,0-.293.757.975.975,0,0,0,.293.757A1.111,1.111,0,0,0,5.225-30.225ZM-3.32-18.555a1.136,1.136,0,0,0-.757-.293.965.965,0,0,0-.708.293L-9.18-14.16l-4.346-4.395a1.136,1.136,0,0,0-.757-.293.965.965,0,0,0-.708.293,1.05,1.05,0,0,0-.342.757.9.9,0,0,0,.342.708l4.346,4.395L-14.99-8.35a1.05,1.05,0,0,0-.342.757.9.9,0,0,0,.342.708.559.559,0,0,0,.317.171,3.945,3.945,0,0,0,.513.024,4.048,4.048,0,0,0,.488-.024.574.574,0,0,0,.342-.171l4.395-4.346L-4.59-6.885a.574.574,0,0,0,.342.171,4.048,4.048,0,0,0,.488.024,3.945,3.945,0,0,0,.513-.024.559.559,0,0,0,.317-.171.9.9,0,0,0,.342-.708A1.05,1.05,0,0,0-2.93-8.35L-7.275-12.7-2.93-17.09a1.107,1.107,0,0,1-.2-.635A2.829,2.829,0,0,0-3.32-18.555ZM16.65-46.875v2.1a6.06,6.06,0,0,1,4.468,1.782A6.06,6.06,0,0,1,22.9-38.525v33.3A6.06,6.06,0,0,1,21.118-.757,6.06,6.06,0,0,1,16.65,1.025h-33.3A6.06,6.06,0,0,1-21.118-.757,6.06,6.06,0,0,1-22.9-5.225v-33.3a6.06,6.06,0,0,1,1.782-4.468,6.06,6.06,0,0,1,4.468-1.782H4.15v-2.1h-20.8a8.048,8.048,0,0,0-5.908,2.441A8.048,8.048,0,0,0-25-38.525v33.3A8.048,8.048,0,0,0-22.559.684,8.048,8.048,0,0,0-16.65,3.125h33.3A8.048,8.048,0,0,0,22.559.684,8.048,8.048,0,0,0,25-5.225v-33.3a8.048,8.048,0,0,0-2.441-5.908A8.048,8.048,0,0,0,16.65-46.875Zm-8.3,2.1H12.5v-2.1H8.35Z"
-                                          transform="translate(25 46.875)"
-                                          fill="#184341"
-                                        ></path>
-                                      </svg>
-                                    </div>
-                                  </div>
+                                  
                                   <h3
                                     class="lqd-iconbox-heading text-center text-16 leading-1em mb-0"
                                   >
-                                    Counseling
+                                  Pre-Marital Counseling & Marriage Enrichment
                                   </h3>
                                   <div class="contents">
-                                    <p>Potter's hand manual</p>
-                                    <!-- <a
-                                      href="page-company-services.html"
-                                      class="btn btn-naked btn-icon-right btn-hover-swp mt-em mb-0 items-center text-15 font-bold text-secondary hover:text-primary"
-                                      ><span
-                                        class="btn-txt"
-                                        data-text="Learn more"
-                                        >Learn more</span
-                                      >
-                                      <span class="btn-icon text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i> </span
-                                      ><span
-                                        class="btn-icon mr-10 text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i></span
-                                    ></a> -->
+                                    <p>Helping couples build a strong foundation for a lasting and fulfilling marriage through guided sessions. We also offer marriage enrichment activities for couples seeking to enhance their relationship, resolve conflicts, and improve communication. </p>
                                   </div>
                                 </div>
                               </div>
@@ -1324,15 +749,7 @@
                       class="lqd-tabs-pane fade"
                     >
                       <p style="text-align: center">
-                        We conduct a 3-day training on worldview and an
-                        introduction to Biblical leadership, character study,
-                        leadership skills, team dynamics, and conflict
-                        transformation. Recently, in partnership with Resonate
-                        Global Mission, we introduced the Timothy Leadership
-                        Training Initiative, a 2-year program with 6 modules for
-                        church leaders with or without theological training.
-                        Trainees attend for four days in three months and carry
-                        out assignments.
+                        Unity Mountain is an initiative launched by Rabagirana Ministries in the three communities of Rusheshe, Mbabe, and Ayabaraya. Its mission is to promote long-lasting peace by fostering healing, development, education, environmental care, health, sports, and culture. The project brings people together from different backgrounds to build unity and transform their communities.
                       </p>
                       <div
                       class="lqd-section icon-box-page bg-gray-200 pt-90 pb-100"
@@ -1347,53 +764,18 @@
                             <div class="col col-12 col-md-6 col-xl-3 p-0">
                               <div class="flex flex-auto p-15 transition-all">
                                 <div
-                                  class="iconbox flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0"
+                                  class="iconbox program-card flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0"
                                   data-slideelement-onhover="true"
                                   data-slideelement-options='{ "visibleElement":  ".iconbox-icon-wrap, p, h3", "hiddenElement":  ".btn", "alignMid":  true, "triggerElement":  ".iconbox" }'
                                 >
-                                  <div class="iconbox-icon-wrap">
-                                    <div
-                                      class="mb-25 iconbox-icon-container inline-flex w-40 text-50"
-                                    >
-                                      <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="50"
-                                        height="50"
-                                        viewbox="0 0 50 50"
-                                      >
-                                        <path
-                                          d="M4.15-19.775a8.008,8.008,0,0,0,5.908-2.466A8.072,8.072,0,0,0,12.5-28.125V-42.48L18.115-37.7l1.465-1.66L11.67-46.24,3.76-39.355,5.225-37.7,10.4-42.48v14.355a6.082,6.082,0,0,1-1.782,4.443A6.017,6.017,0,0,1,4.15-21.875H-6.25a5.843,5.843,0,0,0-3.223.977,10.241,10.241,0,0,0-2.661,2.515,12.919,12.919,0,0,0-1.807,3.369,10.428,10.428,0,0,0-.659,3.54v6.25h2.1v-6.25a10.192,10.192,0,0,1,1.807-5.469q1.807-2.832,4.443-2.832Zm-25-25h25v-2.1h-25a4,4,0,0,0-2.93,1.221A4,4,0,0,0-25-42.725v41.7A4,4,0,0,0-23.779,1.9a4,4,0,0,0,2.93,1.221v-2.1A2.013,2.013,0,0,1-22.339.464,2.013,2.013,0,0,1-22.9-1.025v-41.7a2.013,2.013,0,0,1,.562-1.489A2.013,2.013,0,0,1-20.85-44.775Zm6.25,47.9h2.1v-4.15h-2.1Zm.83-32.52L-10.4-32.91l3.32,3.516,1.66-1.66-3.516-3.32L-5.42-37.7l-1.66-1.66L-10.4-35.84l-3.369-3.516-1.66,1.66,3.564,3.32-3.564,3.32ZM15.82-14.355,12.5-10.84,9.18-14.355,7.52-12.7l3.516,3.32L7.52-6.055l1.66,1.66L12.5-7.91l3.32,3.516,1.66-1.66-3.516-3.32L17.48-12.7ZM22.9-42.725H25a4,4,0,0,0-1.221-2.93,4,4,0,0,0-2.93-1.221h-2.1v2.1h2.1a2.013,2.013,0,0,1,1.489.562A2.013,2.013,0,0,1,22.9-42.725Zm0,41.7A2.013,2.013,0,0,1,22.339.464a2.013,2.013,0,0,1-1.489.562H-6.25v2.1h27.1A4,4,0,0,0,23.779,1.9,4,4,0,0,0,25-1.025v-29.2H22.9Zm0-33.35H25v-4.15H22.9Z"
-                                          transform="translate(25 46.875)"
-                                          fill="#184341"
-                                        ></path>
-                                      </svg>
-                                    </div>
-                                  </div>
+                                  
                                   <h3
                                     class="lqd-iconbox-heading text-center text-16 leading-1em mb-0"
                                   >
-                                    Development
+                                  Healing Christian Witness 
                                   </h3>
                                   <div class="contents">
-                                    <p>Biblical servant leadership</p>
-                                    <!-- <a
-                                      href="page-company-services.html"
-                                      class="btn btn-naked btn-icon-right btn-hover-swp mt-em mb-0 items-center text-15 font-bold text-secondary hover:text-primary"
-                                      ><span
-                                        class="btn-txt"
-                                        data-text="Learn more"
-                                        >Learn more</span
-                                      >
-                                      <span class="btn-icon text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i> </span
-                                      ><span
-                                        class="btn-icon mr-10 text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i></span
-                                    ></a> -->
+                                    <p>This pillar focuses on emotional and spiritual healing among genocide survivors and those who were involved in the atrocities. It includes trauma healing workshops, faith-based support networks, and engagement with church members to encourage everyday acts of peace. Youth and people from diverse historical backgrounds are brought together to listen, heal, and walk toward reconciliation./p>
                                   </div>
                                 </div>
                               </div>
@@ -1401,53 +783,19 @@
                             <div class="col col-12 col-md-6 col-xl-3 p-0">
                               <div class="flex flex-auto p-15 transition-all">
                                 <div
-                                  class="iconbox flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0"
+                                  class="iconbox program-card flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0"
                                   data-slideelement-onhover="true"
                                   data-slideelement-options='{ "visibleElement":  ".iconbox-icon-wrap, p, h3", "hiddenElement":  ".btn", "alignMid":  true, "triggerElement":  ".iconbox" }'
                                 >
-                                  <div class="iconbox-icon-wrap">
-                                    <div
-                                      class="mb-25 iconbox-icon-container inline-flex w-40 text-50"
-                                    >
-                                      <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="50"
-                                        height="50"
-                                        viewbox="0 0 50 50"
-                                      >
-                                        <path
-                                          d="M-1.27-11.865-8.35-5.225l-7.08-6.641a15.456,15.456,0,0,0-3.857,2.441,16.207,16.207,0,0,0-3.027,3.467,16.786,16.786,0,0,0-1.978,4.272A16.381,16.381,0,0,0-25,3.125H8.35a16.381,16.381,0,0,0-.708-4.81A16.786,16.786,0,0,0,5.664-5.957,16.207,16.207,0,0,0,2.637-9.424,15.16,15.16,0,0,0-1.27-11.865ZM-22.705,1.025A14.51,14.51,0,0,1-20.41-4.956a14.049,14.049,0,0,1,4.785-4.419l7.275,7.08,7.52-7.08A15.276,15.276,0,0,1,3.882-4.956,13.977,13.977,0,0,1,6.25,1.025Zm14.355-12.5a8.048,8.048,0,0,0,5.908-2.441A7.991,7.991,0,0,0,0-19.775v-4.2H-2.1v4.2a6.082,6.082,0,0,1-1.782,4.443A6.017,6.017,0,0,1-8.35-13.525a6.04,6.04,0,0,1-4.443-1.807A6.04,6.04,0,0,1-14.6-19.775v-4.2h6.25a8.048,8.048,0,0,0,5.908-2.441A7.991,7.991,0,0,0,0-32.275H-12.5a4,4,0,0,0-2.93,1.221,4,4,0,0,0-1.221,2.93v8.35a7.991,7.991,0,0,0,2.441,5.859A7.991,7.991,0,0,0-8.35-11.475Zm-6.25-16.65a2.048,2.048,0,0,1,.586-1.514,2.048,2.048,0,0,1,1.514-.586H-2.49a6.014,6.014,0,0,1-2.222,3.052A6.049,6.049,0,0,1-8.35-26.025H-14.6Zm18.75-8.35h12.5v-2.051H4.15Zm0,6.25h12.5v-2.051H4.15Zm-6.25-12.5a1.967,1.967,0,0,1,.586-1.489A2.1,2.1,0,0,1,0-44.775H20.85a2.013,2.013,0,0,1,1.489.562,2.013,2.013,0,0,1,.562,1.489H25a4,4,0,0,0-1.221-2.93,4,4,0,0,0-2.93-1.221H0a4,4,0,0,0-2.93,1.221,4,4,0,0,0-1.221,2.93v6.25H-2.1Zm25,8.35H25v-4.15H22.9Zm0,8.35a2.013,2.013,0,0,1-.562,1.489,2.013,2.013,0,0,1-1.489.562H13.965l-5.615,4.2v-4.2H4.15v2.1h2.1v6.25l8.35-6.25h6.25a4,4,0,0,0,2.93-1.221A4,4,0,0,0,25-26.025v-4.2H22.9Z"
-                                          transform="translate(25 46.875)"
-                                          fill="#184341"
-                                        ></path>
-                                      </svg>
-                                    </div>
-                                  </div>
+                                  
                                   <h3
                                     class="lqd-iconbox-heading text-center text-16 leading-1em mb-0"
                                   >
-                                    Health/Sports/Culture
+                                  Development
                                   </h3>
                                   <div class="contents">
-                                    <!-- <p>Lorem, ipsum dolor.</p> -->
-                                    <!-- <a
-                                      href="page-company-services.html"
-                                      class="btn btn-naked btn-icon-right btn-hover-swp mt-em mb-0 items-center text-15 font-bold text-secondary hover:text-primary"
-                                      ><span
-                                        class="btn-txt"
-                                        data-text="Learn more"
-                                        >Learn more</span
-                                      >
-                                      <span class="btn-icon text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i> </span
-                                      ><span
-                                        class="btn-icon mr-10 text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i></span
-                                    ></a> -->
+                                    <p>
+                                      Communities  are trained in leadership and community-based development. Small business groups are formed to promote self-reliance and economic growth. These groups include liquid soap production, craft making, mushroom farming, vase pottery, and tailoring. The goal is to build strong, self-sustaining communities through cooperation and creativity.</p>
                                   </div>
                                 </div>
                               </div>
@@ -1455,53 +803,18 @@
                             <div class="col col-12 col-md-6 col-xl-3 p-0">
                               <div class="flex flex-auto p-15 transition-all">
                                 <div
-                                  class="iconbox flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0"
+                                  class="iconbox program-card flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0"
                                   data-slideelement-onhover="true"
                                   data-slideelement-options='{ "visibleElement":  ".iconbox-icon-wrap, p, h3", "hiddenElement":  ".btn", "alignMid":  true, "triggerElement":  ".iconbox" }'
                                 >
-                                  <div class="iconbox-icon-wrap">
-                                    <div
-                                      class="mb-25 iconbox-icon-container inline-flex w-40 text-50"
-                                    >
-                                      <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="50"
-                                        height="50"
-                                        viewbox="0 0 50 50"
-                                      >
-                                        <path
-                                          d="M-2.1-31.25a1.023,1.023,0,0,0-.269-.757,1.023,1.023,0,0,0-.757-.269H-8.35V-37.5a1.023,1.023,0,0,0-.269-.757,1.023,1.023,0,0,0-.757-.269,1.023,1.023,0,0,0-.757.269,1.023,1.023,0,0,0-.269.757v5.225h-5.225a1.023,1.023,0,0,0-.757.269,1.023,1.023,0,0,0-.269.757,1.023,1.023,0,0,0,.269.757,1.023,1.023,0,0,0,.757.269H-10.4V-25a1.023,1.023,0,0,0,.269.757,1.023,1.023,0,0,0,.757.269,1.023,1.023,0,0,0,.757-.269A1.023,1.023,0,0,0-8.35-25v-5.225h5.225a1.023,1.023,0,0,0,.757-.269A1.023,1.023,0,0,0-2.1-31.25ZM15.625-17.725H5.225a1.056,1.056,0,0,0-.781.293,1.056,1.056,0,0,0-.293.781.994.994,0,0,0,.293.732,1.056,1.056,0,0,0,.781.293h10.4a.975.975,0,0,0,.757-.293,1.043,1.043,0,0,0,.269-.732,1.111,1.111,0,0,0-.269-.781A.975.975,0,0,0,15.625-17.725Zm0,8.35H5.225a1.056,1.056,0,0,0-.781.293.994.994,0,0,0-.293.732,1.056,1.056,0,0,0,.293.781,1.056,1.056,0,0,0,.781.293h10.4a.975.975,0,0,0,.757-.293,1.111,1.111,0,0,0,.269-.781,1.043,1.043,0,0,0-.269-.732A.975.975,0,0,0,15.625-9.375Zm-10.4-20.85h10.4a1.023,1.023,0,0,0,.757-.269,1.023,1.023,0,0,0,.269-.757,1.023,1.023,0,0,0-.269-.757,1.023,1.023,0,0,0-.757-.269H5.225a1.111,1.111,0,0,0-.781.269.975.975,0,0,0-.293.757.975.975,0,0,0,.293.757A1.111,1.111,0,0,0,5.225-30.225ZM-3.32-18.555a1.136,1.136,0,0,0-.757-.293.965.965,0,0,0-.708.293L-9.18-14.16l-4.346-4.395a1.136,1.136,0,0,0-.757-.293.965.965,0,0,0-.708.293,1.05,1.05,0,0,0-.342.757.9.9,0,0,0,.342.708l4.346,4.395L-14.99-8.35a1.05,1.05,0,0,0-.342.757.9.9,0,0,0,.342.708.559.559,0,0,0,.317.171,3.945,3.945,0,0,0,.513.024,4.048,4.048,0,0,0,.488-.024.574.574,0,0,0,.342-.171l4.395-4.346L-4.59-6.885a.574.574,0,0,0,.342.171,4.048,4.048,0,0,0,.488.024,3.945,3.945,0,0,0,.513-.024.559.559,0,0,0,.317-.171.9.9,0,0,0,.342-.708A1.05,1.05,0,0,0-2.93-8.35L-7.275-12.7-2.93-17.09a1.107,1.107,0,0,1-.2-.635A2.829,2.829,0,0,0-3.32-18.555ZM16.65-46.875v2.1a6.06,6.06,0,0,1,4.468,1.782A6.06,6.06,0,0,1,22.9-38.525v33.3A6.06,6.06,0,0,1,21.118-.757,6.06,6.06,0,0,1,16.65,1.025h-33.3A6.06,6.06,0,0,1-21.118-.757,6.06,6.06,0,0,1-22.9-5.225v-33.3a6.06,6.06,0,0,1,1.782-4.468,6.06,6.06,0,0,1,4.468-1.782H4.15v-2.1h-20.8a8.048,8.048,0,0,0-5.908,2.441A8.048,8.048,0,0,0-25-38.525v33.3A8.048,8.048,0,0,0-22.559.684,8.048,8.048,0,0,0-16.65,3.125h33.3A8.048,8.048,0,0,0,22.559.684,8.048,8.048,0,0,0,25-5.225v-33.3a8.048,8.048,0,0,0-2.441-5.908A8.048,8.048,0,0,0,16.65-46.875Zm-8.3,2.1H12.5v-2.1H8.35Z"
-                                          transform="translate(25 46.875)"
-                                          fill="#184341"
-                                        ></path>
-                                      </svg>
-                                    </div>
-                                  </div>
+                                  
                                   <h3
                                     class="lqd-iconbox-heading text-center text-16 leading-1em mb-0"
                                   >
-                                    Environment
+                                  Education
                                   </h3>
                                   <div class="contents">
-                                    <p>Potter's hand manual</p>
-                                    <!-- <a
-                                      href="page-company-services.html"
-                                      class="btn btn-naked btn-icon-right btn-hover-swp mt-em mb-0 items-center text-15 font-bold text-secondary hover:text-primary"
-                                      ><span
-                                        class="btn-txt"
-                                        data-text="Learn more"
-                                        >Learn more</span
-                                      >
-                                      <span class="btn-icon text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i> </span
-                                      ><span
-                                        class="btn-icon mr-10 text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i></span
-                                    ></a> -->
+                                    <p>Unity Mountain provides literacy programs for adults, computer literacy training, and values-based education for school-going children through the Munyamahoro Program. The aim is to open doors of opportunity and equip all generations with knowledge and life skills that foster peace and Unity.</p>
                                   </div>
                                 </div>
                               </div>
@@ -1509,53 +822,18 @@
                             <div class="col col-12 col-md-6 col-xl-3 p-0">
                               <div class="flex flex-auto p-15 transition-all">
                                 <div
-                                  class="iconbox flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0"
+                                  class="iconbox program-card flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0"
                                   data-slideelement-onhover="true"
                                   data-slideelement-options='{ "visibleElement":  ".iconbox-icon-wrap, p, h3", "hiddenElement":  ".btn", "alignMid":  true, "triggerElement":  ".iconbox" }'
                                 >
-                                  <div class="iconbox-icon-wrap">
-                                    <div
-                                      class="mb-25 iconbox-icon-container inline-flex w-40 text-50"
-                                    >
-                                      <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="50"
-                                        height="50"
-                                        viewbox="0 0 50 50"
-                                      >
-                                        <path
-                                          d="M-2.1-31.25a1.023,1.023,0,0,0-.269-.757,1.023,1.023,0,0,0-.757-.269H-8.35V-37.5a1.023,1.023,0,0,0-.269-.757,1.023,1.023,0,0,0-.757-.269,1.023,1.023,0,0,0-.757.269,1.023,1.023,0,0,0-.269.757v5.225h-5.225a1.023,1.023,0,0,0-.757.269,1.023,1.023,0,0,0-.269.757,1.023,1.023,0,0,0,.269.757,1.023,1.023,0,0,0,.757.269H-10.4V-25a1.023,1.023,0,0,0,.269.757,1.023,1.023,0,0,0,.757.269,1.023,1.023,0,0,0,.757-.269A1.023,1.023,0,0,0-8.35-25v-5.225h5.225a1.023,1.023,0,0,0,.757-.269A1.023,1.023,0,0,0-2.1-31.25ZM15.625-17.725H5.225a1.056,1.056,0,0,0-.781.293,1.056,1.056,0,0,0-.293.781.994.994,0,0,0,.293.732,1.056,1.056,0,0,0,.781.293h10.4a.975.975,0,0,0,.757-.293,1.043,1.043,0,0,0,.269-.732,1.111,1.111,0,0,0-.269-.781A.975.975,0,0,0,15.625-17.725Zm0,8.35H5.225a1.056,1.056,0,0,0-.781.293.994.994,0,0,0-.293.732,1.056,1.056,0,0,0,.293.781,1.056,1.056,0,0,0,.781.293h10.4a.975.975,0,0,0,.757-.293,1.111,1.111,0,0,0,.269-.781,1.043,1.043,0,0,0-.269-.732A.975.975,0,0,0,15.625-9.375Zm-10.4-20.85h10.4a1.023,1.023,0,0,0,.757-.269,1.023,1.023,0,0,0,.269-.757,1.023,1.023,0,0,0-.269-.757,1.023,1.023,0,0,0-.757-.269H5.225a1.111,1.111,0,0,0-.781.269.975.975,0,0,0-.293.757.975.975,0,0,0,.293.757A1.111,1.111,0,0,0,5.225-30.225ZM-3.32-18.555a1.136,1.136,0,0,0-.757-.293.965.965,0,0,0-.708.293L-9.18-14.16l-4.346-4.395a1.136,1.136,0,0,0-.757-.293.965.965,0,0,0-.708.293,1.05,1.05,0,0,0-.342.757.9.9,0,0,0,.342.708l4.346,4.395L-14.99-8.35a1.05,1.05,0,0,0-.342.757.9.9,0,0,0,.342.708.559.559,0,0,0,.317.171,3.945,3.945,0,0,0,.513.024,4.048,4.048,0,0,0,.488-.024.574.574,0,0,0,.342-.171l4.395-4.346L-4.59-6.885a.574.574,0,0,0,.342.171,4.048,4.048,0,0,0,.488.024,3.945,3.945,0,0,0,.513-.024.559.559,0,0,0,.317-.171.9.9,0,0,0,.342-.708A1.05,1.05,0,0,0-2.93-8.35L-7.275-12.7-2.93-17.09a1.107,1.107,0,0,1-.2-.635A2.829,2.829,0,0,0-3.32-18.555ZM16.65-46.875v2.1a6.06,6.06,0,0,1,4.468,1.782A6.06,6.06,0,0,1,22.9-38.525v33.3A6.06,6.06,0,0,1,21.118-.757,6.06,6.06,0,0,1,16.65,1.025h-33.3A6.06,6.06,0,0,1-21.118-.757,6.06,6.06,0,0,1-22.9-5.225v-33.3a6.06,6.06,0,0,1,1.782-4.468,6.06,6.06,0,0,1,4.468-1.782H4.15v-2.1h-20.8a8.048,8.048,0,0,0-5.908,2.441A8.048,8.048,0,0,0-25-38.525v33.3A8.048,8.048,0,0,0-22.559.684,8.048,8.048,0,0,0-16.65,3.125h33.3A8.048,8.048,0,0,0,22.559.684,8.048,8.048,0,0,0,25-5.225v-33.3a8.048,8.048,0,0,0-2.441-5.908A8.048,8.048,0,0,0,16.65-46.875Zm-8.3,2.1H12.5v-2.1H8.35Z"
-                                          transform="translate(25 46.875)"
-                                          fill="#184341"
-                                        ></path>
-                                      </svg>
-                                    </div>
-                                  </div>
+                                  
                                   <h3
                                     class="lqd-iconbox-heading text-center text-16 leading-1em mb-0"
                                   >
-                                    Healing/Christian Witness
+                                  Environment 
                                   </h3>
                                   <div class="contents">
-                                    <p>Potter's hand manual</p>
-                                    <!-- <a
-                                      href="page-company-services.html"
-                                      class="btn btn-naked btn-icon-right btn-hover-swp mt-em mb-0 items-center text-15 font-bold text-secondary hover:text-primary"
-                                      ><span
-                                        class="btn-txt"
-                                        data-text="Learn more"
-                                        >Learn more</span
-                                      >
-                                      <span class="btn-icon text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i> </span
-                                      ><span
-                                        class="btn-icon mr-10 text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i></span
-                                    ></a> -->
+                                    <p>Environmental activities include distributing fruit tree seedlings, Building kitchen gardens, and soil erosion control. Community members are also engaged in awareness campaigns to encourage environmental protection. These efforts aim to improve both the health of the land and the wellbeing of its people.</p>
                                   </div>
                                 </div>
                               </div>
@@ -1563,53 +841,18 @@
                             <div class="col col-12 col-md-6 col-xl-3 p-0">
                               <div class="flex flex-auto p-15 transition-all">
                                 <div
-                                  class="iconbox flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0"
+                                  class="iconbox program-card flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0"
                                   data-slideelement-onhover="true"
                                   data-slideelement-options='{ "visibleElement":  ".iconbox-icon-wrap, p, h3", "hiddenElement":  ".btn", "alignMid":  true, "triggerElement":  ".iconbox" }'
                                 >
-                                  <div class="iconbox-icon-wrap">
-                                    <div
-                                      class="mb-25 iconbox-icon-container inline-flex w-40 text-50"
-                                    >
-                                      <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="50"
-                                        height="50"
-                                        viewbox="0 0 50 50"
-                                      >
-                                        <path
-                                          d="M-2.1-31.25a1.023,1.023,0,0,0-.269-.757,1.023,1.023,0,0,0-.757-.269H-8.35V-37.5a1.023,1.023,0,0,0-.269-.757,1.023,1.023,0,0,0-.757-.269,1.023,1.023,0,0,0-.757.269,1.023,1.023,0,0,0-.269.757v5.225h-5.225a1.023,1.023,0,0,0-.757.269,1.023,1.023,0,0,0-.269.757,1.023,1.023,0,0,0,.269.757,1.023,1.023,0,0,0,.757.269H-10.4V-25a1.023,1.023,0,0,0,.269.757,1.023,1.023,0,0,0,.757.269,1.023,1.023,0,0,0,.757-.269A1.023,1.023,0,0,0-8.35-25v-5.225h5.225a1.023,1.023,0,0,0,.757-.269A1.023,1.023,0,0,0-2.1-31.25ZM15.625-17.725H5.225a1.056,1.056,0,0,0-.781.293,1.056,1.056,0,0,0-.293.781.994.994,0,0,0,.293.732,1.056,1.056,0,0,0,.781.293h10.4a.975.975,0,0,0,.757-.293,1.043,1.043,0,0,0,.269-.732,1.111,1.111,0,0,0-.269-.781A.975.975,0,0,0,15.625-17.725Zm0,8.35H5.225a1.056,1.056,0,0,0-.781.293.994.994,0,0,0-.293.732,1.056,1.056,0,0,0,.293.781,1.056,1.056,0,0,0,.781.293h10.4a.975.975,0,0,0,.757-.293,1.111,1.111,0,0,0,.269-.781,1.043,1.043,0,0,0-.269-.732A.975.975,0,0,0,15.625-9.375Zm-10.4-20.85h10.4a1.023,1.023,0,0,0,.757-.269,1.023,1.023,0,0,0,.269-.757,1.023,1.023,0,0,0-.269-.757,1.023,1.023,0,0,0-.757-.269H5.225a1.111,1.111,0,0,0-.781.269.975.975,0,0,0-.293.757.975.975,0,0,0,.293.757A1.111,1.111,0,0,0,5.225-30.225ZM-3.32-18.555a1.136,1.136,0,0,0-.757-.293.965.965,0,0,0-.708.293L-9.18-14.16l-4.346-4.395a1.136,1.136,0,0,0-.757-.293.965.965,0,0,0-.708.293,1.05,1.05,0,0,0-.342.757.9.9,0,0,0,.342.708l4.346,4.395L-14.99-8.35a1.05,1.05,0,0,0-.342.757.9.9,0,0,0,.342.708.559.559,0,0,0,.317.171,3.945,3.945,0,0,0,.513.024,4.048,4.048,0,0,0,.488-.024.574.574,0,0,0,.342-.171l4.395-4.346L-4.59-6.885a.574.574,0,0,0,.342.171,4.048,4.048,0,0,0,.488.024,3.945,3.945,0,0,0,.513-.024.559.559,0,0,0,.317-.171.9.9,0,0,0,.342-.708A1.05,1.05,0,0,0-2.93-8.35L-7.275-12.7-2.93-17.09a1.107,1.107,0,0,1-.2-.635A2.829,2.829,0,0,0-3.32-18.555ZM16.65-46.875v2.1a6.06,6.06,0,0,1,4.468,1.782A6.06,6.06,0,0,1,22.9-38.525v33.3A6.06,6.06,0,0,1,21.118-.757,6.06,6.06,0,0,1,16.65,1.025h-33.3A6.06,6.06,0,0,1-21.118-.757,6.06,6.06,0,0,1-22.9-5.225v-33.3a6.06,6.06,0,0,1,1.782-4.468,6.06,6.06,0,0,1,4.468-1.782H4.15v-2.1h-20.8a8.048,8.048,0,0,0-5.908,2.441A8.048,8.048,0,0,0-25-38.525v33.3A8.048,8.048,0,0,0-22.559.684,8.048,8.048,0,0,0-16.65,3.125h33.3A8.048,8.048,0,0,0,22.559.684,8.048,8.048,0,0,0,25-5.225v-33.3a8.048,8.048,0,0,0-2.441-5.908A8.048,8.048,0,0,0,16.65-46.875Zm-8.3,2.1H12.5v-2.1H8.35Z"
-                                          transform="translate(25 46.875)"
-                                          fill="#184341"
-                                        ></path>
-                                      </svg>
-                                    </div>
-                                  </div>
+                                  
                                   <h3
                                     class="lqd-iconbox-heading text-center text-16 leading-1em mb-0"
                                   >
-                                    Education
+                                  Health, Sport and Culture 
                                   </h3>
                                   <div class="contents">
-                                    <p>Potter's hand manual</p>
-                                    <!-- <a
-                                      href="page-company-services.html"
-                                      class="btn btn-naked btn-icon-right btn-hover-swp mt-em mb-0 items-center text-15 font-bold text-secondary hover:text-primary"
-                                      ><span
-                                        class="btn-txt"
-                                        data-text="Learn more"
-                                        >Learn more</span
-                                      >
-                                      <span class="btn-icon text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i> </span
-                                      ><span
-                                        class="btn-icon mr-10 text-16 tracking-0"
-                                        ><i
-                                          class="lqd-icn-ess icon-md-arrow-round-forward-2"
-                                        ></i></span
-                                    ></a> -->
+                                    <p>This area includes a community cultural hub, a women's football team made up of young mothers, and a traditional dance troupe named Inganzo y’Ubumwe (The Inspiration of Unity). These initiatives provide physical, emotional, and cultural outlets for expression, joy, and healing—bringing people together across generations and backgrounds.</p>
                                   </div>
                                 </div>
                               </div>
@@ -1619,7 +862,6 @@
                       </div>
                       </div>
                     </div>
-
                   </div>
                 </div>
               </div>
@@ -1628,7 +870,7 @@
         </section>
       </div>
     </main>
-    
+
 				<section class="lqd-section footer-menu pt-50 pb-20">
 					<div class="container">
 						<div class="row">
@@ -1681,7 +923,7 @@
 													fill="#001634B3"
 												>
 													<path
-														d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+														d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6-7.8 34.7-22.9 42.6-42.6 11.7-29.5 9-99.5 9-132.1s2.7 102.7-9 132.1z"
 													/>
 												</svg> </span
 											></a>
@@ -1707,28 +949,28 @@
 														opacity="1.000000"
 														stroke="none"
 														d="
-										   M89.000000,129.000000 
-											   C59.333332,129.000000 30.166666,129.000000 1.000000,129.000000 
-											   C1.000000,86.333336 1.000000,43.666668 1.000000,1.000000 
-											   C43.666668,1.000000 86.333336,1.000000 129.000000,1.000000 
-											   C129.000000,43.666668 129.000000,86.333336 129.000000,129.000000 
-											   C115.833336,129.000000 102.666664,129.000000 89.000000,129.000000 
-										   M88.595779,102.711639 
-											   C92.680145,102.711639 96.764519,102.711639 101.890251,102.711639 
-											   C91.588242,87.673340 81.885941,73.510460 72.094246,59.217091 
-											   C81.169685,48.628395 90.098831,38.210400 99.413872,27.342165 
-											   C93.068947,27.151587 93.064674,27.147903 89.605286,31.158394 
-											   C82.897171,38.935150 76.194351,46.716488 69.139130,54.902260 
-											   C63.317783,46.462208 57.807423,38.388306 52.177685,30.398521 
-											   C51.292896,29.142822 49.906246,27.416475 48.684555,27.360039 
-											   C42.154896,27.058399 35.603943,27.217810 28.114105,27.217810 
-											   C38.123894,41.830814 47.486744,55.499367 56.858807,69.181381 
-											   C47.368439,80.245346 38.101017,91.049393 28.833599,101.853447 
-											   C29.191290,102.413307 29.548983,102.973175 29.906673,103.533035 
-											   C32.346878,102.248634 35.376949,101.502609 37.125450,99.586891 
-											   C44.802505,91.175568 52.109020,82.426048 59.817924,73.488388 
-											   C65.357956,81.513451 70.898239,88.810242 75.598846,96.612877 
-											   C78.564026,101.534836 82.044167,103.796852 88.595779,102.711639 
+										   M89.000000,129.000000
+											   C59.333332,129.000000 30.166666,129.000000 1.000000,129.000000
+											   C1.000000,86.333336 1.000000,43.666668 1.000000,1.000000
+											   C43.666668,1.000000 86.333336,1.000000 129.000000,1.000000
+											   C129.000000,43.666668 129.000000,86.333336 129.000000,129.000000
+											   C115.833336,129.000000 102.666664,129.000000 89.000000,129.000000
+										   M88.595779,102.711639
+											   C92.680145,102.711639 96.764519,102.711639 101.890251,102.711639
+											   C91.588242,87.673340 81.885941,73.510460 72.094246,59.217091
+											   C81.169685,48.628395 90.098831,38.210400 99.413872,27.342165
+											   C93.068947,27.151587 93.064674,27.147903 89.605286,31.158394
+											   C82.897171,38.935150 76.194351,46.716488 69.139130,54.902260
+											   C63.317783,46.462208 57.807423,38.388306 52.177685,30.398521
+											   C51.292896,29.142822 49.906246,27.416475 48.684555,27.360039
+											   C42.154896,27.058399 35.603943,27.217810 28.114105,27.217810
+											   C38.123894,41.830814 47.486744,55.499367 56.858807,69.181381
+											   C47.368439,80.245346 38.101017,91.049393 28.833599,101.853447
+											   C29.191290,102.413307 29.548983,102.973175 29.906673,103.533035
+											   C32.346878,102.248634 35.376949,101.502609 37.125450,99.586891
+											   C44.802505,91.175568 52.109020,82.426048 59.817924,73.488388
+											   C65.357956,81.513451 70.898239,88.810242 75.598846,96.612877
+											   C78.564026,101.534836 82.044167,103.796852 88.595779,102.711639
 										   z"
 													/>
 													<path
@@ -1736,30 +978,30 @@
 														opacity="1.000000"
 														stroke="none"
 														d="
-										   M88.121056,102.711639 
-											   C82.044167,103.796852 78.564026,101.534836 75.598846,96.612877 
-											   C70.898239,88.810242 65.357956,81.513451 59.817924,73.488388 
-											   C52.109020,82.426048 44.802505,91.175568 37.125450,99.586891 
-											   C35.376949,101.502609 32.346878,102.248634 29.906673,103.533035 
-											   C29.548983,102.973175 29.191290,102.413307 28.833599,101.853447 
-											   C38.101017,91.049393 47.368439,80.245346 56.858807,69.181381 
-											   C47.486744,55.499367 38.123894,41.830814 28.114105,27.217810 
-											   C35.603943,27.217810 42.154896,27.058399 48.684555,27.360039 
-											   C49.906246,27.416475 51.292896,29.142822 52.177685,30.398521 
-											   C57.807423,38.388306 63.317783,46.462208 69.139130,54.902260 
-											   C76.194351,46.716488 82.897171,38.935150 89.605286,31.158394 
-											   C93.064674,27.147903 93.068947,27.151587 99.413872,27.342165 
-											   C90.098831,38.210400 81.169685,48.628395 72.094246,59.217091 
-											   C81.885941,73.510460 91.588242,87.673340 101.890251,102.711639 
-											   C96.764519,102.711639 92.680145,102.711639 88.121056,102.711639 
-										   M44.934685,32.197666 
-											   C42.675259,32.197666 40.415833,32.197666 37.381123,32.197666 
-											   C38.634197,34.214680 39.409050,35.601364 40.313831,36.897335 
-											   C53.341042,55.556976 66.383774,74.205780 79.427368,92.853981 
-											   C83.523384,98.709976 84.571297,99.066864 92.107208,97.193634 
-											   C91.888306,96.751465 91.729507,96.293953 91.462860,95.911659 
-											   C77.207878,75.474861 62.955601,55.036129 48.645107,34.638241 
-											   C47.945923,33.641636 46.728668,33.008492 44.934685,32.197666 
+										   M88.121056,102.711639
+											   C82.044167,103.796852 78.564026,101.534836 75.598846,96.612877
+											   C70.898239,88.810242 65.357956,81.513451 59.817924,73.488388
+											   C52.109020,82.426048 44.802505,91.175568 37.125450,99.586891
+											   C35.376949,101.502609 32.346878,102.248634 29.906673,103.533035
+											   C29.548983,102.973175 29.191290,102.413307 28.833599,101.853447
+											   C38.101017,91.049393 47.368439,80.245346 56.858807,69.181381
+											   C47.486744,55.499367 38.123894,41.830814 28.114105,27.217810
+											   C35.603943,27.217810 42.154896,27.058399 48.684555,27.360039
+											   C49.906246,27.416475 51.292896,29.142822 52.177685,30.398521
+											   C57.807423,38.388306 63.317783,46.462208 69.139130,54.902260
+											   C76.194351,46.716488 82.897171,38.935150 89.605286,31.158394
+											   C93.064674,27.147903 93.068947,27.151587 99.413872,27.342165
+											   C90.098831,38.210400 81.169685,48.628395 72.094246,59.217091
+											   C81.885941,73.510460 91.588242,87.673340 101.890251,102.711639
+											   C96.764519,102.711639 92.680145,102.711639 88.121056,102.711639
+										   M44.934685,32.197666
+											   C42.675259,32.197666 40.415833,32.197666 37.381123,32.197666
+											   C38.634197,34.214680 39.409050,35.601364 40.313831,36.897335
+											   C53.341042,55.556976 66.383774,74.205780 79.427368,92.853981
+											   C83.523384,98.709976 84.571297,99.066864 92.107208,97.193634
+											   C91.888306,96.751465 91.729507,96.293953 91.462860,95.911659
+											   C77.207878,75.474861 62.955601,55.036129 48.645107,34.638241
+											   C47.945923,33.641636 46.728668,33.008492 44.934685,32.197666
 										   z"
 													/>
 													<path
@@ -1767,14 +1009,14 @@
 														opacity="1.000000"
 														stroke="none"
 														d="
-										   M45.343670,32.201881 
-											   C46.728668,33.008492 47.945923,33.641636 48.645107,34.638241 
-											   C62.955601,55.036129 77.207878,75.474861 91.462860,95.911659 
-											   C91.729507,96.293953 91.888306,96.751465 92.107208,97.193634 
-											   C84.571297,99.066864 83.523384,98.709976 79.427368,92.853981 
-											   C66.383774,74.205780 53.341042,55.556976 40.313831,36.897335 
-											   C39.409050,35.601364 38.634197,34.214680 37.381123,32.197666 
-											   C40.415833,32.197666 42.675259,32.197666 45.343670,32.201881 
+										   M45.343670,32.201881
+											   C46.728668,33.008492 47.945923,33.641636 48.645107,34.638241
+											   C62.955601,55.036129 77.207878,75.474861 91.462860,95.911659
+											   C91.729507,96.293953 91.888306,96.751465 92.107208,97.193634
+											   C84.571297,99.066864 83.523384,98.709976 79.427368,92.853981
+											   C66.383774,74.205780 53.341042,55.556976 40.313831,36.897335
+											   C39.409050,35.601364 38.634197,34.214680 37.381123,32.197666
+											   C40.415833,32.197666 42.675259,32.197666 45.343670,32.201881
 										   z"
 													/>
 												</svg> </span
