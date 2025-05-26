@@ -285,6 +285,72 @@
         color: #FF0000;
       }
       
+      /* Fix for carousel consistency */
+      .carousel-items {
+        overflow: hidden; /* Prevent content from spilling outside container */
+      }
+      
+      /* Ensure carousel items maintain proper dimensions regardless of state */
+      .carousel-item {
+        width: calc(25% - 20px); /* Default 4 items per row with spacing */
+      }
+      
+      /* Responsive adjustments */
+      @media (max-width: 1199px) {
+        .carousel-item {
+          width: calc(33.333% - 20px); /* 3 items per row on medium screens */
+        }
+      }
+      
+      @media (max-width: 991px) {
+        .carousel-item {
+          width: calc(50% - 20px); /* 2 items per row on smaller screens */
+        }
+      }
+      
+      @media (max-width: 767px) {
+        .carousel-item {
+          width: calc(100% - 20px); /* 1 item per row on mobile */
+        }
+      }
+      
+      /* Force Flickity to initialize with proper styling */
+      .flickity-enabled {
+        position: relative;
+      }
+      
+      .flickity-enabled:focus {
+        outline: none;
+      }
+      
+      /* Ensure cell sizing is consistent even before Flickity JS fully initializes */
+      .flickity-viewport {
+        overflow: hidden;
+        position: relative;
+        height: 100%;
+      }
+      
+      .flickity-slider {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+      
+      /* Override any conflicting grid styles */
+      #stories.carousel-items {
+        display: block !important; /* Prevent grid display on refresh */
+      }
+      
+      /* Add a subtle loading state */
+      #stories:not(.flickity-enabled) {
+        opacity: 0.7;
+        transition: opacity 0.3s ease;
+      }
+      
+      #stories.flickity-enabled {
+        opacity: 1;
+      }
+      
       @media (max-width: 992px) {
         body, html {
           overflow-y: auto;
@@ -437,7 +503,7 @@
     <script src="assets/js/index.js"></script>
     <script>
       // Set the countdown to a specific fixed date (replace with your actual launch date)
-      const countdownDate = new Date("2025-05-18T00:00:00").getTime();
+      const countdownDate = new Date("2025-05-28T00:00:00").getTime();
       
       // Update the countdown every second
       const countdown = setInterval(function() {
