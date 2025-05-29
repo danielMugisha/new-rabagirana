@@ -36,6 +36,179 @@
 		/>
 		<title>Rabagirana Ministries</title>
 		<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+		<style>
+		.pillar{
+			min-height: 410px !important;
+		}
+
+		/* Custom Slider Styles */
+		.custom-slider-container {
+			position: relative;
+			width: 100%;
+			overflow: hidden;
+			padding: 0 5%;
+		}
+
+		.custom-slider-wrapper {
+			overflow: hidden;
+			margin: 0 60px;
+		}
+
+		.custom-slider-track {
+			display: flex;
+			transition: transform 0.5s ease;
+			gap: 20px;
+		}
+
+		.story-slide {
+			flex: 0 0 auto;
+			width: calc(25% - 20px);
+			position: relative;
+			transition: transform 0.3s ease;
+		}
+
+		.story-slide:hover {
+			transform: translateY(-5px);
+		}
+
+		.slider-controls {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 20px;
+		}
+
+		.slider-prev, .slider-next {
+			background: #f3c248;
+			color: white;
+			border: none;
+			border-radius: 50%;
+			width: 40px;
+			height: 40px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			transition: background 0.3s ease;
+		}
+
+		.slider-prev:hover, .slider-next:hover {
+			background: #61975f;
+		}
+
+		/* Story Card Styling with Perfect Square Images */
+		.story-slide .lqd-pf-item {
+			width: 100%;
+		}
+
+		.story-slide .lqd-pf-img {
+			position: relative;
+			overflow: hidden;
+			width: 100%;
+			padding-top: 100%; /* Perfect square aspect ratio */
+			height: 0;
+		}
+
+		.story-slide .lqd-pf-img figure {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			margin: 0;
+		}
+
+		.story-slide .lqd-pf-img img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+			transition: transform 0.4s ease;
+		}
+
+		.story-slide:hover .lqd-pf-img img {
+			transform: scale(1.05);
+		}
+
+		.story-slide .lqd-pf-overlay-bg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-image: linear-gradient(
+				180deg,
+				rgba(243, 194, 72, 0.85) 0%,
+				rgba(97, 151, 95, 0.85) 100%
+			) !important;
+			opacity: 0;
+			visibility: hidden;
+			transition: opacity 0.3s ease, visibility 0.3s ease;
+			z-index: 10;
+			padding: 20px;
+			text-align: center;
+		}
+
+		.story-slide:hover .lqd-pf-overlay-bg {
+			opacity: 1;
+			visibility: visible;
+		}
+
+		.story-slide .lqd-pf-overlay-bg p {
+			color: white;
+			font-size: 16px;
+			line-height: 1.5;
+			max-height: 100%;
+			overflow: auto;
+			margin: 0;
+		}
+
+		.story-slide .lqd-pf-details {
+			padding: 1rem 0;
+		}
+
+		/* Scrollbar styling for the summary */
+		.story-slide .lqd-pf-overlay-bg p::-webkit-scrollbar {
+			width: 5px;
+		}
+
+		.story-slide .lqd-pf-overlay-bg p::-webkit-scrollbar-track {
+			background: rgba(255, 255, 255, 0.2);
+			border-radius: 10px;
+		}
+
+		.story-slide .lqd-pf-overlay-bg p::-webkit-scrollbar-thumb {
+			background: #ffffff;
+			border-radius: 10px;
+		}
+
+		/* Responsive styles */
+		@media (max-width: 991px) {
+			.story-slide {
+				width: calc(33.33% - 20px);
+			}
+		}
+
+		@media (max-width: 767px) {
+			.story-slide {
+				width: calc(50% - 20px);
+			}
+			.custom-slider-wrapper {
+				margin: 0 40px;
+			}
+		}
+
+		@media (max-width: 480px) {
+			.story-slide {
+				width: calc(100% - 20px);
+			}
+			.custom-slider-wrapper {
+				margin: 0 20px;
+			}
+		}
+	</style>
 	</head>
 	<body
 		data-localscroll-offset="80"
@@ -48,11 +221,6 @@
 		data-mobile-logo-alignment="default"
 		data-overlay-onmobile="false"
 	>
-	<style>
-		.pillar{
-			min-height: 410px !important;
-		}
-	</style>
 		<div id="wrap">
 			<div class="lqd-sticky-placeholder hidden"></div>
 			<header
@@ -329,10 +497,10 @@
 													/>
 												</video>
 												<button class="video-inactive" id="sound-btn">
-													<img src="/assets/images/common/sound.png" alt="">
+													<i class="fas fa-volume-up" style="font-size: 28px; color: #333;"></i>
 												</button>
 												<button class="video-inactive" id="mute-btn">
-													<img src="/assets/images/common/mute.png" alt="">
+													<i class="fas fa-volume-mute" style="font-size: 28px; color: #333;"></i>
 												</button>
 											</figure>
 										</div>
@@ -609,12 +777,16 @@
 							<div class="row items-center justify-center">
 								<div class="col col-12 p-0">
 									<div class="carousel-container pt-40 animation-element">
-										<div
-											class="carousel-items px-40"
-											id="stories"
-											data-lqd-flickity='{ "equalHeightCells": true, "filters": "#pf-filter-46824385", "prevNextButtons": true, "navArrow":  6, "fullwidthSide":  true, "buttonsAppendTo":  "self" }'
-										>
-										
+										<div class="custom-slider-container">
+											<div class="slider-controls">
+												<button class="slider-prev"><i class="lqd-icn-ess icon-md-arrow-back"></i></button>
+												<button class="slider-next"><i class="lqd-icn-ess icon-md-arrow-forward"></i></button>
+											</div>
+											<div class="custom-slider-wrapper">
+												<div class="custom-slider-track" id="stories">
+													<!-- Slides will be populated here by JavaScript -->
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -1289,16 +1461,7 @@
 											   C32.346878,102.248634 35.376949,101.502609 37.125450,99.586891
 											   C44.802505,91.175568 52.109020,82.426048 59.817924,73.488388
 											   C65.357956,81.513451 70.898239,88.810242 75.598846,96.612877
-											   C78.564026,101.534836 82.044167,103.796852 88.595779,102.711639
-										   z"
-													/>
-													<path
-														fill="#F1F1F1"
-														opacity="1.000000"
-														stroke="none"
-														d="
-										   M88.121056,102.711639
-											   C82.044167,103.796852 78.564026,101.534836 75.598846,96.612877
+											   C78.564026,101.534836 
 											   C70.898239,88.810242 65.357956,81.513451 59.817924,73.488388
 											   C52.109020,82.426048 44.802505,91.175568 37.125450,99.586891
 											   C35.376949,101.502609 32.346878,102.248634 29.906673,103.533035
@@ -1362,8 +1525,7 @@
 															d="M2315 5109 c-800 -83 -1501 -518 -1927 -1196 -604 -960 -491 -2230
 												272 -3065 423 -463 951 -740 1585 -830 118 -17 511 -16 635 0 579 80 1097 337
 												1491 739 130 132 157 163 243 277 256 341 423 757 488 1211 17 118 17 512 0
-												630 -43 303 -122 561 -247 814 -134 268 -270 459 -483 674 -395 400 -889 649
-												-1457 733 -123 18 -478 26 -600 13z m800 -1439 c616 -22 747 -46 863 -154 96
+												630 -43 303 -122 561 -247 814 -134 268 -270 459 -483 674 -889 733 -123 18 -478 26 -600 13z m800 -1439 c616 -22 747 -46 863 -154 96
 												-90 136 -209 163 -491 17 -174 18 -730 1 -910 -26 -272 -51 -375 -111 -455
 												-83 -110 -165 -152 -349 -175 -493 -62 -1923 -56 -2304 10 -196 34 -320 150
 												-361 340 -48 218 -69 677 -47 1030 25 411 55 528 161 640 91 96 177 123 464

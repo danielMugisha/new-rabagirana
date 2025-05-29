@@ -112,29 +112,62 @@ function setupEventListeners() {
   var soundBtn = document.getElementById("sound-btn");
   var muteBtn = document.getElementById("mute-btn");
   
-  if (video) {
+  if (video && soundBtn && muteBtn) {
+    // Set initial button states based on video muted property
+    if(video.muted) {
+      soundBtn.className = 'video-active';
+      muteBtn.className = 'video-inactive';
+    } else {
+      soundBtn.className = 'video-inactive';
+      muteBtn.className = 'video-active';
+    }
+    
+    // Video hover shows appropriate buttons
     video.addEventListener("mouseover", function () {
-      if(video.muted){
-        muteBtn.className = 'video-inactive';
+      if(video.muted) {
         soundBtn.className = 'video-active';
+        muteBtn.className = 'video-inactive';
       } else {
         soundBtn.className = 'video-inactive';
         muteBtn.className = 'video-active';
       }
     });
     
+    // Hide buttons when mouse leaves video
     video.addEventListener("mouseleave", function () {
       soundBtn.className = 'video-inactive';
       muteBtn.className = 'video-inactive';
     });
-  }
-  
-  if (hero) {
-    hero.addEventListener("click", function () {
-      if (video.muted){
-        video.muted = false;
-      } else {
-        video.muted = true;
+    
+    // Sound button click - unmute video
+    soundBtn.addEventListener("click", function(e) {
+      e.stopPropagation(); // Prevent event from bubbling to parent containers
+      video.muted = false;
+      soundBtn.className = 'video-inactive';
+      muteBtn.className = 'video-active';
+    });
+    
+    // Mute button click - mute video
+    muteBtn.addEventListener("click", function(e) {
+      e.stopPropagation(); // Prevent event from bubbling to parent containers
+      video.muted = true;
+      muteBtn.className = 'video-inactive';
+      soundBtn.className = 'video-active';
+    });
+    
+    // Video click - toggle mute state
+    video.addEventListener("click", function(e) {
+      // Only handle clicks directly on the video, not on buttons
+      if (e.target === video) {
+        if(video.muted) {
+          video.muted = false;
+          soundBtn.className = 'video-inactive';
+          muteBtn.className = 'video-active';
+        } else {
+          video.muted = true;
+          muteBtn.className = 'video-inactive';
+          soundBtn.className = 'video-active';
+        }
       }
     });
   }
@@ -162,193 +195,133 @@ const getBaseUrl = () => {
   apiURL = "https://app.rabagirana.org/";
 };
 
-// Modified functions to return promises for better flow control
-const getMannaContent = async () => {
-  const URL = `${apiURL}api/manna/latest`;
-  
-  try {
-    const response = await fetch(URL);
-    const result = await response.json();
-    if(result.data) {
-      buildManna(result.data);
-    }
-    return true;
-  } catch (error) {
-    console.error('Error fetching manna content:', error);
-    return false;
-  }
-};
-
-const getStories = async () => {
-  const URL = `${apiURL}api/stories`;
-
-  try {
-    const response = await fetch(URL);
-    const result = await response.json();
-    
-    if (result.data && result.data.length > 0) {
-      // Merge API stories with defaults, preferring API versions
-      const mergedStories = [...defaultStories];
-      result.data.forEach(apiStory => {
-        const index = mergedStories.findIndex(s => s._id === apiStory._id);
-        if (index >= 0) {
-          mergedStories[index] = apiStory;
-        } else {
-          mergedStories.push(apiStory);
-        }
-      });
-      currentStories = mergedStories;
-    }
-    
-    // Always build stories after attempt to fetch
-    buildStories();
-    return true;
-  } catch (error) {
-    console.error('Error fetching stories:', error);
-    // Build stories with default data if fetch fails
-    currentStories = [...defaultStories];
-    buildStories();
-    return false;
-  }
-};
-
+// Custom slider for Stories
 const buildStories = async () => {
-  var el = document.getElementById("stories");
-  if (!el) return; // Safety check if element doesn't exist
+  const storySlider = document.getElementById("stories");
+  if (!storySlider) return; // Safety check if element doesn't exist
   
   // Clear existing content
-  el.innerHTML = "";
+  storySlider.innerHTML = "";
   
   // Build HTML for each story
   currentStories.forEach((story) => {
-    el.innerHTML += `<div class="carousel-item col-12 col-lg-6 col-xl-3 mr-70">
-      <article
-          class="lqd-pf-item lqd-pf-item-style-3 lqd-pf-overlay-bg-scale lqd-pf-content-v pf-details-h-str"
-      >
+    const storySlide = document.createElement('div');
+    storySlide.className = 'story-slide';
+    
+    storySlide.innerHTML = `
+      <article class="lqd-pf-item">
         <div class="lqd-pf-item-inner">
-            <div
-                class="lqd-pf-img overflow-hidden rounded-6 relative mb-2em"
-            >
-                <figure>
-                    <figure class="lqd-overlay flex">
-                        <img
-                            width="640"
-                            height="600"
-                            src=${story.image}
-                            class="w-full h-full objfit-cover objfit-center"
-                            alt="case study"
-                        />
-                    </figure>
-                </figure>
-                <span
-                    class="lqd-pf-overlay-bg lqd-overlay flex items-center justify-center bg-transparent text-white"
-                    style="
-                        background-image: linear-gradient(
-                            180deg,
-                            rgb(243, 194, 72, 0.3) 0%,
-                            rgba(97, 151, 95, 0.3) 100%
-                        );
-                    "
-                    >
-                    <p
-                        class="ld-fh-element inline-block relative mb-0/5em text-20 leading-1/7em"
-                    style="margin: 16px">
-                        ${story.summary}
-                    </p>
-                    </span>
+          <div class="lqd-pf-img overflow-hidden rounded-6 relative mb-2em">
+            <figure>
+              <img
+                width="400"
+                height="400"
+                src="${story.image}"
+                class="w-full h-full objfit-cover objfit-center"
+                alt="${story.title}"
+              />
+            </figure>
+            <div class="lqd-pf-overlay-bg flex items-center justify-center">
+              <p>${story.summary}</p>
             </div>
-            <div class="lqd-pf-details">
-                <h2 class="lqd-pf-title mt-0 mb-1 h5">
-                    ${story.title}
-                </h2>
-                <ul
-                    class="reset-ul inline-nav lqd-pf-cat inline-flex relative z-2"
-                >
-                    <li>
-                        <a href="#" class="leading-1/4em"
-                            >${story.narrator}</a
-                        >
-                    </li>
-                </ul>
-            </div>
-            <a
-                href="/story.html?id=${story._id}"
-                class="lqd-overlay flex lqd-pf-overlay-link leading-1/4em "
-                data-fresco-group="case-studies"
-            ></a>
+          </div>
+          <div class="lqd-pf-details">
+            <h2 class="lqd-pf-title mt-0 mb-1 h5">${story.title}</h2>
+            <ul class="reset-ul inline-nav lqd-pf-cat inline-flex relative z-2">
+              <li>
+                <a href="#" class="leading-1/4em">${story.narrator}</a>
+              </li>
+            </ul>
+          </div>
+          <a
+            href="/story.html?id=${story._id}"
+            class="lqd-overlay flex lqd-pf-overlay-link leading-1/4em"
+          ></a>
         </div>
-    </article>
-</div>`;
+      </article>
+    `;
+    
+    storySlider.appendChild(storySlide);
   });
   
-  // Enhanced carousel initialization with more explicit handling and retries
-  const initCarousel = () => {
-    if (typeof $ === 'undefined' || !$.fn || !$.fn.flickity) {
-      console.log('Waiting for Flickity to load...');
-      setTimeout(initCarousel, 500);
-      return;
-    }
-
-    const $carousel = $(el);
-    
-    // Ensure any existing carousel is destroyed
-    if ($carousel.data('flickity')) {
-      $carousel.flickity('destroy');
-    }
-    
-    // Initialize with robust error handling
-    try {
-      $carousel.flickity({
-        equalHeightCells: true,
-        prevNextButtons: true,
-        navArrow: 6,
-        fullwidthSide: true,
-        buttonsAppendTo: 'self',
-        cellAlign: 'left',
-        contain: true,
-        pageDots: false,
-        dragThreshold: 10,
-        wrapAround: false,
-        adaptiveHeight: false,
-        imagesLoaded: true,
-        on: {
-          ready: function() {
-            // Force a resize after initialization
-            setTimeout(() => {
-              $carousel.flickity('resize');
-            }, 100);
-          }
-        }
-      });
-    } catch (error) {
-      console.error('Error initializing flickity:', error);
-      // Try to reinitialize once more after a delay
-      setTimeout(() => {
-        try {
-          $carousel.flickity({
-            equalHeightCells: true,
-            prevNextButtons: true,
-            navArrow: 6,
-            fullwidthSide: true,
-            buttonsAppendTo: 'self',
-            cellAlign: 'left',
-            contain: true,
-            pageDots: false,
-            dragThreshold: 10,
-            wrapAround: false,
-            adaptiveHeight: false,
-            imagesLoaded: true
-          });
-        } catch (retryError) {
-          console.error('Failed to initialize carousel on retry:', retryError);
-        }
-      }, 1000);
-    }
-  };
-
-  // Start carousel initialization
-  initCarousel();
+  // Initialize the custom slider functionality
+  initCustomSlider();
 };
+
+// Initialize custom slider functionality
+function initCustomSlider() {
+  const slider = document.getElementById('stories');
+  const prevBtn = document.querySelector('.slider-prev');
+  const nextBtn = document.querySelector('.slider-next');
+  
+  if (!slider || !prevBtn || !nextBtn) return;
+  
+  let slideWidth = 0;
+  let slidesPerView = 4;
+  let currentPosition = 0;
+  const totalSlides = slider.children.length;
+  
+  // Determine slides per view based on viewport width
+  function updateSlidesPerView() {
+    if (window.innerWidth < 480) {
+      slidesPerView = 1;
+    } else if (window.innerWidth < 768) {
+      slidesPerView = 2;
+    } else if (window.innerWidth < 992) {
+      slidesPerView = 3;
+    } else {
+      slidesPerView = 4;
+    }
+    
+    // Update slide width based on container width and slides per view
+    const sliderWrapper = slider.closest('.custom-slider-wrapper');
+    if (sliderWrapper) {
+      const containerWidth = sliderWrapper.clientWidth;
+      slideWidth = containerWidth / slidesPerView;
+      
+      // Apply width to slides
+      Array.from(slider.children).forEach(slide => {
+        slide.style.width = `${slideWidth - 20}px`; // Account for gap
+      });
+    }
+    
+    // Reset position when viewport changes
+    goToSlide(0);
+  }
+  
+  // Move slider to specified position
+  function goToSlide(position) {
+    currentPosition = position;
+    
+    // Ensure we don't go out of bounds
+    if (currentPosition < 0) {
+      currentPosition = 0;
+    }
+    
+    const maxPosition = totalSlides - slidesPerView;
+    if (currentPosition > maxPosition) {
+      currentPosition = maxPosition > 0 ? maxPosition : 0;
+    }
+    
+    // Apply transform
+    slider.style.transform = `translateX(-${currentPosition * (slideWidth)}px)`;
+  }
+  
+  // Handle next/prev button clicks
+  nextBtn.addEventListener('click', () => {
+    goToSlide(currentPosition + 1);
+  });
+  
+  prevBtn.addEventListener('click', () => {
+    goToSlide(currentPosition - 1);
+  });
+  
+  // Initialize slider dimensions
+  updateSlidesPerView();
+  
+  // Update on window resize
+  window.addEventListener('resize', updateSlidesPerView);
+}
 
 const subscribe = async () => {
   const emailInput = document.getElementById('email');
