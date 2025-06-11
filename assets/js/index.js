@@ -93,16 +93,16 @@ window.onload = function() {
   cleanupCarousel();
   
   // Load data in sequence with promises to ensure proper timing
-  Promise.all([
+  //Promise.all([
     getMannaContent(),
     getEvents(),
     getStories()
-  ]).catch(error => {
-    console.error('Error in data loading sequence:', error);
+  //]).catch(error => {
+    //console.error('Error in data loading sequence:', error);
     // Ensure stories still get built with defaults if there's an error
-    currentStories = [...defaultStories];
+    //currentStories = [...defaultStories];
     buildStories();
-  });
+  //});
 };
 
 // New function to setup event listeners - extracted from window.onload
@@ -234,7 +234,7 @@ const buildStories = async () => {
             </ul>
           </div>
           <a
-            href="/story.html?id=${story._id}"
+            href="story.html?id=${story._id}"
             class="lqd-overlay flex lqd-pf-overlay-link leading-1/4em"
           ></a>
         </div>
@@ -380,29 +380,48 @@ const buildManna = async (manna) => {
   linkElement.href = `manna.html?id=${manna._id}` 
 }
 
-const getEvents = async () =>{
+const getMannaContent = async () => {
+  const URL = `${apiURL}api/manna/latest`;
+  try {
+    const response = await fetch(URL);
+    const result = await response.json();
+    if (result.data) {
+      buildManna(result.data);
+    }
+    return true;
+  } catch (error) {
+    console.error('Error fetching manna content:', error);
+    return false;
+  }
+};
+
+
+const getEvents = async () => {
   const URL = `${apiURL}api/events/latest`;
 
   try {
     const response = await fetch(URL);
     const result = await response.json();
 
-    if(result.data) {
+    if (result.data && Array.isArray(result.data) && result.data.length > 0) {
       buildEvents(result.data);
-    }
+    } 
     return true;
   } catch (error) {
     console.error('Error fetching events:', error);
+    buildEvents(defaultEvents);
     return false;
   }
 }
 
-const buildEvents = async(events) =>{
+const buildEvents = async(events) => {
   const el = document.getElementById('upcoming');
-  if (!el) return; // Safety check if element doesn't exist
+  if (!el) return;
+  
+  const eventsToShow = Array.isArray(events) && events.length > 0 ? events : defaultEvents;
   
   el.innerHTML = '';
-  events.forEach(event => {
+  eventsToShow.forEach(event => {
     el.innerHTML += `<div class="col col-12 col-md-6 col-xl-3 p-0 module-content">
     <div
       class="lqd-fb relative lqd-fb-style-6 rounded-4 h-pt-125 text-white"
@@ -520,3 +539,22 @@ const buildEvents = async(events) =>{
   </div>`
   }
 }
+
+const getStories = async () => {
+  const URL = `${apiURL}api/stories`;
+  try {
+    const response = await fetch(URL);
+    const result = await response.json();
+    if (result.data && result.data.length > 0) {
+      // If stories are fetched successfully, update currentStories
+      currentStories = result.data;
+      buildStories();
+    }
+    return true;
+  } catch (error) {
+    console.error('Error fetching stories:', error);
+    currentStories = [...defaultStories];
+    buildStories();
+    return false;
+  }
+};
