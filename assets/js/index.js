@@ -89,20 +89,16 @@ document.addEventListener('DOMContentLoaded', function() {
 window.onload = function() {
   getBaseUrl();
   
-  // Force cleanup of any existing carousel first
-  cleanupCarousel();
-  
-  // Load data in sequence with promises to ensure proper timing
-  //Promise.all([
-    getMannaContent(),
-    getEvents(),
-    getStories()
-  //]).catch(error => {
-    //console.error('Error in data loading sequence:', error);
-    // Ensure stories still get built with defaults if there's an error
-    //currentStories = [...defaultStories];
-    buildStories();
-  //});
+  // Check if we're on the story page
+  if (window.location.pathname.includes('story.html')) {
+    displayStory();
+  } else {
+    // Existing homepage initialization
+    cleanupCarousel();
+    getMannaContent();
+    getEvents();
+    getStories();
+  }
 };
 
 // New function to setup event listeners - extracted from window.onload
@@ -548,6 +544,7 @@ const getStories = async () => {
     if (result.data && result.data.length > 0) {
       // If stories are fetched successfully, update currentStories
       currentStories = result.data;
+      defaultStories = result.data;
       buildStories();
     }
     return true;
@@ -556,5 +553,62 @@ const getStories = async () => {
     currentStories = [...defaultStories];
     buildStories();
     return false;
+  }
+};
+
+// Add function to display individual story
+const displayStory = async () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const storyId = urlParams.get('id');
+  
+  if (!storyId) return;
+
+  try {
+   
+    
+   
+      const story = currentStories.find(s => s._id === parseInt(storyId));
+      if (!story) {
+        console.error('Story not found:', storyId);
+        return;
+      }
+      
+      // Update page content
+      document.getElementById('story-title').textContent = story.title;
+      document.getElementById('story-body').innerHTML = story.content;
+      document.getElementById('story-image').src = story.image ?? `${apiURL}${story.image}`;
+      
+      const otherStories = currentStories.filter(s => s._id !== parseInt(storyId)).slice(0, 3); // Get up to 3 other stories
+      
+          
+        const otherStoriesHTML = otherStories.map(story => `
+          <div class="col col-12 col-md-6 col-xl-4 p-0">
+            <div class="iconbox program-card flex-grow-1 relative flex-col iconbox-default iconbox-contents-show-onhover py-40 px-20 mb-30 items-center bg-white rounded-10 shadow-bottom lg:m-0">
+              <h3 class="lqd-iconbox-heading text-center text-16 leading-1em mb-2">
+                ${story.title}
+              </h3>
+              <div class="contents">
+                <p>${story.summary}</p>
+                <a href="story.html?id=${story._id}" class="btn btn-naked btn-icon-right btn-hover-reveal mt-1/5em mb-0">
+                  <span class="btn-txt">Read more</span>
+                  <span class="btn-icon"><i class="lqd-icn-ess icon-md-arrow-forward"></i></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        `).join('');
+        
+        document.getElementById('other-stories').innerHTML = `
+          <div class="container">
+            <h3 class="text-center mb-3" style="margin-top: -2rem;">Other Stories</h3>
+            <div class="d-flex flex-wrap justify-content-between">
+              ${otherStoriesHTML}
+            </div>
+          </div>
+        `;
+      
+    
+  } catch (error) {
+    console.error('Error fetching story:', error);
   }
 };

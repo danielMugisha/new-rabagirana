@@ -199,16 +199,12 @@
             <div class="container">
               <div class="row items-center">
                 <div class="col col-12 col-md-6">
-                    <div class="flex pl-5percent lg:pl-0">
-                        <div
-                            class="mb-2em"
-                            id="">
-                            <div class="" id="story-body">
-                           
-                        </div>
+                  <div class="flex pl-5percent lg:pl-0">
+                    <div class="mb-2em" id="">
+                      <div class="" id="story-body"></div>
                     </div>
+                  </div>
                 </div>
-              </div>
                 <div class="col col-12 col-xl-6 p-0">
                   <div
                     class="w-full flex  items-end relative flex justify-end "
@@ -237,11 +233,10 @@
                     </div>
                   </div>
                 </div>
-               
               </div>
             </div>
           </section>
-          <section class="lqd-sectoin what-we-do-page py-100">
+          <section class="lqd-section what-we-do-page py-100">
             <div class="container">
               <div class="row" id="other-stories">
                
@@ -557,9 +552,13 @@
     <script src="assets/vendors/isotope/isotope.pkgd.min.js"></script>
     <script src="assets/js/liquid-gdpr.min.js"></script>
     <script src="assets/js/theme.min.js"></script>
-    <!-- <script src="assets/js/index.js"></script> -->
     <script src="assets/js/liquid-ajax-contact-form.min.js"></script>
     <script src="assets/js/index.js?version=0.1"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        displayStory();
+      });
+    </script>
     <div class="lqd-cc lqd-cc--inner fixed pointer-events-none"></div>
     <div
       class="lqd-cc--el lqd-cc-solid lqd-cc-explore flex items-center justify-center rounded-full fixed pointer-events-none"
