@@ -564,9 +564,6 @@ const displayStory = async () => {
   if (!storyId) return;
 
   try {
-   
-    
-   
       const story = currentStories.find(s => s._id === parseInt(storyId));
       if (!story) {
         console.error('Story not found:', storyId);
