@@ -207,7 +207,7 @@ const buildStories = async () => {
     storySlide.innerHTML = `
       <article class="lqd-pf-item">
         <div class="lqd-pf-item-inner">
-          <div class="lqd-pf-img overflow-hidden rounded-6 relative mb-2em">
+          <div class="lqd-pf-img overflow-hidden rounded-6 relative" >
             <figure>
               <img
                 width="400"
@@ -217,17 +217,13 @@ const buildStories = async () => {
                 alt="${story.title}"
               />
             </figure>
-            <div class="lqd-pf-overlay-bg flex items-center justify-center">
-              <p>${story.summary}</p>
+            <div class="lqd-pf-overlay-bg flex flex-col items-center justify-between py-4 px-3">
+              <div class="text-center mb-auto">
+                <h2 class="text-white text-xl font-bold mb-2">${story.title}</h2>
+                <p class="text-white text-sm italic">By ${story.narrator}</p>
+              </div>
+              <p class="text-white text-center">${story.summary}</p>
             </div>
-          </div>
-          <div class="lqd-pf-details">
-            <h2 class="lqd-pf-title mt-0 mb-1 h5">${story.title}</h2>
-            <ul class="reset-ul inline-nav lqd-pf-cat inline-flex relative z-2">
-              <li>
-                <a href="#" class="leading-1/4em">${story.narrator}</a>
-              </li>
-            </ul>
           </div>
           <a
             href="story.html?id=${story._id}"
@@ -275,9 +271,9 @@ function initCustomSlider() {
       const containerWidth = sliderWrapper.clientWidth;
       slideWidth = containerWidth / slidesPerView;
       
-      // Apply width to slides
+      // Apply width to slides with minimal gap
       Array.from(slider.children).forEach(slide => {
-        slide.style.width = `${slideWidth - 20}px`; // Account for gap
+        slide.style.width = `${slideWidth - 5}px`; // Reduced gap to 5px
       });
     }
     
@@ -609,3 +605,27 @@ const displayStory = async () => {
     console.error('Error fetching story:', error);
   }
 };
+
+// Handle donate button visibility
+function handleDonateButtonVisibility() {
+    const hero = document.querySelector('#banner');
+    const donateBtn = document.querySelector('.nav-donate-btn');
+    
+    if (!hero || !donateBtn) return;
+
+    const heroBottom = hero.offsetTop + hero.offsetHeight;
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollPosition > heroBottom) {
+        donateBtn.classList.remove('opacity-0', 'pointer-events-none');
+        donateBtn.classList.add('opacity-100', 'pointer-events-auto');
+    } else {
+        donateBtn.classList.add('opacity-0', 'pointer-events-none');
+        donateBtn.classList.remove('opacity-100', 'pointer-events-auto');
+    }
+}
+
+// Add scroll event listener
+window.addEventListener('scroll', handleDonateButtonVisibility);
+// Initialize on page load
+window.addEventListener('load', handleDonateButtonVisibility);
