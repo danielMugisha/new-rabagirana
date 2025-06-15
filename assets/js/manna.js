@@ -1,87 +1,109 @@
-
 window.onload = ()=> {
     const searchParams = new URLSearchParams(window.location.search);
     const id = searchParams.get('id');
     if (id) {
-        getMannaContent(id)
+        getMannaContent(id);
+    } else {
+        // If no ID provided, get the latest article
+        getLatestManna();
     }
 }
 
+const getLatestManna = async () => {
+    const URL = `https://app.rabagirana.org/api/manna/latest`;
+    try {
+        const response = await fetch(URL);
+        const result = await response.json();
+        if(result.data) {
+            buildManna(result.data._id, [result.data]);
+            getOtherMannas(result.data._id);
+        }
+    } catch (error) {
+        console.error('Error fetching latest manna:', error);
+    }
+}
 
 const getMannaContent = async (id) => {
-	const URL = `https://strapi.rabagirana.org/api/manna`;
-
-	const response = await fetch(URL);
-	const result = await response.json();
-    console.log(result);
-	if(result.data)
-    {
-        const mannas = result.data;
-        buildManna(id,mannas)
+    const URL = `https://app.rabagirana.org/api/manna/${id}`;
+    try {
+        const response = await fetch(URL);
+        const result = await response.json();
+        if(result.data) {
+            buildManna(id, [result.data]);
+            getOtherMannas(id);
+        }
+    } catch (error) {
+        console.error('Error fetching manna:', error);
     }
-		
 }
 
-const buildManna = (id,mannas) =>{
+const getOtherMannas = async (currentId) => {
+    const URL = `https://app.rabagirana.org/api/manna`;
+    try {
+        const response = await fetch(URL);
+        const result = await response.json();
+        if(result.data) {
+            buildOtherMannas(currentId, result.data);
+        }
+    } catch (error) {
+        console.error('Error fetching other mannas:', error);
+    }
+}
+
+const buildManna = (id, mannas) => {
     const manna = mannas.find(manna => manna._id === id);
-	var imageElement = document.getElementById('manna-img')
-	var titleElement = document.getElementById('manna-title')
-	var contentElement = document.getElementById('manna-content')
+    if (!manna) return;
 
-	imageElement.src = `https://strapi.rabagirana.org/${manna.featuredImage}`
-	titleElement.innerText = manna.title
-	contentElement.innerHTML = manna.content
+    const imageElement = document.getElementById('manna-img');
+    const titleElement = document.getElementById('manna-title');
+    const contentElement = document.getElementById('manna-content');
 
+    if (imageElement) imageElement.src = `https://app.rabagirana.org/${manna.featuredImage}`;
+    if (titleElement) titleElement.innerText = manna.title;
+    if (contentElement) contentElement.innerHTML = manna.content;
+}
 
-    const otherMannas = mannas.filter(manna => manna._id != id);
-    var otherArticles = document.getElementById('other-articles');
+const buildOtherMannas = (currentId, mannas) => {
+    const otherMannas = mannas.filter(manna => manna._id !== currentId);
+    const otherArticles = document.getElementById('other-articles');
+    if (!otherArticles) return;
+
     otherArticles.innerHTML = "";
-    otherMannas.forEach(a => {
+    otherMannas.forEach(manna => {
         otherArticles.innerHTML += `
-        <div class="carousel-item  col-lg-3 col-xl-3 m-10">
-                    <article
-                        class="lqd-pf-item lqd-pf-item-style-3 lqd-pf-overlay-bg-scale lqd-pf-content-v pf-details-h-str"
-                    >
-                        <div class="lqd-pf-item-inner">
-                            <div
-                                class="lqd-pf-img overflow-hidden rounded-6 relative mb-2em"
-                            >
-                                <figure>
-                                    <figure class="lqd-overlay flex">
-                                        <img
-                                            width="640"
-                                            height="600"
-                                            src="https://strapi.rabagirana.org/${a.featuredImage}"
-                                            class="w-full h-full objfit-cover objfit-center"
-                                            alt="case study"
-                                        />
-                                    </figure>
+            <div class="carousel-item col-lg-3 col-xl-3 m-10">
+                <article class="lqd-pf-item lqd-pf-item-style-3 lqd-pf-overlay-bg-scale lqd-pf-content-v pf-details-h-str">
+                    <div class="lqd-pf-item-inner">
+                        <div class="lqd-pf-img overflow-hidden rounded-6 relative mb-2em">
+                            <figure>
+                                <figure class="lqd-overlay flex">
+                                    <img
+                                        width="640"
+                                        height="600"
+                                        src="https://app.rabagirana.org/${manna.featuredImage}"
+                                        class="w-full h-full objfit-cover objfit-center"
+                                        alt="manna article"
+                                    />
                                 </figure>
-                            
-                            </div>
-                            <div class="lqd-pf-details">
-                            <a
-                            href="/manna.html?id=${a._id}"<h2 class="lqd-pf-title mt-0 mb-1 h5">
-                                    ${a.title}
-                                </h2></a>
-                                <ul
-                                    class="reset-ul inline-nav lqd-pf-cat inline-flex relative z-2"
-                                >
-                                    <li>
-                                        <a href="#" class="leading-1/4em"
-                                            >${a.author}</a
-                                        >
-                                    </li>
-                                </ul>
-                            </div>
-                            <a
-                                href="/manna.html?id=${a._id}"
-                                class="lqd-overlay flex lqd-pf-overlay-link leading-1/4em "
-                                data-fresco-group="case-studies"
-                            ></a>
+                            </figure>
                         </div>
-                    </article>
-                </div>
-        `
+                        <div class="lqd-pf-details">
+                            <a href="/manna.html?id=${manna._id}">
+                                <h2 class="lqd-pf-title mt-0 mb-1 h5">${manna.title}</h2>
+                            </a>
+                            <ul class="reset-ul inline-nav lqd-pf-cat inline-flex relative z-2">
+                                <li>
+                                    <a href="#" class="leading-1/4em">${manna.author}</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <a
+                            href="/manna.html?id=${manna._id}"
+                            class="lqd-overlay flex lqd-pf-overlay-link leading-1/4em"
+                        ></a>
+                    </div>
+                </article>
+            </div>
+        `;
     });
 }
