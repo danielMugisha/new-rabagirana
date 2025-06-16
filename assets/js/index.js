@@ -205,7 +205,7 @@ const buildStories = async () => {
     storySlide.className = 'story-slide';
     
     storySlide.innerHTML = `
-      <article class="lqd-pf-item">
+      <article class="lqd-pf-item cursor-pointer" onclick="window.location.href='story.html?id=${story._id}'">
         <div class="lqd-pf-item-inner">
           <div class="lqd-pf-img overflow-hidden rounded-6 relative" >
             <figure>
@@ -225,10 +225,6 @@ const buildStories = async () => {
               <p class="text-white text-center">${story.summary}</p>
             </div>
           </div>
-          <a
-            href="story.html?id=${story._id}"
-            class="lqd-overlay flex lqd-pf-overlay-link leading-1/4em"
-          ></a>
         </div>
       </article>
     `;
@@ -395,10 +391,7 @@ const getEvents = async () => {
     const response = await fetch(URL);
     const result = await response.json();
 
-    if (result.data && Array.isArray(result.data) && result.data.length > 0) {
       buildEvents(result.data);
-    } 
-    return true;
   } catch (error) {
     console.error('Error fetching events:', error);
     buildEvents(defaultEvents);
@@ -409,11 +402,11 @@ const getEvents = async () => {
 const buildEvents = async(events) => {
   const el = document.getElementById('upcoming');
   if (!el) return;
-  
-  const eventsToShow = Array.isArray(events) && events.length > 0 ? events : defaultEvents;
+  console.log('Building events...');
   
   el.innerHTML = '';
-  eventsToShow.forEach(event => {
+  if (events.length !== 0) {
+  events.forEach(event => {
     el.innerHTML += `<div class="col col-12 col-md-6 col-xl-3 p-0 module-content">
     <div
       class="lqd-fb relative lqd-fb-style-6 rounded-4 h-pt-125 text-white"
@@ -443,10 +436,10 @@ const buildEvents = async(events) => {
               class="lqd-fb-hover-overlay lqd-overlay flex bg-transparent"
               style="
                 background-image: linear-gradient(
-                  180deg,
-                  rgba(255, 255, 255, 0) 25%,
-                  rgba(71, 214, 126, 0.8) 100%
-                );
+				180deg,
+				rgba(243, 194, 72, 0.85) 0%,
+				rgba(97, 151, 95, 0.85) 100%
+			);
               "
             ></div>
           </div>
@@ -471,7 +464,7 @@ const buildEvents = async(events) => {
     </div>
   </div>`
   })
-  
+}
   const count = 3 - events.length
 
   for(var i = 0; i<count; i++){
@@ -496,7 +489,7 @@ const buildEvents = async(events) => {
               <img
                 class="w-full"
                 src="https://fakeimg.pl/500x400?text=Coming+Soon"
-                alt="Business Consultation"
+                alt="Rabagirana"
               />
             </figure>
             <div class="lqd-fb-bg lqd-overlay flex"></div>
@@ -504,10 +497,10 @@ const buildEvents = async(events) => {
               class="lqd-fb-hover-overlay lqd-overlay flex bg-transparent"
               style="
                 background-image: linear-gradient(
-                  180deg,
-                  rgba(238, 109, 11, 0) 25%,
-                  rgb(238, 109, 1) 100%
-                );
+				180deg,
+				rgba(243, 194, 72, 0.85) 0%,
+				rgba(97, 151, 95, 0.85) 100%
+			);
               "
             ></div>
           </div>
