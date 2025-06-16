@@ -7,21 +7,12 @@
 			name="keywords"
 			content="rabagirana ministries unity and reconciliation ubumwe n'ubwiyunge"
 		/>
-		<meta name="author" content="Daniel Mugisha" />
-		<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-		<meta http-equiv="cache-control" content="no-cache, must-revalidate, post-check=0, pre-check=0" />
-		<meta http-equiv="cache-control" content="max-age=0" />
-		<meta http-equiv="expires" content="0" />
-		<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
-		<meta http-equiv="pragma" content="no-cache" />
-		<meta
-			name="description"
-			content="NGO Website"
-		/>
-		<link
-			rel="stylesheet"
-			href="assets/vendors/liquid-icon/lqd-essentials/lqd-essentials.min.css"
-		/>
+		<meta name="author" content="Neatlabs" />
+		<meta name="description" content="NGO Website" />
+		<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+		<meta http-equiv="Cache-Control" content="public, max-age=3600" />
+		<meta http-equiv="Expires" content="Wed, 01 Jan 2025 00:00:00 GMT" />
+		<link rel="stylesheet" href="assets/vendors/liquid-icon/lqd-essentials/lqd-essentials.min.css"/>
 		<link rel="stylesheet" href="assets/css/theme.min.css" />
 		<link rel="stylesheet" href="assets/css/utility.min.css" />
 		<link rel="stylesheet" href="assets/css/demo/digital-hub/base.css" />
@@ -44,25 +35,24 @@
 		/* Custom Slider Styles */
 		.custom-slider-container {
 			position: relative;
-			width: 100%;
-			overflow: hidden;
-			padding: 0 5%;
+			padding: 0 60px;  /* Equal padding on both sides */
 		}
 
 		.custom-slider-wrapper {
 			overflow: hidden;
-			margin: 0 60px;
+			margin: 0;  /* Removed margin */
+			position: relative;
 		}
 
 		.custom-slider-track {
 			display: flex;
 			transition: transform 0.5s ease;
-			gap: 20px;
+			gap: 8px;  /* Increased gap between slides */
 		}
 
 		.story-slide {
 			flex: 0 0 auto;
-			width: calc(25% - 20px);
+			width: calc(25% - 12px);  /* Adjusted for new gap */
 			position: relative;
 			transition: transform 0.3s ease;
 		}
@@ -72,30 +62,62 @@
 		}
 
 		.slider-controls {
-			display: flex;
-			justify-content: space-between;
-			margin-bottom: 20px;
+			position: absolute;
+			top: 50%;
+			left: -10px;
+			right: -10px;
+			transform: translateY(-50%);
+			z-index: 100;
+			width: calc(100% + 20px);
+			pointer-events: none;
 		}
 
 		.slider-prev, .slider-next {
-			background: #f3c248;
-			color: white;
-			border: none;
-			border-radius: 50%;
+			position: absolute;
 			width: 40px;
 			height: 40px;
+			background: transparent;
+			border: none;
+			cursor: pointer;
+			pointer-events: auto;
+			z-index: 101;
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			cursor: pointer;
-			transition: background 0.3s ease;
+		}
+
+		.slider-prev {
+			left: 10px;
+		}
+
+		.slider-next {
+			right: 10px;
+		}
+
+		.slider-prev:before {
+			content: '';
+			display: block;
+			border-top: 15px solid transparent;
+			border-bottom: 15px solid transparent;
+			border-right: 25px solid #f3c248;
+		}
+
+		.slider-next:before {
+			content: '';
+			display: block;
+			border-top: 15px solid transparent;
+			border-bottom: 15px solid transparent;
+			border-left: 25px solid #f3c248;
 		}
 
 		.slider-prev:hover, .slider-next:hover {
-			background: #61975f;
+			opacity: 0.8;
 		}
 
-		/* Story Card Styling with Perfect Square Images */
+		.slider-prev:hover:before, .slider-next:hover:before {
+			transform: scale(1.1);
+		}
+
 		.story-slide .lqd-pf-item {
 			width: 100%;
 		}
@@ -187,25 +209,28 @@
 		/* Responsive styles */
 		@media (max-width: 991px) {
 			.story-slide {
-				width: calc(33.33% - 20px);
+				width: calc(33.33% - 5px);  /* Adjusted for smaller gap */
+			}
+			.custom-slider-container {
+				padding: 0 45px;
 			}
 		}
 
 		@media (max-width: 767px) {
 			.story-slide {
-				width: calc(50% - 20px);
+				width: calc(50% - 5px);  /* Adjusted for smaller gap */
 			}
-			.custom-slider-wrapper {
-				margin: 0 40px;
+			.custom-slider-container {
+				padding: 0 35px;
 			}
 		}
 
 		@media (max-width: 480px) {
 			.story-slide {
-				width: calc(100% - 20px);
+				width: calc(100% - 5px);  /* Adjusted for smaller gap */
 			}
-			.custom-slider-wrapper {
-				margin: 0 20px;
+			.custom-slider-container {
+				padding: 0 30px;
 			}
 		}
 		/* Footer */
@@ -441,7 +466,7 @@
 									</ul>
 								</div>
 							</div>
-							<div class="w-25percent flex items-center justify-end "
+							<div class="w-25percent flex items-center justify-end nav-donate-btn opacity-0 pointer-events-none"
 							data-custom-animations="true"
 							data-ca-options='{"animationTarget": "h2, h6, p, .btn", "duration" : 1800, "delay" : 170, "ease": "power4.out", "initValues": {"y": "65px", "rotationY" : 65, "opacity" : 0} , "animations": {"y": "0px", "rotationY" : 0, "opacity" : 1}}'>
 								<div class="fancy-button module-btn px-0/5em">
@@ -539,7 +564,7 @@
 									class="ld-particles-inner lqd-overlay flex pointer-events-none"
 									id="lqd-particle-banner"
 									data-particles="true"
-									data-particles-options='{"particles": {"number": {"value" : 14, "density" : 1} , "color": {"value" : ["#F27E3F", "#0FBBB4", "#48BB0F", "#3FF292", "#899BFF"]} , "shape": {"type" : ["circle"]} , "opacity": {"value" : 1} , "size": {"value" : 6, "random": true, "anim": {"enable": true, "size_min" : 1, "speed" : 1}} , "move": {"enable": true, "direction": "right", "out_mode": "out"}} , "interactivity" : [], "retina_detect": true}'
+									data-particles-options='{"particles": {"number": {"value" : 28, "density" : 4} , "color": {"value" : ["#F27E3F", "#0FBBB4", "#48BB0F", "#3FF292", "#899BFF"]} , "shape": {"type" : ["circle"]} , "opacity": {"value" : 1} , "size": {"value" : 6, "random": true, "anim": {"enable": true, "size_min" : 1, "speed" : 1}} , "move": {"enable": true, "direction": "right", "out_mode": "out"}} , "interactivity" : [], "retina_detect": true}'
 								>
 
 							</div>
@@ -937,7 +962,7 @@
 										<p
 											class="ld-fh-element inline-block relative mb-0/5em text-20 leading-1/7em"
 										>
-											Stories and testimonies from various people and groups on the impact og Rabagirana in lives.
+											Stories and testimonies from various people and groups on the impact of Rabagirana in lives.
 										</p>
 									</div>
 								</div>
@@ -947,8 +972,8 @@
 									<div class="carousel-container pt-40 animation-element">
 										<div class="custom-slider-container">
 											<div class="slider-controls">
-												<button class="slider-prev"><i class="lqd-icn-ess icon-md-arrow-back"></i></button>
-												<button class="slider-next"><i class="lqd-icn-ess icon-md-arrow-forward"></i></button>
+												<button class="slider-prev" aria-label="Previous slide"></button>
+												<button class="slider-next" aria-label="Next slide"></button>
 											</div>
 											<div class="custom-slider-wrapper">
 												<div class="custom-slider-track" id="stories">
@@ -1003,22 +1028,17 @@
 														class="lqd-fb-hover-overlay lqd-overlay flex bg-transparent"
 														style="
 															background-image: linear-gradient(
-																180deg,
-																rgba(192, 11, 238, 0) 25%,
-																rgba(192, 11, 238, 0.8) 100%
-															);
+				180deg,
+				rgba(243, 194, 72, 0.85) 0%,
+				rgba(97, 151, 95, 0.85) 100%
+			);
 														"
 													></div>
 												</div>
 												<div
 													class="lqd-fb-content flex flex-col justify-end lqd-overlay flex backface-hidden py-1/5em px-1/5em"
 												>
-													<span class="lqd-fb-icon flex mb-0/85em"
-														><i
-															aria-hidden="true"
-															class="lqd-icn-ess icon-lqd-presentation"
-														></i
-													></span>
+													
 													<h6 class="mt-0 mb-1/35em font-bold">Micah Global</h6>
 													<h2 class="lqd-fb__title mt-0 text-26 font-bold">
 														Micah Connect Africa 2023 - The Kisumu Mandate
@@ -1057,22 +1077,17 @@
 														class="lqd-fb-hover-overlay lqd-overlay flex bg-transparent"
 														style="
 															background-image: linear-gradient(
-																180deg,
-																rgba(255, 255, 255, 0) 25%,
-																rgba(71, 214, 126, 0.8) 100%
-															);
+				180deg,
+				rgba(243, 194, 72, 0.85) 0%,
+				rgba(97, 151, 95, 0.85) 100%
+			);
 														"
 													></div>
 												</div>
 												<div
 													class="lqd-fb-content flex flex-col justify-end lqd-overlay flex backface-hidden py-1/5em px-1/5em"
 												>
-													<span class="lqd-fb-icon flex mb-0/85em"
-														><i
-															aria-hidden="true"
-															class="lqd-icn-ess icon-lqd-mobile"
-														></i
-													></span>
+													
 													<h6 class="mt-0 mb-1/35em font-bold">Rabagirana</h6>
 													<h2 class="lqd-fb__title mt-0 text-26 font-bold">
 														International School Of Reconciliation 2024
@@ -1103,7 +1118,7 @@
 														<img
 															class="w-full"
 															src="https://fakeimg.pl/500x400?text=Coming+Soon"
-															alt="Business Consultation"
+															alt="rabagirana"
 														/>
 													</figure>
 													<div class="lqd-fb-bg lqd-overlay flex"></div>
@@ -1111,22 +1126,17 @@
 														class="lqd-fb-hover-overlay lqd-overlay flex bg-transparent"
 														style="
 															background-image: linear-gradient(
-																180deg,
-																rgba(238, 109, 11, 0) 25%,
-																rgb(238, 109, 1) 100%
-															);
+				180deg,
+				rgba(243, 194, 72, 0.85) 0%,
+				rgba(97, 151, 95, 0.85) 100%
+			);
 														"
 													></div>
 												</div>
 												<div
 													class="lqd-fb-content flex flex-col justify-end lqd-overlay flex backface-hidden py-1/5em px-1/5em"
 												>
-													<span class="lqd-fb-icon flex mb-0/85em"
-														><i
-															aria-hidden="true"
-															class="lqd-icn-ess icon-lqd-path"
-														></i
-													></span>
+													
 													<h6 class="mt-0 mb-1/35em font-bold">Upcoming</h6>
 													<h2 class="lqd-fb__title mt-0 text-26 font-bold">
 														Coming Soon
@@ -1425,118 +1435,118 @@
 			</main>
 			<!-- Footer -->
 			<footer id="site-footer" class="main-footer bg-white">
-    <section class="lqd-section footer-menu pt-50 pb-20">
-        <div class="container">
-            <div class="row">
-                <!-- Logo and Description Column -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="footer-widget">
-                        <div class="footer-logo mb-4">
-                            <img width="150px" class="logo-default" src="assets/images/demo/digital-hub/logo.png" alt="Rabagirana" />
-                        </div>
-                        <div class="footer-content">
-                            <p class="mb-4 text-slate-500">Our passion is to see Rwanda become a model of lasting peace, unity and light for the nations to the glory of God.</p>
-                            <div class="social-icons">
-                                <a href="https://www.facebook.com/share/1AZHi6NhC1/?mibextid=wwXIfr" target="_blank" class="social-icon">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="https://www.instagram.com/rabagirana_ministries?igsh=MTFwdjJnMWJ5OXM4" target="_blank" class="social-icon">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="https://x.com/Rabagirana_org" target="_blank" class="social-icon">
-                                    <i class="fab fa-x"></i>
-                                </a>
-                                <a href="https://www.youtube.com/@rabagiranaministries4562" target="_blank" class="social-icon">
-                                    <i class="fab fa-youtube"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+				<section class="lqd-section footer-menu pt-50 pb-20">
+					<div class="container">
+						<div class="row">
+							<!-- Logo and Description Column -->
+							<div class="col-lg-4 col-md-6 mb-4">
+								<div class="footer-widget">
+									<div class="footer-logo mb-4">
+										<img width="150px" class="logo-default" src="assets/images/demo/digital-hub/logo.png" alt="Rabagirana" />
+									</div>
+									<div class="footer-content">
+										<p class="mb-4 text-slate-500">Our passion is to see Rwanda become a model of lasting peace, unity and light for the nations to the glory of God.</p>
+										<div class="social-icons">
+											<a href="https://www.facebook.com/share/1AZHi6NhC1/?mibextid=wwXIfr" target="_blank" class="social-icon">
+												<i class="fab fa-facebook-f"></i>
+											</a>
+											<a href="https://www.instagram.com/rabagirana_ministries?igsh=MTFwdjJnMWJ5OXM4" target="_blank" class="social-icon">
+												<i class="fab fa-instagram"></i>
+											</a>
+											<a href="https://x.com/Rabagirana_org" target="_blank" class="social-icon">
+												<i class="fab fa-x"></i>
+											</a>
+											<a href="https://www.youtube.com/@rabagiranaministries4562" target="_blank" class="social-icon">
+												<i class="fab fa-youtube"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
 
-                <!-- Quick Links Column -->
-                <div class="col-lg-2 col-md-6 mb-4">
-                    <div class="footer-widget">
-                        <h4 class="widget-title text-16 font-bold mb-4" style="color: #f3c248">Quick Links</h4>
-                        <ul class="list-unstyled mb-0">
-                            <li class="mb-2"><a href="#programs" class="text-slate-500">Programs</a></li>
-                            <li class="mb-2"><a href="/umusozi.html" class="text-slate-500">Umusozi w' ubumwe</a></li>
-                            <li class="mb-2"><a href="#events" class="text-slate-500">Events</a></li>
-                            <li class="mb-2"><a href="#manna" class="text-slate-500">Manna</a></li>
-                            <li class="mb-2"><a href="/resources.html" class="text-slate-500">Resources</a></li>
-                        </ul>
-                    </div>
-                </div>
+							<!-- Quick Links Column -->
+							<div class="col-lg-2 col-md-6 mb-4">
+								<div class="footer-widget">
+									<h4 class="widget-title text-16 font-bold mb-4" style="color: #f3c248">Quick Links</h4>
+									<ul class="list-unstyled mb-0">
+										<li class="mb-2"><a href="#programs" class="text-slate-500">Programs</a></li>
+										<li class="mb-2"><a href="/umusozi.html" class="text-slate-500">Umusozi w' ubumwe</a></li>
+										<li class="mb-2"><a href="#events" class="text-slate-500">Events</a></li>
+										<li class="mb-2"><a href="#manna" class="text-slate-500">Manna</a></li>
+										<li class="mb-2"><a href="/resources.html" class="text-slate-500">Resources</a></li>
+									</ul>
+								</div>
+							</div>
 
-                <!-- Projects Column -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="footer-widget">
-                        <h4 class="widget-title text-16 font-bold mb-4" style="color: #f3c248">Our Projects</h4>
-                        <ul class="list-unstyled mb-0">
-                            <li class="mb-2"><a href="/programs.html" class="text-slate-500">International School of Reconciliation</a></li>
-                            <li class="mb-2"><a href="/programs.html" class="text-slate-500">Healing Hearts Transforming Lives</a></li>
-                            <li class="mb-2"><a href="/programs.html" class="text-slate-500">Emmaus Family Centre</a></li>
-                            <li class="mb-2"><a href="/programs.html" class="text-slate-500">Kumbaya</a></li>
-                        </ul>
-                    </div>
-                </div>
+							<!-- Projects Column -->
+							<div class="col-lg-3 col-md-6 mb-4">
+								<div class="footer-widget">
+									<h4 class="widget-title text-16 font-bold mb-4" style="color: #f3c248">Our Projects</h4>
+									<ul class="list-unstyled mb-0">
+										<li class="mb-2"><a href="/programs.html" class="text-slate-500">International School of Reconciliation</a></li>
+										<li class="mb-2"><a href="/programs.html" class="text-slate-500">Healing Hearts Transforming Lives</a></li>
+										<li class="mb-2"><a href="/programs.html" class="text-slate-500">Emmaus Family Centre</a></li>
+										<li class="mb-2"><a href="/programs.html" class="text-slate-500">Kumbaya</a></li>
+									</ul>
+								</div>
+							</div>
 
-                <!-- Contact Info Column -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="footer-widget">
-                        <h4 class="widget-title text-16 font-bold mb-4">Contact Info</h4>
-                        <ul class="list-unstyled mb-0">
-                            <li class="mb-3">
-                                <div class="contact-info-item d-flex align-items-center">
-                                    <div class="icon-wrapper me-3 d-flex align-items-center justify-content-center rounded-circle">
-                                        <i class="fas fa-envelope"></i>
-                                    </div>
-                                    <a href="mailto:info@rabagirana.org">info@rabagirana.org</a>
-                                </div>
-                            </li>
-                            <li class="mb-3">
-                                <div class="contact-info-item d-flex align-items-center">
-                                    <div class="icon-wrapper me-3 d-flex align-items-center justify-content-center rounded-circle">
-                                        <i class="fas fa-phone"></i>
-                                    </div>
-                                    <a href="tel:+2507840114515">+250 784 011 415</a>
-                                </div>
-                            </li>
-                            <li class="mb-3">
-                                <div class="newsletter">
-                                    <h5 class="text-14 font-bold mb-3">Subscribe to Newsletter</h5>
-                                    <form class="newsletter-form">
-                                        <div class="input-group">
-                                            <input type="email" id="email" class="form-control" 
-                                                placeholder="Your email">
-                                            <button type="button" onclick="subscribe()" class="btn">
-                                                <i class="fas fa-paper-plane"></i>
-                                            </button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+							<!-- Contact Info Column -->
+							<div class="col-lg-3 col-md-6 mb-4">
+								<div class="footer-widget">
+									<h4 class="widget-title text-16 font-bold mb-4">Contact Info</h4>
+									<ul class="list-unstyled mb-0">
+										<li class="mb-3">
+											<div class="contact-info-item d-flex align-items-center">
+												<div class="icon-wrapper me-3 d-flex align-items-center justify-content-center rounded-circle">
+													<i class="fas fa-envelope"></i>
+												</div>
+												<a href="mailto:info@rabagirana.org">info@rabagirana.org</a>
+											</div>
+										</li>
+										<li class="mb-3">
+											<div class="contact-info-item d-flex align-items-center">
+												<div class="icon-wrapper me-3 d-flex align-items-center justify-content-center rounded-circle">
+													<i class="fas fa-phone"></i>
+												</div>
+												<a href="tel:+2507840114515">+250 784 011 415</a>
+											</div>
+										</li>
+										<li class="mb-3">
+											<div class="newsletter">
+												<h5 class="text-14 font-bold mb-3">Subscribe to Newsletter</h5>
+												<form class="newsletter-form">
+													<div class="input-group">
+														<input type="email" id="email" class="form-control" 
+															placeholder="Your email">
+														<button type="button" onclick="subscribe()" class="btn">
+															<i class="fas fa-paper-plane"></i>
+														</button>
+													</div>
+												</form>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
     
-    <!-- Copyright Section -->
-    <div class="footer-bottom py-3 bg-slate-100">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-0 text-slate-500">© 2025 Rabagirana Ministries. All rights reserved.</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <p class="mb-0 text-slate-500">Designed  by Neatlabs</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
+				<!-- Copyright Section -->
+				<div class="footer-bottom py-3 bg-slate-100">
+					<div class="container">
+						<div class="row align-items-center">
+							<div class="col-md-6 text-center text-md-start">
+								<p class="mb-0 text-slate-500">© 2025 Rabagirana Ministries. All rights reserved.</p>
+							</div>
+							<div class="col-md-6 text-center text-md-end">
+								<p class="mb-0 text-slate-500">Designed  by Neatlabs</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
 		</div>
 		<div
 			id="contact-modal"
@@ -1608,7 +1618,7 @@
 							</div>
 							<div class="w-25percent lg:w-50percent sm:w-full">
 								<div class="relative flex flex-col bg-slate-300 transition-all rounded-6 p-30 mx-15 mb-30 hover:bg-accent">
-									<h3 class="ld-fh-element relative mb-0/5em text-22 text-slate-900">MOMO Pay</h3>
+																		<h3 class="ld-fh-element relative mb-0/5em text-22 text-slate-900">MOMO Pay</h3>
 									<p class="ld-fh-element relative mb-0/5em text-17 leading-1/6em">Or use MTN Momo pay<br>to the following MOMO Code<br><br>000000</p>
 								</div>
 							</div>
@@ -1625,9 +1635,7 @@
 			</div>
 		</div>
 
-		<script
-			data-cfasync="false"
-			src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+		<script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
 		></script>
 		<script src="assets/vendors/jquery.min.js"></script>
 		<script src="assets/vendors/jquery-ui/jquery-ui.min.js"></script>
