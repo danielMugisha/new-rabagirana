@@ -401,7 +401,51 @@
     background: #f8f9fa;
 }
 
-		</style>
+/* Events section specific styles */
+.shimmer-effect {
+    position: relative;
+    background: #f6f7f8;
+    overflow: hidden;
+}
+
+.shimmer-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    100% {
+        left: 100%;
+    }
+}
+
+.h-pt-100 {
+    padding-top: 100% !important;
+}
+
+#events {
+    position: relative;
+    z-index: 1;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+    #events {
+        width: 95% !important;
+    }
+}</style>
 	</head>
 	<body
 		data-localscroll-offset="80"
@@ -782,11 +826,9 @@
 											class="iconbox text-start mb-0 items-start flex flex-grow-1 relative flex-col iconbox-default"
 										>
 											<div class="iconbox-icon-wrap">
-												<div
-													class="iconbox-icon-container inline-flex relative z-1 rounded-full mb-25 w-55 h-55 text-26 bg-green-100"
-												>
-													<img src="assets/images/common/team.png">
-												</div>
+												<div class="iconbox-icon-container inline-flex relative z-1 rounded-full mb-25 w-55 h-55 text-26 bg-green-100 justify-center items-center">
+                            <i class="fas fa-home"></i>
+                        </div>
 											</div>
 											<div class="contents text-start">
 												<h3 class="lqd-iconbox-heading text-20 mb-0/75em">
@@ -824,11 +866,9 @@
 											class="iconbox text-start mb-0 items-start flex flex-grow-1 relative flex-col iconbox-default"
 										>
 											<div class="iconbox-icon-wrap">
-												<div
-													class="iconbox-icon-container inline-flex relative z-1 rounded-full mb-25 w-55 h-55 text-26 bg-green-100"
-												>
-													<img src="assets/images/common/team.png">
-												</div>
+												<div class="iconbox-icon-container inline-flex relative z-1 rounded-full mb-25 w-55 h-55 text-26 bg-green-100 justify-center items-center">
+                            <i class="fas fa-home"></i>
+                        </div>
 											</div>
 											<div class="contents text-start">
 												<h3 class="lqd-iconbox-heading text-20 mb-0/75em">
@@ -864,11 +904,9 @@
 											class="iconbox text-start mb-0 items-start flex flex-grow-1 relative flex-col iconbox-default"
 										>
 											<div class="iconbox-icon-wrap">
-												<div
-													class="iconbox-icon-container inline-flex relative z-1 rounded-full mb-25 w-55 h-55 text-26 bg-green-100"
-												>
-													<img src="assets/images/common/team.png">
-												</div>
+												<div class="iconbox-icon-container inline-flex relative z-1 rounded-full mb-25 w-55 h-55 text-26 bg-green-100 justify-center items-center">
+                            <i class="fas fa-home"></i>
+                        </div>
 											</div>
 											<div class="contents text-start">
 												<h3 class="lqd-iconbox-heading text-20 mb-0/75em">
@@ -989,166 +1027,49 @@
 
 					<!-- Events -->
 					<section class="lqd-section portfolio pb-100" >
-						<div class="container-fluid" id="events">
-							<div class="col col-12 col-md-6 p-0" style="margin: 2rem;">
-								<div class="ld-fancy-heading relative animation-element">
-									<h2 class="ld-fh-element m-0 inline-block pos-re">
-										Events
-									</h2>
-								</div>
-							</div>
-							<div class="row d-flex justify-around" id="upcoming">
-								
-								<div class="col col-12 col-md-6 col-xl-3 p-0 module-content">
-									<div
-										class="lqd-fb relative lqd-fb-style-6 rounded-4 h-pt-125 text-white"
-										data-lqd-zindex="true"
-									>
-										<div class="lqd-fb-shadow"></div>
-										<div
-											class="flex flex-wrap items-center lqd-overlay flex"
-											data-hover3d="true"
-										>
-											<div
-												class="lqd-fb-content-wrap lqd-overlay flex flex-col items-end transform-style-3d backface-hidden will-change-transform"
-												data-stacking-factor="0.5"
-											>
-												<div
-													class="lqd-fb-img lqd-overlay flex rounded-4 overflow-hidden backface-hidden"
-												>
-													<figure class="w-full">
-														<img
-															class="w-full h-full objfit-center"
-															src="assets/images/demo/digital-hub/events/Micah.jpg"
-															alt="Micah"
-														/>
-													</figure>
-													<div class="lqd-fb-bg lqd-overlay flex"></div>
-													<div
-														class="lqd-fb-hover-overlay lqd-overlay flex bg-transparent"
-														style="
-															background-image: linear-gradient(
-				180deg,
-				rgba(243, 194, 72, 0.85) 0%,
-				rgba(97, 151, 95, 0.85) 100%
-			);
-														"
-													></div>
-												</div>
-												<div
-													class="lqd-fb-content flex flex-col justify-end lqd-overlay flex backface-hidden py-1/5em px-1/5em"
-												>
-													
-													<h6 class="mt-0 mb-1/35em font-bold">Micah Global</h6>
-													<h2 class="lqd-fb__title mt-0 text-26 font-bold">
-														Micah Connect Africa 2023 - The Kisumu Mandate
-													</h2>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col col-12 col-md-6 col-xl-3 p-0 module-content">
-									<div
-										class="lqd-fb relative lqd-fb-style-6 rounded-4 h-pt-125 text-white"
-										data-lqd-zindex="true"
-									>
-										<div class="lqd-fb-shadow"></div>
-										<div
-											class="flex flex-wrap items-center lqd-overlay flex"
-											data-hover3d="true"
-										>
-											<div
-												class="lqd-fb-content-wrap lqd-overlay flex flex-col items-end transform-style-3d backface-hidden will-change-transform"
-												data-stacking-factor="0.5"
-											>
-												<div
-													class="lqd-fb-img lqd-overlay flex rounded-4 overflow-hidden backface-hidden"
-												>
-													<figure class="w-full h-full m-0">
-														<img
-															class="w-full"
-															src="assets/images/demo/digital-hub/events/ISOR2024.jpg"
-															alt="ISOR"
-														/>
-													</figure>
-													<div class="lqd-fb-bg lqd-overlay flex"></div>
-													<div
-														class="lqd-fb-hover-overlay lqd-overlay flex bg-transparent"
-														style="
-															background-image: linear-gradient(
-				180deg,
-				rgba(243, 194, 72, 0.85) 0%,
-				rgba(97, 151, 95, 0.85) 100%
-			);
-														"
-													></div>
-												</div>
-												<div
-													class="lqd-fb-content flex flex-col justify-end lqd-overlay flex backface-hidden py-1/5em px-1/5em"
-												>
-													
-													<h6 class="mt-0 mb-1/35em font-bold">Rabagirana</h6>
-													<h2 class="lqd-fb__title mt-0 text-26 font-bold">
-														International School Of Reconciliation 2024
-													</h2>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col col-12 col-md-6 col-xl-3 p-0 module-content">
-									<div
-										class="lqd-fb relative lqd-fb-style-6 rounded-4 h-pt-125 text-white"
-										data-lqd-zindex="true"
-									>
-										<div class="lqd-fb-shadow"></div>
-										<div
-											class="flex flex-wrap items-center lqd-overlay flex"
-											data-hover3d="true"
-										>
-											<div
-												class="lqd-fb-content-wrap lqd-overlay flex flex-col items-end transform-style-3d backface-hidden will-change-transform"
-												data-stacking-factor="0.5"
-											>
-												<div
-													class="lqd-fb-img lqd-overlay flex rounded-4 overflow-hidden backface-hidden"
-												>
-													<figure class="w-full h-full m-0">
-														<img
-															class="w-full"
-															src="https://fakeimg.pl/500x400?text=Coming+Soon"
-															alt="rabagirana"
-														/>
-													</figure>
-													<div class="lqd-fb-bg lqd-overlay flex"></div>
-													<div
-														class="lqd-fb-hover-overlay lqd-overlay flex bg-transparent"
-														style="
-															background-image: linear-gradient(
-				180deg,
-				rgba(243, 194, 72, 0.85) 0%,
-				rgba(97, 151, 95, 0.85) 100%
-			);
-														"
-													></div>
-												</div>
-												<div
-													class="lqd-fb-content flex flex-col justify-end lqd-overlay flex backface-hidden py-1/5em px-1/5em"
-												>
-													
-													<h6 class="mt-0 mb-1/35em font-bold">Upcoming</h6>
-													<h2 class="lqd-fb__title mt-0 text-26 font-bold">
-														Coming Soon
-													</h2>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</section>
+    <div class="container-fluid" id="events" style="background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('assets/images/demo/digital-hub/bg/events-bg.jpg') center/cover no-repeat; border-radius: 15px; width: 80%; margin: 0 auto; padding: 2rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        <div class="col col-12 col-md-6 p-0" style="margin-bottom: 1rem;">
+            <div class="ld-fancy-heading relative animation-element">
+                <h2 class="ld-fh-element m-0 inline-block pos-re" style="position: relative; padding-bottom: 10px;">
+                    Events
+                    <span style="position: absolute; bottom: 0; left: 0; width: 50px; height: 3px; background: #f3c248;"></span>
+                </h2>
+            </div>
+        </div>
+        <div class="row d-flex justify-around" id="upcoming" style="min-height: 300px;">
+            <div class="col col-12 col-md-6 col-xl-3 p-0 module-content">
+                <div class="lqd-fb relative lqd-fb-style-6 rounded-4 h-pt-100 text-white" data-lqd-zindex="true">
+                    <div class="lqd-fb-shadow"></div>
+                    <div class="flex flex-wrap items-center lqd-overlay flex shimmer-effect">
+                        <div class="lqd-fb-content-wrap lqd-overlay flex flex-col items-end">
+                            <div class="lqd-fb-img lqd-overlay flex rounded-4 overflow-hidden"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-12 col-md-6 col-xl-3 p-0 module-content">
+                <div class="lqd-fb relative lqd-fb-style-6 rounded-4 h-pt-100 text-white" data-lqd-zindex="true">
+                    <div class="lqd-fb-shadow"></div>
+                    <div class="flex flex-wrap items-center lqd-overlay flex shimmer-effect">
+                        <div class="lqd-fb-content-wrap lqd-overlay flex flex-col items-end">
+                            <div class="lqd-fb-img lqd-overlay flex rounded-4 overflow-hidden"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-12 col-md-6 col-xl-3 p-0 module-content">
+                <div class="lqd-fb relative lqd-fb-style-6 rounded-4 h-pt-100 text-white" data-lqd-zindex="true">
+                    <div class="lqd-fb-shadow"></div>
+                    <div class="flex flex-wrap items-center lqd-overlay flex shimmer-effect">
+                        <div class="lqd-fb-content-wrap lqd-overlay flex flex-col items-end">
+                            <div class="lqd-fb-img lqd-overlay flex rounded-4 overflow-hidden"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 					<!-- Manna -->
 					<section class="lqd-section marketing pt-60 pb-60" id="manna">
@@ -1177,7 +1098,8 @@
 															<img
 																id="manna-image"
 																class="w-full rounded-10"
-																src="https://images.unsplash.com/photo-1536704382439-da99b6ccc0cf?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+																src="assets/images/demo/digital-hub/manna-placeholder.jpg"
+																onerror="this.onerror=null; this.src='assets/images/demo/digital-hub/default-placeholder.jpg';"
 																alt="Manna"
 																width="1040"
 																height="1108"

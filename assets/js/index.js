@@ -386,142 +386,122 @@ const getMannaContent = async () => {
 
 const getEvents = async () => {
   const URL = `${apiURL}api/events/latest`;
+  
+  // Show loading state immediately
+  buildEvents([], true);
 
   try {
     const response = await fetch(URL);
     const result = await response.json();
-
-      buildEvents(result.data);
+    
+    // Pass false for loading since we have the data now
+    buildEvents(result.data, false);
   } catch (error) {
     console.error('Error fetching events:', error);
-    buildEvents(defaultEvents);
+    // Show empty state when there's an error
+    buildEvents([], false);
     return false;
   }
 }
 
-const buildEvents = async(events) => {
+const buildEvents = async(events, isLoading = false) => {
   const el = document.getElementById('upcoming');
   if (!el) return;
-  console.log('Building events...');
   
   el.innerHTML = '';
-  if (events.length !== 0) {
-  events.forEach(event => {
-    el.innerHTML += `<div class="col col-12 col-md-6 col-xl-3 p-0 module-content">
-    <div
-      class="lqd-fb relative lqd-fb-style-6 rounded-4 h-pt-125 text-white"
-      data-lqd-zindex="true"
-    >
-      <div class="lqd-fb-shadow"></div>
-      <div
-        class="flex flex-wrap items-center lqd-overlay flex"
-        data-hover3d="true"
-      >
-        <div
-          class="lqd-fb-content-wrap lqd-overlay flex flex-col items-end transform-style-3d backface-hidden will-change-transform"
-          data-stacking-factor="0.5"
-        >
-          <div
-            class="lqd-fb-img lqd-overlay flex rounded-4 overflow-hidden backface-hidden"
-          >
-            <figure class="w-full h-full m-0">
-              <img
-                class="w-full"
-                src="${apiURL}${event.featuredImage}"
-                alt="${event.title}"
-              />
-            </figure>
-            <div class="lqd-fb-bg lqd-overlay flex"></div>
-            <div
-              class="lqd-fb-hover-overlay lqd-overlay flex bg-transparent"
-              style="
-                background-image: linear-gradient(
-				180deg,
-				rgba(243, 194, 72, 0.85) 0%,
-				rgba(97, 151, 95, 0.85) 100%
-			);
-              "
-            ></div>
-          </div>
-          <div
-            class="lqd-fb-content flex flex-col justify-end lqd-overlay flex backface-hidden py-1/5em px-1/5em"
-          >
-            <span class="lqd-fb-icon flex mb-0/85em"
-              ><i
-                aria-hidden="true"
-                class="lqd-icn-ess icon-lqd-mobile"
-              ></i
-            ></span>
-            <h6 class="mt-0 mb-1/35em font-bold">${new Date(
-              event.startDate
-            ).toLocaleString()}</h6>
-            <h2 class="lqd-fb__title mt-0 text-26 font-bold">
-              ${event.title}
-            </h2>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>`
-  })
-}
-  const count = 3 - events.length
 
-  for(var i = 0; i<count; i++){
-    el.innerHTML += `<div class="col col-12 col-md-6 col-xl-3 p-0 module-content">
-    <div
-      class="lqd-fb relative lqd-fb-style-6 rounded-4 h-pt-125 text-white"
-      data-lqd-zindex="true"
-    >
-      <div class="lqd-fb-shadow"></div>
-      <div
-        class="flex flex-wrap items-center lqd-overlay flex"
-        data-hover3d="true"
-      >
-        <div
-          class="lqd-fb-content-wrap lqd-overlay flex flex-col items-end transform-style-3d backface-hidden will-change-transform"
-          data-stacking-factor="0.5"
-        >
-          <div
-            class="lqd-fb-img lqd-overlay flex rounded-4 overflow-hidden backface-hidden"
-          >
-            <figure class="w-full h-full m-0">
-              <img
-                class="w-full"
-                src="https://fakeimg.pl/500x400?text=Coming+Soon"
-                alt="Rabagirana"
-              />
-            </figure>
-            <div class="lqd-fb-bg lqd-overlay flex"></div>
-            <div
-              class="lqd-fb-hover-overlay lqd-overlay flex bg-transparent"
-              style="
-                background-image: linear-gradient(
-				180deg,
-				rgba(243, 194, 72, 0.85) 0%,
-				rgba(97, 151, 95, 0.85) 100%
-			);
-              "
-            ></div>
+  // Show loading state
+  if (isLoading) {
+    for (let i = 0; i < 3; i++) {
+      el.innerHTML += `
+      <div class="col col-12 col-md-6 col-xl-3 p-0 module-content">
+        <div class="lqd-fb relative lqd-fb-style-6 rounded-4 h-pt-125 text-white" data-lqd-zindex="true">
+          <div class="lqd-fb-shadow"></div>
+          <div class="flex flex-wrap items-center lqd-overlay flex shimmer-effect">
+            <div class="lqd-fb-content-wrap lqd-overlay flex flex-col items-end">
+              <div class="lqd-fb-img lqd-overlay flex rounded-4 overflow-hidden"></div>
+            </div>
           </div>
-          <div
-            class="lqd-fb-content flex flex-col justify-end lqd-overlay flex backface-hidden py-1/5em px-1/5em"
-          >
-            <span class="lqd-fb-icon flex mb-0/85em"
-              ><i
-                aria-hidden="true"
-                class="lqd-icn-ess icon-lqd-path"
-              ></i
-            ></span>
-            <h6 class="mt-0 mb-1/35em font-bold">Coming Soon</h6>
-            <h2 class="lqd-fb__title mt-0 text-26 font-bold">
-              Stay Tuned
-            </h2>
+        </div>
+      </div>`;
+    }
+    return;
+  }
+
+  // If we have events, show them
+  if (events && events.length > 0) {
+    events.forEach(event => {
+      el.innerHTML += `<div class="col col-12 col-md-6 col-xl-3 p-0 module-content">
+        <div class="lqd-fb relative lqd-fb-style-6 rounded-4 h-pt-125 text-white" data-lqd-zindex="true">
+          <div class="lqd-fb-shadow"></div>
+          <div class="flex flex-wrap items-center lqd-overlay flex" data-hover3d="true">
+            <div class="lqd-fb-content-wrap lqd-overlay flex flex-col items-end transform-style-3d backface-hidden will-change-transform" data-stacking-factor="0.5">
+              <div class="lqd-fb-img lqd-overlay flex rounded-4 overflow-hidden backface-hidden">
+                <figure class="w-full h-full m-0">
+                  <img class="w-full" src="${apiURL}${event.featuredImage}" alt="${event.title}" />
+                </figure>
+                <div class="lqd-fb-bg lqd-overlay flex"></div>
+                <div class="lqd-fb-hover-overlay lqd-overlay flex bg-transparent" style="background-image: linear-gradient(180deg, rgba(243, 194, 72, 0.85) 0%, rgba(97, 151, 95, 0.85) 100%);"></div>
+              </div>
+              <div class="lqd-fb-content flex flex-col justify-end lqd-overlay flex backface-hidden py-1/5em px-1/5em">
+                <span class="lqd-fb-icon flex mb-0/85em"><i aria-hidden="true" class="lqd-icn-ess icon-lqd-mobile"></i></span>
+                <h6 class="mt-0 mb-1/35em font-bold">${new Date(event.startDate).toLocaleString()}</h6>
+                <h2 class="lqd-fb__title mt-0 text-26 font-bold">${event.title}</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>`;
+    });
+
+    // Fill remaining slots if needed
+    const count = 3 - events.length;
+    for (let i = 0; i < count; i++) {
+      el.innerHTML += `<div class="col col-12 col-md-6 col-xl-3 p-0 module-content">
+        <div class="lqd-fb relative lqd-fb-style-6 rounded-4 h-pt-125 text-white" data-lqd-zindex="true">
+          <div class="lqd-fb-shadow"></div>
+          <div class="flex flex-wrap items-center lqd-overlay flex" data-hover3d="true">
+            <div class="lqd-fb-content-wrap lqd-overlay flex flex-col items-end transform-style-3d backface-hidden will-change-transform" data-stacking-factor="0.5">
+              <div class="lqd-fb-img lqd-overlay flex rounded-4 overflow-hidden ">
+                <figure class="w-full h-full m-0">
+                  <img class="w-full" src="https://fakeimg.pl/500x400?text=Coming+Soon" alt="Rabagirana" />
+                </figure>
+                <div class="lqd-fb-bg lqd-overlay flex"></div>
+                <div class="lqd-fb-hover-overlay lqd-overlay flex bg-transparent" style="background-image: linear-gradient(180deg, rgba(243, 194, 72, 0.85) 0%, rgba(97, 151, 95, 0.85) 100%);"></div>
+              </div>
+              <div class="lqd-fb-content flex flex-col justify-end lqd-overlay flex backface-hidden py-1/5em px-1/5em">
+                <span class="lqd-fb-icon flex mb-0/85em"><i aria-hidden="true" class="lqd-icn-ess icon-lqd-path"></i></span>
+                <h6 class="mt-0 mb-1/35em font-bold">Coming Soon</h6>
+                <h2 class="lqd-fb__title mt-0 text-26 font-bold">Stay Tuned</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>`;
+    }
+  } else {
+    // Show single morphic card for no events
+    el.innerHTML = `<div class="col col-12 col-md-6 col-xl-3 p-0 module-content mx-auto">
+      <div class="lqd-fb relative lqd-fb-style-6 rounded-4 h-pt-60 text-white" data-lqd-zindex="true">
+        <div class="lqd-fb-shadow"></div>
+        <div class="flex flex-wrap items-center lqd-overlay flex" data-hover3d="true">
+          <div class="lqd-fb-content-wrap lqd-overlay flex flex-col items-end transform-style-3d backface-hidden will-change-transform" data-stacking-factor="0.5">
+            <div class="lqd-fb-img lqd-overlay flex rounded-4 overflow-hidden backface-hidden">
+              <figure class="w-full h-full m-0">
+                <img class="w-full" src="https://fakeimg.pl/800x400?text=Stay+Tuned" alt="Rabagirana" />
+              </figure>
+              <div class="lqd-fb-bg lqd-overlay flex"></div>
+              <div class="lqd-fb-hover-overlay lqd-overlay flex bg-transparent" style="background-image: linear-gradient(180deg, rgba(243, 194, 72, 0.85) 0%, rgba(97, 151, 95, 0.85) 100%);"></div>
+            </div>
+            <div class="lqd-fb-content flex flex-col justify-end lqd-overlay flex backface-hidden py-1/5em px-1/5em">
+              <span class="lqd-fb-icon flex mb-0/85em"><i aria-hidden="true" class="lqd-icn-ess icon-lqd-calendar"></i></span>
+              <h6 class="mt-0 mb-1/35em font-bold">Stay Tuned</h6>
+              <h2 class="lqd-fb__title mt-0 text-26 font-bold">Upcoming Events</h2>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>`
+    </div>`;
   }
 }
 
