@@ -66,6 +66,32 @@
         -webkit-line-clamp: unset;
         max-height: 400px;
       }
+
+      /* Add these styles in the existing style section */
+      .program-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.15;
+    transition: opacity 0.5s ease, background-image 0.5s ease;
+    z-index: 0;
+    pointer-events: none;
+}
+
+main.content {
+    position: relative;
+    z-index: 1;
+}
+
+.lqd-section {
+    position: relative;
+    z-index: 1;
+}
     </style>
   </head>
   <body
@@ -223,7 +249,8 @@
         </div>
       </div>
     </div>
-    <main class="content bg-white" id="lqd-site-content">
+    <div id="program-bg" class="program-background"></div>
+    <main class="content " id="lqd-site-content">
       <div id="lqd-contents-wrap">
         <section class="lqd-section tab-items">
           <div class="container">
@@ -360,11 +387,12 @@
                       </li>
                     </ul>
                   </nav>
-                  <div class="lqd-tabs-content relative">
+                  <div class="lqd-tabs-content relative" id="program-tabs-content">
                     <div
                       id="lqd-tab-item-1"
                       role="tabpanel"
                       class="lqd-tabs-pane fade"
+                      
                     >
                       <p style="text-align: center">
                         Unity Mountain is an initiative launched by Rabagirana Ministries in the three communities of Rusheshe, Mbabe, and Ayabaraya. Its mission is to promote long-lasting peace by fostering healing, development, education, environmental care, health, sports, and culture. The project brings people together from different backgrounds to build unity and transform their communities.
@@ -1158,230 +1186,92 @@ At Emmaus Family Centre, we are committed to walking alongside individuals, fami
     background: #f8f9fa;
 }
 </style>
-    <div
-      id="contact-modal"
-      class="lity-modal lqd-modal lity-hide"
-      data-modal-type="fullscreen"
-    >
-      <div class="lqd-modal-inner">
-        <div class="lqd-modal-head"></div>
-        <section
-          class="lqd-section lqd-modal-content link-black bg-center bg-cover bg-norepeat"
-          style="background-image: url(assets/images/common/modal-bg.jpg)"
+<div
+id="contact-modal"
+class="lity-modal lqd-modal lity-hide"
+data-modal-type="fullscreen"
+>
+<div class="lqd-modal-inner">
+  <div class="lqd-modal-head"></div>
+  <section
+    class="lqd-section lqd-modal-content link-black bg-center bg-cover bg-norepeat min-h-100vh"
+    style="background-image: url(assets/images/common/modal-bg.jpg)"
+  >
+    <div class="container flex items-center flex-wrap">
+      <div class="w-65percent relative flex flex-col sm:w-full">
+        <div
+          class="flex flex-col items-start justify-center py-10 pr-100 pl-10 module-content"
         >
-          <div class="container min-h-100vh flex items-center flex-wrap">
-            <div class="w-55percent relative flex flex-col sm:w-full">
-              <div
-                class="flex flex-col items-start justify-center py-10 pr-100 pl-10 module-content"
-              >
-                <div class="ld-fancy-heading">
-                  <h2
-                    class="ld-fh-element text-120 mb-0/5em leading-0/8em font-medium text-black"
-                  >
-                    Send a <span>message.</span>
-                  </h2>
-                </div>
-                <div class="ld-fancy-heading">
-                  <p class="text-18 ld-fh-element">
-                    We're here to answer any question you may have.
-                  </p>
-                </div>
-                <div class="w-full flex flex-wrap module-info">
-                  <div
-                    class="w-50percent flex flex-col sm:w-full module-info-inner"
-                  >
-                    <div class="mb-10 ld-fancy-heading relative">
-                      <h6
-                        class="ld-fh-element inline-block relative mb-1/25em text-14 font-bold tracking-0 text-black"
-                      >
-                        careers
-                      </h6>
-                    </div>
-                    <div class="ld-fancy-heading relative">
-                      <p
-                        class="ld-fh-element inline-block relative mb-0/75em text-16 leading-1/2em"
-                      >
-                        Would you like to join our growing team?
-                      </p>
-                    </div>
-                    <div class="mb-10 ld-fancy-heading relative">
-                      <p
-                        class="ld-fh-element inline-block relative mb-0/5em text-16 font-bold leading-1/2em"
-                      >
-                        <a
-                          href="cdn-cgi/l/email-protection.html"
-                          class="__cf_email__"
-                          data-cfemail="d1b2b0a3b4b4a3a291b9a4b3ffb2bebc"
-                          >[email&#160;protected]</a
-                        >
-                      </p>
-                    </div>
-                  </div>
-                  <div class="w-50percent flex flex-col sm:w-full">
-                    <div class="mb-10 ld-fancy-heading relative">
-                      <h6
-                        class="ld-fh-element mb-0/5em inline-block relative mb-1/25em text-14 font-bold tracking-0 text-black"
-                      >
-                        careers
-                      </h6>
-                    </div>
-                    <div class="ld-fancy-heading relative">
-                      <p
-                        class="ld-fh-element inline-block relative mb-0/75em text-16 leading-1/2em"
-                      >
-                        Would you like to join our growing team?
-                      </p>
-                    </div>
-                    <div class="mb-10 ld-fancy-heading relative">
-                      <p
-                        class="ld-fh-element inline-block relative mb-0/5em text-16 font-bold leading-1/2em"
-                      >
-                        <a
-                          href="cdn-cgi/l/email-protection.html"
-                          class="__cf_email__"
-                          data-cfemail="8deeecffe8e8fffecde5f8efa3eee2e0"
-                          >[email&#160;protected]</a
-                        >
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="w-45percent relative flex flex-col sm:w-full">
-              <div
-                class="lqd-contact-form lqd-contact-form-inputs-underlined lqd-contact-form-button-lg lqd-contact-form-button-block p-10"
-              >
-                <div role="form">
-                  <div class="screen-reader-response">
-                    <p role="status" aria-live="polite" aria-atomic="true"></p>
-                  </div>
-                  <form
-                    action="https://hubhtml.liquid-themes.com/assets/php/mailer.php"
-                    method="post"
-                    class="lqd-cf-form"
-                    novalidate="novalidate"
-                    data-status="init"
-                  >
-                    <div class="row">
-                      <div class="col col-md-6 col-12 p-0">
-                        <p class="m-0 text-black-30 text-12">Your name</p>
-                        <p>
-                          <span class="lqd-form-control-wrap text"
-                            ><input
-                              class="text-13 text-black"
-                              type="text"
-                              name="name"
-                              value
-                              size="40"
-                              aria-required="true"
-                              aria-invalid="false"
-                              placeholder="Full name"
-                          /></span>
-                        </p>
-                      </div>
-                      <div class="col col-md-6 col-12 p-0">
-                        <p class="m-0 text-black-30 text-12">Email address</p>
-                        <p>
-                          <span class="lqd-form-control-wrap email"
-                            ><input
-                              class="text-13 text-black"
-                              type="email"
-                              name="email"
-                              value
-                              size="40"
-                              aria-required="true"
-                              aria-invalid="false"
-                              placeholder="Email Address"
-                          /></span>
-                        </p>
-                      </div>
-                      <div class="col col-md-6 col-12 p-0">
-                        <p class="m-0 text-black-30 text-12">(Optional)</p>
-                        <p>
-                          <span class="lqd-form-control-wrap tel"
-                            ><input
-                              class="text-13 text-black"
-                              type="tel"
-                              name="tel"
-                              value
-                              size="40"
-                              aria-invalid="false"
-                              placeholder="Phone number"
-                          /></span>
-                        </p>
-                      </div>
-                      <div class="col col-md-6 col-12 p-0">
-                        <p class="m-0 text-black-30 text-12">Subject</p>
-                        <p>
-                          <span class="lqd-form-control-wrap text"
-                            ><input
-                              class="text-13 text-black"
-                              type="text"
-                              name="project-name"
-                              value
-                              size="40"
-                              aria-required="true"
-                              aria-invalid="false"
-                              placeholder="New Project"
-                          /></span>
-                        </p>
-                      </div>
-                      <div class="col col-12 p-0">
-                        <p class="m-0 text-black-30 text-12">Your message</p>
-                        <p>
-                          <span class="lqd-form-control-wrap textarea">
-                            <textarea
-                              class="text-13 text-black"
-                              name="message"
-                              cols="10"
-                              rows="4"
-                              aria-required="true"
-                              aria-invalid="false"
-                              placeholder="Tell us about your project"
-                            ></textarea>
-                          </span>
-                        </p>
-                      </div>
-                      <div class="col col-12 p-0">
-                        <span class="lqd-form-control-wrap acceptance"
-                          ><span class="lqd-cf-form-control lqd-cf-acceptance"
-                            ><span class="lqd-cf-list-item"
-                              ><label
-                                ><input
-                                  class="text-black"
-                                  type="checkbox"
-                                  name="acceptance"
-                                  value="1"
-                                  aria-invalid="false"
-                                />
-                                <span class="lqd-cf-list-item-label"
-                                  >I am bound by the terms of the Service I
-                                  accept Privacy Policy</span
-                                ></label
-                              ></span
-                            ></span
-                          ></span
-                        >
-                      </div>
-                      <div class="col col-12 p-0">
-                        <input
-                          type="button"
-                          value="Send message"
-                          class="lqd-cf-form-control text-16 font-medium leading-1/5em bg-primary text-white border-none"
-                        />
-                      </div>
-                    </div>
-                  </form>
-                  <div class="lqd-cf-response-output"></div>
-                </div>
-              </div>
-            </div>
+          <div class="ld-fancy-heading">
+            <h2
+              class="ld-fh-element text-120 mb-0/5em leading-0/8em font-medium text-black"
+            >
+              Send your <span>donation.</span>
+            </h2>
           </div>
-        </section>
-        <div class="lqd-modal-foot"></div>
+          <div class="ld-fancy-heading">
+            <p class="text-18 ld-fh-element">
+              Rabagirana is a non-profit organization which relies on donations for all daily activities and programs.
+              each donation is valuable and is well managed to achieve the mission and vision of Rabagirana.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="w-35percent relative flex flex-col sm:w-full" >
+        <div
+          class="donation-img-container"
+        >
+        <img class="donation-img" src="/assets/images/donation/Vocational training.JPG"/>
+          </div>
       </div>
     </div>
+    <div class="container">
+      <div class="row">
+        <div class="w-25percent lg:w-50percent sm:w-full">
+          <div class="relative flex flex-col bg-slate-300 transition-all rounded-6 p-30 mx-15 mb-30 hover:bg-accent">
+            <h3 class="ld-fh-element relative mb-0/5em text-22 text-slate-900">PayPal & Cards</h3>
+            <p class="ld-fh-element relative mb-0/5em text-17 leading-1/6em">Send donations using<br>Paypal bank cards<br><br></p>
+            <div id="donate-button-container" class="flex align-center">
+              <div id="donate-button"></div>
+              <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+              <script>
+              PayPal.Donation.Button({
+              env:'production',
+              hosted_button_id:'XDQZWPZQXK4WY',
+              image: {
+              src:'https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif',
+              alt:'Donate with PayPal button',
+              title:'PayPal - The safer, easier way to pay online!',
+              }
+              }).render('#donate-button');
+              </script>
+            </div>
+          </div>
+        </div>
+        <div class="w-25percent lg:w-50percent sm:w-full">
+          <div class="relative flex flex-col bg-slate-300 transition-all rounded-6 p-30 mx-15 mb-30 hover:bg-accent">
+            <h3 class="ld-fh-element relative mb-0/5em text-22 text-slate-900">WorldRemit</h3>
+            <p class="ld-fh-element relative mb-0/5em text-17 leading-1/6em">You can use World remit.<br>Click <a target="_blank" href="https://www.worldremit.com/en?amountfrom=100.00&selectfrom=rw&currencyfrom=rwf&selectto=ph&currencyto=php&transfer=bnk">here</a> and use this number<br><br>+250 788 763 611</p>
+          </div>
+        </div>
+        <div class="w-25percent lg:w-50percent sm:w-full">
+          <div class="relative flex flex-col bg-slate-300 transition-all rounded-6 p-30 mx-15 mb-30 hover:bg-accent">
+                              <h3 class="ld-fh-element relative mb-0/5em text-22 text-slate-900">MOMO Pay</h3>
+            <p class="ld-fh-element relative mb-0/5em text-17 leading-1/6em">Or use MTN Momo pay<br>to the following MOMO Code<br><br>000000</p>
+          </div>
+        </div>
+        <div class="w-25percent lg:w-50percent sm:w-full">
+          <div class="relative flex flex-col bg-slate-300 transition-all rounded-6 p-30 mx-15 mb-30 hover:bg-accent">
+            <h3 class="ld-fh-element relative mb-0/5em text-22 text-slate-900">FOR NORTH AMERICA</h3>
+            <p class="ld-fh-element relative mb-0/5em text-17 leading-1/6em">
+              You can also make your check out to: <b>Le Rucher/Mercy Ministries</b> and <b>enclose a note saying it is for Rabagirana.</b> Send to Renee Schudel, 13890 Indio Drive, Sloughhouse, CA  95683.</p>
+          </div>
+        </div>
+      </div>
+  </section>
+  <div class="lqd-modal-foot"></div>
+</div>
+</div>
 
     <script
       data-cfasync="false"
@@ -1514,7 +1404,7 @@ At Emmaus Family Centre, we are committed to walking alongside individuals, fami
             <p class="lqd-snickersbar-msg-done flex items-center mt-0 mb-0"></p>
           </div>
           <div class="lqd-snickersbar-ext ml-1/5em"></div>
-        </div></div></template
+        </div></div></template>
     ><template id="lqd-temp-sticky-header-sentinel"
       ><div
         class="lqd-sticky-sentinel invisible absolute pointer-events-none"
@@ -1586,5 +1476,111 @@ At Emmaus Family Centre, we are committed to walking alongside individuals, fami
         }
       });
     </script>
-    </body>
+    <!-- <script>
+    // JavaScript to update background image based on active program
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the tabs content container
+    const tabsContent = document.getElementById('program-tabs-content');
+    
+    // Function to update background image based on active tab
+    function updateBackground(tabId) {
+        const programMap = {
+            'lqd-tab-item-1': 'unity-mountain',
+            'lqd-tab-item-2': 'rwanda-unite',
+            'lqd-tab-item-3': 'emmaus',
+            'lqd-tab-item-4': 'kumbaya',
+            'lqd-tab-item-5': 'international'
+        };
+        
+        if (programMap[tabId]) {
+            tabsContent.style.backgroundImage = `url(assets/images/program-bgs/${programMap[tabId]}.png)`;
+            tabsContent.style.backgroundSize = 'cover';
+            tabsContent.style.backgroundPosition = 'center';
+            tabsContent.style.backgroundRepeat = 'no-repeat';
+        }
+    }
+    
+    // Listen for tab changes
+    document.querySelectorAll('.lqd-tabs-nav a').forEach(tab => {
+        tab.addEventListener('click', function(e) {
+            const tabId = this.getAttribute('href').substring(1);
+            updateBackground(tabId);
+        });
+    });
+    
+    // Set initial background based on active tab
+    const activeTab = document.querySelector('.lqd-tabs-nav a.active');
+    if (activeTab) {
+        const tabId = activeTab.getAttribute('href').substring(1);
+        updateBackground(tabId);
+    }
+});
+</script> -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the background container
+    const bgContainer = document.getElementById('program-bg');
+    
+    // Function to preload image
+    function preloadImage(url) {
+        return new Promise((resolve, reject) => {
+            const img = new Image();
+            img.onload = () => resolve(url);
+            img.onerror = () => reject(url);
+            img.src = url;
+        });
+    }
+
+    // Function to update background image with smooth transition
+    async function updateBackground(tabId) {
+        const programMap = {
+            'lqd-tab-item-1': 'unity-mountain',
+            'lqd-tab-item-2': 'rwanda-unite',
+            'lqd-tab-item-3': 'emmaus',
+            'lqd-tab-item-4': 'kumbaya',
+            'lqd-tab-item-5': 'international'
+        };
+        
+        if (programMap[tabId]) {
+            const imageUrl = `assets/images/program-bgs/${programMap[tabId]}.png`;
+            
+            try {
+                // Preload the image
+                await preloadImage(imageUrl);
+                
+                // Fade out
+                bgContainer.style.opacity = '0';
+                
+                // Wait for fade out to complete
+                setTimeout(() => {
+                    // Update background image
+                    bgContainer.style.backgroundImage = `url(${imageUrl})`;
+                    
+                    // Fade in
+                    bgContainer.style.opacity = '0.15';
+                }, 500);
+                
+            } catch (error) {
+                console.error('Failed to load image:', error);
+            }
+        }
+    }
+    
+    // Listen for tab changes
+    document.querySelectorAll('.lqd-tabs-nav a').forEach(tab => {
+        tab.addEventListener('click', function(e) {
+            const tabId = this.getAttribute('href').substring(1);
+            updateBackground(tabId);
+        });
+    });
+    
+    // Set initial background based on active tab
+    const activeTab = document.querySelector('.lqd-tabs-nav a.active');
+    if (activeTab) {
+        const tabId = activeTab.getAttribute('href').substring(1);
+        updateBackground(tabId);
+    }
+});
+</script>
+  </body>
 </html>
