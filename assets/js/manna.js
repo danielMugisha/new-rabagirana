@@ -58,7 +58,7 @@ const buildManna = (id, mannas) => {
     const titleElement = document.getElementById('manna-title');
     const contentElement = document.getElementById('manna-content');
 
-    if (imageElement) imageElement.src = `https://app.rabagirana.org/${manna.featuredImage}`;
+    if (imageElement) imageElement.src = `https://app.rabagirana.org/uploads/${manna.featuredImage}`;
     if (titleElement) titleElement.innerText = manna.title;
     if (contentElement) contentElement.innerHTML = manna.content;
 }
@@ -80,7 +80,7 @@ const buildOtherMannas = (currentId, mannas) => {
                                     <img
                                         width="640"
                                         height="600"
-                                        src="https://app.rabagirana.org/${manna.featuredImage}"
+                                        src="https://app.rabagirana.org/uploads/${manna.featuredImage}"
                                         class="w-full h-full objfit-cover objfit-center"
                                         alt="manna article"
                                     />

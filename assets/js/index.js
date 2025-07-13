@@ -362,7 +362,7 @@ const buildManna = async (manna) => {
     return;
   }
 
-  imageElement.src = `${apiURL}${manna.featuredImage}`
+  imageElement.src = `${apiURL}uploads/${manna.featuredImage}`
   titleElement.innerText = manna.title
   summaryElement.innerText = manna.summary
   linkElement.href = `manna.html?id=${manna._id}` 
