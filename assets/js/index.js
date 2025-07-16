@@ -214,7 +214,7 @@ const buildStories = async () => {
               <img
                 width="400"
                 height="400"
-                src="${story.image}"
+                src="https://app.rabagirana.org/uploads/${story.featuredImage}"
                 class="w-full h-full objfit-cover objfit-center"
                 alt="${story.title}"
               />
