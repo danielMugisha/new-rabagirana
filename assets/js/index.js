@@ -214,7 +214,7 @@ const buildStories = async () => {
               <img
                 width="400"
                 height="400"
-                src="https://app.rabagirana.org/uploads/${story.featuredImage}"
+                src='https://app.rabagirana.org/uploads/${story.featuredImage}'
                 class="w-full h-full objfit-cover objfit-center"
                 alt="${story.title}"
               />
@@ -535,11 +535,21 @@ const getStories = async () => {
 const displayStory = async () => {
   const urlParams = new URLSearchParams(window.location.search);
   const storyId = urlParams.get('id');
-  
+  const URL = `${apiURL}api/stories`;
+  try {
+    const response = await fetch(URL);
+    const result = await response.json();
+    if (result.data && result.data.length > 0) {
+      // Update currentStories and build the carousel
+      currentStories = result.data;
+    }
+  } catch (error) {
+    console.error('Error fetching stories for display:', error);
+  }
   if (!storyId) return;
 
   try {
-      const story = currentStories.find(s => s._id === parseInt(storyId));
+      const story = currentStories.find(s => s._id === storyId);
       if (!story) {
         console.error('Story not found:', storyId);
         return;
@@ -548,7 +558,7 @@ const displayStory = async () => {
       // Update page content
       document.getElementById('story-title').textContent = story.title;
       document.getElementById('story-body').innerHTML = story.content;
-      document.getElementById('story-image').src = story.image ?? `${apiURL}${story.image}`;
+      document.getElementById('story-image').src = story.image ?? `${apiURL}uploads/${story.featuredImage}`;
       
       const otherStories = currentStories.filter(s => s._id !== parseInt(storyId)).slice(0, 3); // Get up to 3 other stories
       
