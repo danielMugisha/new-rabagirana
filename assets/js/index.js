@@ -74,30 +74,32 @@ const defaultStories = [
 	},
 ];
 
-// Keep track of current stories, initialized with defaults
-let currentStories = [...defaultStories];
+// Keep track of current stories
+let currentStories = [];
 
 // Added an event listener for DOMContentLoaded to ensure early initialization
 document.addEventListener('DOMContentLoaded', function() {
   // Initialize basic UI elements that don't depend on data
   setupEventListeners();
-  // Try to initialize carousel early with default stories
-  buildStories();
 });
 
 // Refactoring window.onload to maintain reference to the original code but reorganize timing
-window.onload = function() {
+window.onload = async function() {
   getBaseUrl();
   
   // Check if we're on the story page
   if (window.location.pathname.includes('story.html')) {
+    await getStories(); // Wait for stories to load before displaying
     displayStory();
   } else {
     // Existing homepage initialization
     cleanupCarousel();
-    getMannaContent();
-    getEvents();
-    getStories();
+    // Load all content in parallel
+    await Promise.all([
+      getStories(),
+      getMannaContent(),
+      getEvents()
+    ]);
   }
 };
 
@@ -220,7 +222,7 @@ const buildStories = async () => {
             <div class="lqd-pf-overlay-bg flex flex-col items-center justify-between py-4 px-3">
               <div class="text-center mb-auto">
                 <h2 class="text-white text-xl font-bold mb-2">${story.title}</h2>
-                <p class="text-white text-sm italic">By ${story.narrator}</p>
+                <p class="text-white text-sm italic">By ${story.author}</p>
               </div>
               <p class="text-white text-center">${story.summary}</p>
             </div>
@@ -511,15 +513,19 @@ const getStories = async () => {
     const response = await fetch(URL);
     const result = await response.json();
     if (result.data && result.data.length > 0) {
-      // If stories are fetched successfully, update currentStories
+      // Update currentStories and build the carousel
       currentStories = result.data;
-      defaultStories = result.data;
       buildStories();
+      return true;
     }
-    return true;
+    // If no stories from API, fall back to defaults
+    currentStories = defaultStories;
+    buildStories();
+    return false;
   } catch (error) {
     console.error('Error fetching stories:', error);
-    currentStories = [...defaultStories];
+    // On error, fall back to defaults
+    currentStories = defaultStories;
     buildStories();
     return false;
   }
