@@ -1257,7 +1257,14 @@ data-modal-type="fullscreen"
         <div class="w-25percent lg:w-50percent sm:w-full">
           <div class="relative flex flex-col bg-slate-300 transition-all rounded-6 p-30 mx-15 mb-30 hover:bg-accent">
                               <h3 class="ld-fh-element relative mb-0/5em text-22 text-slate-900">MOMO Pay</h3>
-            <p class="ld-fh-element relative mb-0/5em text-17 leading-1/6em">Or use MTN Momo pay<br>to the following MOMO Code<br><br>000000</p>
+            <p>Or use MTN Momo pay to the following MOMO Code:</p>
+              <div class="text-center mt-3">
+                <a href="tel:*182*8*1*028321%23" class="btn btn-primary btn-lg momo-code">
+                  028321
+                </a>
+              </div>
+              <div id="qrcode" class="text-center mt-3"></div>
+              <p class="text-sm mt-2 text-center">(Scan to donate)</p>
           </div>
         </div>
         <div class="w-25percent lg:w-50percent sm:w-full">
@@ -1582,5 +1589,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 </script>
+<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+          text: "tel:*182*8*1*028321%23",
+          width: 128,
+          height: 128
+        });
+      });
+    </script>
   </body>
 </html>
+``` 
