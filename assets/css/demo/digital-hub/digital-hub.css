@@ -617,3 +617,31 @@ footer a:hover{
 		padding: 30px 20px 15px 20px;
 	}
 }
+
+/* Events section specific styles */
+
+/* Event card hover effects */
+.lqd-fb-content {
+  transition: opacity 0.3s ease;
+}
+
+.lqd-fb-content.hover:opacity-100 {
+  background: linear-gradient(180deg, rgba(243, 194, 72, 0.85) 0%, rgba(97, 151, 95, 0.85) 100%);
+}
+
+.lqd-fb[data-lqd-zindex="true"] {
+  transition: transform 0.3s ease;
+}
+
+.lqd-fb[data-lqd-zindex="true"]:hover {
+  transform: translateY(-5px);
+}
+
+/* PDF cursor indicator */
+.lqd-fb[onclick] {
+  cursor: pointer;
+}
+
+.lqd-fb[onclick]:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
