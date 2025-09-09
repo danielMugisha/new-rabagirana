@@ -433,22 +433,31 @@ const buildEvents = async(events, isLoading = false) => {
   // If we have events, show them
   if (events && events.length > 0) {
     events.forEach(event => {
+      // Format the paths correctly by replacing backslashes and removing 'uploads/'
+      const imagePath = event.featuredImage?.replace(/\\/g, '/').replace(/^uploads\//, '');
+      const pdfPath = event.featuredPdf?.replace(/\\/g, '/').replace(/^uploads\//, '');
+      
       el.innerHTML += `<div class="col col-12 col-md-6 col-xl-3 p-0 module-content">
-        <div class="lqd-fb relative lqd-fb-style-6 rounded-4 h-pt-125 text-white" data-lqd-zindex="true">
+        <div class="lqd-fb relative lqd-fb-style-6 rounded-4 h-pt-125 text-white" data-lqd-zindex="true" 
+          style="cursor: ${event.featuredPdf || event.registrationForm ? 'pointer' : 'default'}"
+          ${event.registrationForm ? `onclick="window.open('${event.registrationForm}', '_blank')"` : 
+            event.featuredPdf ? `onclick="window.open('${apiURL}uploads/${pdfPath}', '_blank')"` : ''}>
           <div class="lqd-fb-shadow"></div>
           <div class="flex flex-wrap items-center lqd-overlay flex" data-hover3d="true">
             <div class="lqd-fb-content-wrap lqd-overlay flex flex-col items-end transform-style-3d backface-hidden will-change-transform" data-stacking-factor="0.5">
               <div class="lqd-fb-img lqd-overlay flex rounded-4 overflow-hidden backface-hidden">
                 <figure class="w-full h-full m-0">
-                  <img class="w-full" src="${apiURL}${event.featuredImage}" alt="${event.title}" />
+                  <img class="w-full" src="${apiURL}uploads/${imagePath}" alt="${event.title}" />
                 </figure>
                 <div class="lqd-fb-bg lqd-overlay flex"></div>
                 <div class="lqd-fb-hover-overlay lqd-overlay flex bg-transparent" style="background-image: linear-gradient(180deg, rgba(243, 194, 72, 0.85) 0%, rgba(97, 151, 95, 0.85) 100%);"></div>
               </div>
-              <div class="lqd-fb-content flex flex-col justify-end lqd-overlay flex backface-hidden py-1/5em px-1/5em">
+              <div class="lqd-fb-content flex flex-col justify-end lqd-overlay flex backface-hidden py-1/5em px-1/5em opacity-0 hover:opacity-100 transition-opacity duration-300">
                 <span class="lqd-fb-icon flex mb-0/85em"><i aria-hidden="true" class="lqd-icn-ess icon-lqd-mobile"></i></span>
                 <h6 class="mt-0 mb-1/35em font-bold">${new Date(event.startDate).toLocaleString()}</h6>
                 <h2 class="lqd-fb__title mt-0 text-26 font-bold">${event.title}</h2>
+                ${event.registrationForm || event.featuredPdf ? 
+                  `<div class="text-sm mt-2"><i class="fas fa-external-link-alt"></i> Click to register here</div>` : ''}
               </div>
             </div>
           </div>
